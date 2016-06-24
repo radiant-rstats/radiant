@@ -10,9 +10,9 @@ build_app <- function(app) {
 sapply(apps, build_app)
 
 ## build for packages ahead of CRAN
-non_cran <- function(app) {
-	devtools::install(file.path("..",app))
-	devtools::build(file.path("..",app), binary = TRUE)
-}
-ncapps <- c("shiny","DT","DiagrammeR", "NeuralNetTools")
-sapply(ncapps, build_app)
+# non_cran <- function(app) {
+# 	devtools::install(file.path("..",app))
+# 	devtools::build(file.path("..",app), binary = TRUE)
+# }
+# ncapps <- c("shiny","DT","DiagrammeR", "NeuralNetTools")
+# sapply(ncapps, build_app)
