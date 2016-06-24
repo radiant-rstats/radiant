@@ -17,3 +17,20 @@ update_app <- function(app, mess = "Update [ci skip]", git = FALSE, github = FAL
 apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
           "radiant.multivariate","radiant")
 sapply(apps, update_app, mess = "Cleanup", git = TRUE, github = TRUE)
+
+## build for mac
+build_app <- function(app) {
+	devtools::build(file.path("..",app))
+	devtools::build(file.path("..",app), binary = TRUE)
+}
+sapply(apps, build_app)
+
+## build for packages ahead of CRAN
+non_cran <- function(app) {
+	devtools::install(file.path("..",app))
+	devtools::build(file.path("..",app))
+	devtools::build(file.path("..",app), binary = TRUE)
+}
+apps <- c("shiny","DT","DiagrammeR", "NeuralNetTools")
+sapply(apps, build_app)
+
