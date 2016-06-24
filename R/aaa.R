@@ -1,3 +1,5 @@
+globalVariables(".rs.restartR")
+
 #' radiant
 #'
 #' @name radiant

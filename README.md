@@ -18,7 +18,7 @@ Radiant is an open-source platform-independent browser-based interface for busin
 
 #### Explore
 
-Radiant is interactive. Results update immediately when inputs are changed (i.e., no separate dialog boxes) and/or when a button is pressed (e.g., `Estimate` in _Model > Logistic regression (GLM)_). This greatly facilitates rapid exploration and understanding of the data.
+Radiant is interactive. Results update immediately when inputs are changed (i.e., no separate dialog boxes) and/or when a button is pressed (e.g., `Estimate` in _Model > Estimate > Logistic regression (GLM)_). This facilitates rapid exploration and understanding of the data.
 
 #### Cross-platform
 
@@ -42,14 +42,14 @@ Radiant focuses on business data and decisions. It offers tools, examples, and d
 
 ## How to install Radiant
 
-- Required: [R](http://cran.rstudio.com/) version 3.3.0 or later
+- Required: [R](https://cran.rstudio.com/) version 3.3.0 or later
 - Required: A modern browser (e.g., [Chrome](https://www.google.com/intl/en/chrome/browser/desktop/) or Safari). Internet Explorer (version 11 or higher) should work as well
 - Required: [Rstudio](http://www.rstudio.com/products/rstudio/download/)
 
 If you use Rstudio (version 0.99.893 or later) you can start and update Radiant through the `Addins` menu at the top of the screen. To install the latest version of Radiant for Windows or Mac, with complete documentation for off-line access, open R(studio) and copy-and-paste the command below:
 
 ```r
-install.packages("radiant", repos = "http://radiant-rstats.github.io/minicran/", type = 'binary')
+install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/", type = 'binary')
 ```
 
 Once all packages are installed select `Radiant` from the `Addins` menu in Rstudio or use the command below to launch the app:
@@ -60,7 +60,7 @@ radiant::radiant()
 
 See the [installing radiant](http://radiant-rstats.github.io/docs/install.html) page for details.
 
-You can also create a launcher on your Desktop to start Radiant by typing `radiant::launcher()` in the R(studio) console and pressing return. A file called `radiant.bat` (windows) or `radiant.command` (mac) will be created that you can double-click to start Radiant in your default browser. The `launcher` command will also create a file called `update_radiant.bat` (windows) or `update_radiant.command` (mac) that you can double-click to update Radiant to the latest release.
+**Optional:** You can also create a launcher on your Desktop to start Radiant by typing `radiant::launcher()` in the R(studio) console and pressing return. A file called `radiant.bat` (windows) or `radiant.command` (mac) will be created that you can double-click to start Radiant in your default browser. The `launcher` command will also create a file called `update_radiant.bat` (windows) or `update_radiant.command` (mac) that you can double-click to update Radiant to the latest release.
 
 When Radiant starts you will see data on diamond prices. To close the application click the <i title='Power off' class='fa fa-power-off'></i> icon in the navigation bar and then click `Stop`. The Radiant process will stop and the browser window will close (Chrome) or gray-out.
 
@@ -101,14 +101,14 @@ To run your own server instance copy/fork the repo from github and [deploy to sh
 You can also host Radiant using [shiny-server](http://www.rstudio.com/products/rstudio/download-server/). First, install radiant on the server using the command below:
 
 ```r
-install.packages("radiant", repos = "http://radiant-rstats.github.io/minicran/")
+install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/")
 ```
 
-Then clone the radiant repo and point shiny-server to the inst/app/ directory. As a courtesy, please let me know if you intend to use Radiant on a server.
+Then clone the <a href="https://radiant-rstats.github.io/radiant" target="_blank">radiant</a> repo and point shiny-server to the `inst/app/` directory. As a courtesy, please let me know if you intend to use Radiant on a server.
 
 ## Saving and loading state
 
-To save your analyses save the state of the app to a file by clicking on the <i title='Save' class='fa fa-save'></i> icon in the navbar and then on `Save state` (see also the `Data > Manage` tab). You can open this state-file at a later time or on another computer to continue where you left off. You can also share the file with others that may want to replicate your analyses. As an example, load the state_file [`radiant-state.rda`](https://radiant-rstats.github.io/docs/examples/radiant-state.rda) through the Data > Manage tab. Go to `Data > View`, `Data > Visualize` to see some of the settings. There is also a report in `R > Report` that was created using the Radiant interface. The html file <a href="https://radiant-rstats.github.io/docs/examples/radiant-state.html" target="_blank">`radiant-state.html`</a> contains the output.
+To save your analyses save the state of the app to a file by clicking on the <i title='Save' class='fa fa-save'></i> icon in the navbar and then on `Save state` (see also the `Data > Manage` tab). You can open this state-file at a later time or on another computer to continue where you left off. You can also share the file with others that may want to replicate your analyses. As an example, load the state-file [`radiant-state.rda`](https://radiant-rstats.github.io/docs/examples/radiant-state.rda) through the _Data > Manage_ tab. Go to _Data > View_ and _Data > Visualize_ to see some of the settings. There is also a report in _R > Report_ that was created using the Radiant interface. The html file <a href="https://radiant-rstats.github.io/docs/examples/radiant-state.html" target="_blank">`radiant-state.html`</a> contains the output.
 
 A related feature in Radiant is that state is maintained if you accidentally navigate to another page, close (and reopen) the browser, and/or hit refresh. Use `Refresh` in the <i title='Power off' class='fa fa-power-off'></i> menu in the navigation bar to return to a clean/new state.
 
@@ -122,13 +122,13 @@ numericInput("sm_comp_value", "Comparison value:", state_init('sm_comp_value', 0
 
 ## Source code
 
-The source code is available on GitHub at <https://github.com/radiant-rstats>. `radiant.data`, offers data loading, saving, viewing, visualizing, combining, and transforming tools. `radiant.design` build on `radiant.data` and adds tools for experimental design, sampling, and sample size calculations. `radiant.basics` covers basic statistical analysis (e.g., comparing means and proportions, cross-tabs, correlation, etc.) and includes a probability calculator. `radiant.model` covers model estimation (e.g., linear and logistic regression), model evaluation (e.g., gains charts, profits curves, confusion matrix, etc.), and decision support tools (e.g., decision analysis and simulation). Finally, `radiant.multivariate` includes tools to generate brand maps and conduct cluster, factor, and conjoint analysis.
+The source code is available on GitHub at <https://github.com/radiant-rstats>. `radiant.data`, offers data loading, saving, viewing, visualizing, combining, and transforming tools. `radiant.design` builds on `radiant.data` and adds tools for experimental design, sampling, and sample size calculation. `radiant.basics` covers the basics of statistical analysis (e.g., comparing means and proportions, cross-tabs, correlation, etc.) and includes a probability calculator. `radiant.model` covers model estimation (e.g., logistic regression and neural networks), model evaluation (e.g., gains chart, profit curve, confusion matrix, etc.), and decision tools (e.g., decision analysis and simulation). Finally, `radiant.multivariate` includes tools to generate brand maps and conduct cluster, factor, and conjoint analysis.
 
-These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Research for Marketing Decisions_, and _Customer Analytics_ classes at the Rady School of Management (UCSD).
+These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Research for Marketing Decisions_, _Consumer behavior_, _Experiments in firms_, and _Customer Analytics_ classes at the Rady School of Management (UCSD).
 
 ## Credits
 
-Radiant would not be possible without [R](http://cran.rstudio.com/) and [Shiny](http://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmardown, and DT. For an overview of other packages that Radiant relies on please see the <a href="http://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
+Radiant would not be possible without [R](https://cran.rstudio.com/) and [Shiny](http://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmardown, and DT. For an overview of other packages that Radiant relies on please see the <a href="http://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
 
 
 ## License

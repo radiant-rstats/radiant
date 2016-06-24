@@ -16,8 +16,8 @@ update_app <- function(app, mess = "Update [ci skip]", git = FALSE, github = FAL
 
 apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
           "radiant.multivariate","radiant")
-sapply(apps, update_app, mess = "documentation updates", git = TRUE, github = TRUE)
-# sapply(apps, update_app, git = FALSE, github = FALSE)
+# sapply(apps, update_app, mess = "updates", git = TRUE, github = TRUE)
+sapply(apps, update_app, git = FALSE, github = FALSE)
 
 ## build for mac
 build_app <- function(app) {
@@ -32,6 +32,6 @@ non_cran <- function(app) {
 	devtools::build(file.path("..",app))
 	devtools::build(file.path("..",app), binary = TRUE)
 }
-apps <- c("shiny","DT","DiagrammeR", "NeuralNetTools")
-sapply(apps, build_app)
 
+ncapps <- c("shiny","DT","DiagrammeR", "NeuralNetTools")
+sapply(ncapps, build_app)

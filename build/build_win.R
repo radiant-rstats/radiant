@@ -1,16 +1,18 @@
-# run this separately on mac and windows
-# install.packages("devtools")
-library(devtools)
-document(roclets = c('rd', 'collate', 'namespace'))
+apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
+          "radiant.multivariate","radiant")
 
-# install('../shiny')
-# build('../shiny', binary = TRUE)
+## build for mac
+build_app <- function(app) {
+	devtools::install(file.path("..",app))
+	devtools::build(file.path("..",app), binary = TRUE)
+}
 
-# install('../DT')
-# build('../DT', binary = TRUE)
+sapply(apps, build_app)
 
-build('../radiant.data', binary = TRUE)
-
-setwd('../')
-rfile <- Sys.glob("*zip")
-setwd('radiant.data')
+## build for packages ahead of CRAN
+non_cran <- function(app) {
+	devtools::install(file.path("..",app))
+	devtools::build(file.path("..",app), binary = TRUE)
+}
+ncapps <- c("shiny","DT","DiagrammeR", "NeuralNetTools")
+sapply(ncapps, build_app)
