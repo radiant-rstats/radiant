@@ -39,7 +39,7 @@ shinyServer(function(input, output, session) {
       sidebarPanel(
         help_data_panel,
         help_design_panel,
-        help_basic_panel,
+        help_basics_panel,
         help_model_panel,
         help_multivariate_panel,
         uiOutput("help_text"),
@@ -49,7 +49,7 @@ shinyServer(function(input, output, session) {
         HTML(paste0("<h2>Select help files to show and search</h2><hr>")),
         htmlOutput("help_data"),
         htmlOutput("help_design"),
-        htmlOutput("help_basic"),
+        htmlOutput("help_basics"),
         htmlOutput("help_model"),
         htmlOutput("help_multivariate")
       )
