@@ -16,16 +16,16 @@ rem_old <- function(app) {
 	unlink(paste0(dirwin, "/", app, "*"))
 }
 
+sapply("radiant", rem_old)
+
 apps <- c("radiant", "radiant.design","radiant.basics", "radiant.model",
           "radiant.multivariate", "radiant.data")
-# sapply(apps, rem_old)
-sapply("radiant", rem_old)
 
 ## probably need to restart Rstudion before building
 ## avoid 'loaded namespace' stuff when building for mac
 system(paste0(Sys.which("R"), " -e \"source('radiant/build/build_mac.R')\""))
 
-win <- readline(prompt="Did you build in Windows? y/n: ")
+win <- readline(prompt = "Did you build on Windows? y/n: ")
 
 # system(paste0(Sys.which("R"), " -e \"source('radiant/build/build_win.R')\""))
 
