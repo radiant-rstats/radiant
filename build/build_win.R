@@ -7,17 +7,14 @@ apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
 # 	devtools::build(file.path("..",app), binary = TRUE)
 # }
 
-sapply(apps, build_app)
-
-path <- ".."
-curr <- getwd(); setwd(path)
+path <- "Z:/Desktop/GitHub"
+#curr <- getwd(); setwd(path)
 build_app <- function(app) {
 	f <- devtools::build(file.path(path, app))
 	system(paste0("R CMD INSTALL --build ", f))
 }
 sapply(apps, build_app)
-setwd(curr)
-
+#setwd(curr)
 
 ## build for packages ahead of CRAN
 # non_cran <- function(app) {
