@@ -14,7 +14,7 @@ Radiant is an open-source platform-independent browser-based interface for busin
 - Programming: Integrate Radiant's analysis functions with your own R-code
 - Context: Data and examples focus on business applications
 
-<iframe width="640" height="375" src="https://www.youtube.com/embed/kFVxcpdoKi8" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="375" src="https://www.youtube.com/embed/7L3hDpLw53I" frameborder="0" allowfullscreen></iframe>
 
 #### Explore
 
