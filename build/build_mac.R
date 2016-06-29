@@ -16,15 +16,20 @@ update_app <- function(app, mess = "Update [ci skip]", git = FALSE, github = FAL
 
 apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
           "radiant.multivariate","radiant")
-sapply(apps, update_app, mess = "documentation updates", git = TRUE, github = TRUE)
+sapply(apps, update_app, mess = "build fix for inst/rstudio", git = TRUE, github = TRUE)
 # sapply(apps, update_app, git = FALSE, github = FALSE)
 
 ## build for mac
+path <- "~/gh"
+curr <- getwd(); setwd(path)
 build_app <- function(app) {
-	devtools::build(file.path("..",app))
-	devtools::build(file.path("..",app), binary = TRUE)
+	# devtools::build(file.path("..",app))
+	# devtools::build(file.path("..",app), binary = TRUE)
+	f <- devtools::build(file.path(path, app))
+	system(paste0("R CMD INSTALL --build ", f))
 }
 sapply(apps, build_app)
+setwd(curr)
 
 ## build for packages ahead of CRAN
 # non_cran <- function(app) {
