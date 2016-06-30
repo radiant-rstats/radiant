@@ -1,6 +1,6 @@
 # Radiant - Business analytics using R and Shiny
 
-<!-- [![Travis-CI Build Status](https://travis-ci.org/vnijs/radiant.png?branch=master)](https://travis-ci.org/vnijs/radiant) -->
+[![Travis-CI Build Status](https://travis-ci.org/radiant-rstat/radiant.png?branch=master)](https://travis-ci.org/radiant-rstats/radiant)
 <!-- [![Coverage Status](https://img.shields.io/coveralls/vnijs/radiant.svg)](https://coveralls.io/r/vnijs/radiant?branch=master) -->
 
 

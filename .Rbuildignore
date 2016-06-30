@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 ^.*\.sublime-project$
 ^build$
+^\.travis\.yml$

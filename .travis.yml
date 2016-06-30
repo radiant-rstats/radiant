@@ -1,0 +1,16 @@
+language: r
+warnings_are_errors: false
+sudo: required
+
+r_github_packages:
+  - jimhester/covr
+  - rstudio/DT
+  - rstudio/shiny
+  - rich-iannone/DiagrammeR
+  - fawda123/NeuralNetTools
+  - radiant-rstats/radiant.data
+  - radiant-rstats/radiant.design
+  - radiant-rstats/radiant.basics
+  - radiant-rstats/radiant.model
+  - radiant-rstats/radiant.multivariate
+
