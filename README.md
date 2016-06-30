@@ -1,6 +1,6 @@
 # Radiant - Business analytics using R and Shiny
 
-[![Travis-CI Build Status](https://travis-ci.org/radiant-rstat/radiant.png?branch=master)](https://travis-ci.org/radiant-rstats/radiant)
+[![Build Status](https://travis-ci.org/radiant-rstats/radiant.png?branch=master)](https://travis-ci.org/radiant-rstats/radiant)
 <!-- [![Coverage Status](https://img.shields.io/coveralls/vnijs/radiant.svg)](https://coveralls.io/r/vnijs/radiant?branch=master) -->
 
 
@@ -140,4 +140,4 @@ As a summary, the AGPLv3 license requires, attribution, including copyright and 
 
 If you are interested in using Radiant please email me at radiant@rady.ucsd.edu
 
-&copy; Vincent Nijs (2016) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/base/images/80x15.png" /></a>
+&copy; Vincent Nijs (2016) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/images/80x15.png" /></a>
