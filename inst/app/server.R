@@ -7,7 +7,7 @@ shinyServer(function(input, output, session) {
   ## source data & app tools from radiant.data
   for (file in list.files(c(file.path(getOption("radiant.path.data"),"app/tools/app"),
                             file.path(getOption("radiant.path.data"),"app/tools/data")),
-                          pattern="\\.(r|R)$", full.names = TRUE))
+                          pattern = "\\.(r|R)$", full.names = TRUE))
     source(file, encoding = getOption("radiant.encoding"), local = TRUE)
 
   ## list of radiant menu's to include
