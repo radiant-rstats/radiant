@@ -19,7 +19,7 @@ update_radiant <- function() {
   type <- ifelse(os_type == "Linux", "source", "binary")
 
   ## avoid problems with loaded packages
-  system(paste0(Sys.which("R"), " -e \"install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "'); suppressWarnings(update.packages(repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "'))\""))
+  system(paste0(Sys.which("R"), " -e \"install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "'); suppressWarnings(update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "'))\""))
 
   ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
   ret <- .rs.restartR()
@@ -54,16 +54,17 @@ win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
       message(paste0("The launcher function was unable to find your Desktop. The launcher and update files/icons will be put in the directory: ", pt))
     }
 
-    pt <- normalizePath(pt, winslash='/')
+    pt <- normalizePath(pt, winslash = "/")
 
     fn1 <- file.path(pt, "radiant.bat")
-    launch_string <- paste0("\"",Sys.which('R'), "\" -e \"if (!require(radiant)) { install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary') }; library(radiant); shiny::runApp(system.file(\'", app[1], "\', package='radiant'), port = 4444, launch.browser = TRUE)\"")
-    cat(launch_string, file=fn1, sep="\n")
+    launch_string <- paste0("\"",Sys.which('R'), "\" -e \"if (!require(radiant)) { install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary') }; library(radiant); shiny::runApp(system.file('app', package='", app[1], "'), port = 4444, launch.browser = TRUE)\"")
+    launch_string
+    cat(launch_string, file = fn1, sep = "\n")
     Sys.chmod(fn1, mode = "0755")
 
     fn2 <- file.path(pt, "update_radiant.bat")
-    launch_string <- paste0("\"", Sys.which('R'), "\" -e \"unlink('~/r_sessions/*.rds', force = TRUE); install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary'); suppressWarnings(update.packages(repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = 'binary'))\"\npause(1000)")
-    cat(launch_string,file=fn2,sep="\n")
+    launch_string <- paste0("\"", Sys.which('R'), "\" -e \"unlink('~/r_sessions/*.rds', force = TRUE); install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary'); suppressWarnings(update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = 'binary'))\"\npause(1000)")
+    cat(launch_string, file = fn2,sep = "\n")
     Sys.chmod(fn2, mode = "0755")
 
     if (file.exists(fn1) && file.exists(fn2))
@@ -96,13 +97,13 @@ mac_launcher <- function(app = c("radiant","radiant.data","radiant.design","radi
     if (!file.exists(local_dir)) dir.create(local_dir, recursive = TRUE)
 
     fn1 <- paste0("/Users/",Sys.getenv("USER"),"/Desktop/radiant.command")
-    launch_string <- paste0("#!/usr/bin/env Rscript\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary')\n}\n\nlibrary(radiant)\nshiny::runApp(system.file(\'", app[1], "\', package='radiant'), port = 4444, launch.browser = TRUE)\n")
-    cat(launch_string,file=fn1,sep="\n")
+    launch_string <- paste0("#!/usr/bin/env Rscript\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary')\n}\n\nlibrary(radiant)\nshiny::runApp(system.file('app', package='", app[1], "'), port = 4444, launch.browser = TRUE)\n")
+    cat(launch_string, file = fn1, sep = "\n")
     Sys.chmod(fn1, mode = "0755")
 
     fn2 <- paste0("/Users/",Sys.getenv("USER"),"/Desktop/update_radiant.command")
-    launch_string <- paste0("#!/usr/bin/env Rscript\nunlink('~/r_sessions/*.rds', force = TRUE)\ninstall.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary')\nsuppressWarnings(update.packages(repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = 'binary'))\nSys.sleep(1000)")
-    cat(launch_string,file=fn2,sep="\n")
+    launch_string <- paste0("#!/usr/bin/env Rscript\nunlink('~/r_sessions/*.rds', force = TRUE)\ninstall.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary')\nsuppressWarnings(update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = 'binary'))\nSys.sleep(1000)")
+    cat(launch_string, file = fn2, sep= "\n")
     Sys.chmod(fn2, mode = "0755")
 
     if (file.exists(fn1) && file.exists(fn2))
@@ -136,13 +137,13 @@ lin_launcher <- function(app = c("radiant","radiant.data","radiant.design","radi
     if (!file.exists(local_dir)) dir.create(local_dir, recursive = TRUE)
 
     fn1 <- paste0(Sys.getenv("HOME"),"/Desktop/radiant.sh")
-    launch_string <- paste0("#!/usr/bin/env Rscript\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/')\n}\n\nlibrary(radiant)\nshiny::runApp(system.file(\'", app[1], "\', package='radiant'), port = 4444, launch.browser = TRUE)\n")
-    cat(launch_string,file=fn1,sep="\n")
+    launch_string <- paste0("#!/usr/bin/env Rscript\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/')\n}\n\nlibrary(radiant)\nshiny::runApp(system.file('app', package='", app[1], "'), port = 4444, launch.browser = TRUE)\n")
+    cat(launch_string, file = fn1, sep = "\n")
     Sys.chmod(fn1, mode = "0755")
 
-    fn2 <- paste0("/Users/",Sys.getenv("USER"),"/Desktop/update_radiant.sh")
-    launch_string <- paste0("#!/usr/bin/env Rscript\nunlink('~/r_sessions/*.rds', force = TRUE)\ninstall.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/')\nsuppressWarnings(update.packages(repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE))\nsleep(1000)")
-    cat(launch_string,file=fn2,sep="\n")
+    fn2 <- paste0(Sys.getenv("HOME"),"/Desktop/update_radiant.sh")
+    launch_string <- paste0("#!/usr/bin/env Rscript\nunlink('~/r_sessions/*.rds', force = TRUE)\ninstall.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/')\nsuppressWarnings(update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE))\nsleep(1000)")
+    cat(launch_string, file = fn2, sep = "\n")
     Sys.chmod(fn2, mode = "0755")
 
     if (file.exists(fn1) && file.exists(fn2))
