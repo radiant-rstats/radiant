@@ -15,8 +15,11 @@ update_radiant <- function() {
   ## cleanup old session files
   unlink("~/radiant.sessions/*.rds", force = TRUE)
 
+  os_type <- Sys.info()["sysname"]
+  type <- ifelse(os_type == "Linux", "source", "binary")
+
   ## avoid problems with loaded packages
-  system(paste0(Sys.which("R"), " -e \"install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = 'binary'); suppressWarnings(update.packages(repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = 'binary'))\""))
+  system(paste0(Sys.which("R"), " -e \"install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "'); suppressWarnings(update.packages(repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "'))\""))
 
   ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
   ret <- .rs.restartR()
@@ -132,13 +135,13 @@ lin_launcher <- function(app = c("radiant","radiant.data","radiant.design","radi
     local_dir <- Sys.getenv("R_LIBS_USER")
     if (!file.exists(local_dir)) dir.create(local_dir, recursive = TRUE)
 
-    fn1 <- paste0("/home/",Sys.getenv("USER"),"/Desktop/radiant.sh")
+    fn1 <- paste0(Sys.getenv("HOME"),"/Desktop/radiant.sh")
     launch_string <- paste0("#!/usr/bin/env Rscript\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/')\n}\n\nlibrary(radiant)\nshiny::runApp(system.file(\'", app[1], "\', package='radiant'), port = 4444, launch.browser = TRUE)\n")
     cat(launch_string,file=fn1,sep="\n")
     Sys.chmod(fn1, mode = "0755")
 
     fn2 <- paste0("/Users/",Sys.getenv("USER"),"/Desktop/update_radiant.sh")
-    launch_string <- paste0("#!/usr/bin/env Rscript\nunlink('~/r_sessions/*.rds', force = TRUE)\ninstall.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/')\nsuppressWarnings(update.packages(repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = 'binary'))\nsleep(1000)")
+    launch_string <- paste0("#!/usr/bin/env Rscript\nunlink('~/r_sessions/*.rds', force = TRUE)\ninstall.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/')\nsuppressWarnings(update.packages(repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE))\nsleep(1000)")
     cat(launch_string,file=fn2,sep="\n")
     Sys.chmod(fn2, mode = "0755")
 
