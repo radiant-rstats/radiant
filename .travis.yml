@@ -5,9 +5,8 @@ sudo: required
 r_github_packages:
   - jimhester/covr
   - rstudio/DT
+  - kevinushey/sourcetools
   - rstudio/shiny
-  - rich-iannone/DiagrammeR
-  - fawda123/NeuralNetTools
   - radiant-rstats/radiant.data
   - radiant-rstats/radiant.design
   - radiant-rstats/radiant.basics
