@@ -8,8 +8,8 @@ cat("--", file="figures/place_holder.txt")
 filenames <- list.files(pattern="\\.(md|Rmd)$")
 for ( f in filenames ){
   org <- readLines(f)
-  changed <- gsub( "figures_quant/",  "http://vnijs.github.io/radiant/quant/figures_quant/", org )
-#   changed <- gsub( "http://vnijs.github.io/radiant/marketing/figures_quant/",  "http://vnijs.github.io/radiant/quant/figures_quant/", org )
+  changed <- gsub( "figures_quant/",  "https://radiant-rstats.github.io/docs/basics/figures_quant/", org )
+#   changed <- gsub( "https://radiant-rstats.github.io/docs/multivariate/figures_quant/",  "https://radiant-rstats.github.io/docs/basics/figures_quant/", org )
   cat(changed, file=f, sep="\n")
 }
 
@@ -22,6 +22,6 @@ cat("--", file="figures/place_holder.txt")
 filenames <- list.files(pattern="\\.(md|Rmd)$")
 for ( f in filenames ){
   org <- readLines(f)
-  changed <- gsub( "figures_marketing/",  "http://vnijs.github.io/radiant/marketing/figures_marketing/", org )
+  changed <- gsub( "figures_marketing/",  "https://radiant-rstats.github.io/docs/multivariate/figures_marketing/", org )
   cat(changed, file=f, sep="\n")
 }
