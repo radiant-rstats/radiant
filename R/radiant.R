@@ -19,7 +19,7 @@ update_radiant <- function() {
   type <- ifelse (os_type == "Linux", "source", "binary")
 
   ## avoid problems with loaded packages
-  system(paste0(Sys.which("R"), " -e \"install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "'); update.packages(lib.loc = .libPaths(), repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "')\""))
+  system(paste0(Sys.which("R"), " -e \"install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "'); update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "')\""))
 
   ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
   ret <- .rs.restartR()
