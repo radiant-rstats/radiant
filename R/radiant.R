@@ -18,12 +18,8 @@ update_radiant <- function() {
   os_type <- Sys.info()["sysname"]
   type <- ifelse (os_type == "Linux", "source", "binary")
 
-  ## avoid problems with loaded packages
-  # system(paste0(Sys.which("R"), " -e \"pkgs <- c('radiant.data','radiant.design','radiant.basics','radiant.model','radiant.multivariate','radiant'); install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', dependencies = TRUE, type = '", type, "'); update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "'); res <- sapply(pkgs, function(rp) { rp <- 'radiant.data'; ret <- try(suppressPackageStartupMessages(library(rp, character.only = TRUE)), silent = TRUE); if (is(ret, 'try-error')) install.packages(rp, repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "')})\""))
-
-  system(paste0(Sys.which("R"), " -e \"pkgs <- c('radiant.data','radiant.design','radiant.basics','radiant.model','radiant.multivariate','radiant'); install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', dependencies = TRUE, type = '", type, "'); update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "'); pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "', ask = FALSE); if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', dependencies = TRUE, type = '", type, "')\""))
-
-  new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = 'binary', ask = FALSE)
+  ## avoid problems with loaded packages, new.packages added for windoze
+  system(paste0(Sys.which("R"), " -e \"install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "'); update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "'); pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "', ask = FALSE); if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "')\""))
 
   ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
   ret <- .rs.restartR()
