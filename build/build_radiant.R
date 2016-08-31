@@ -6,6 +6,7 @@ dirsrc <- file.path("minicran/src/contrib")
 dirmac <- file.path("minicran/bin/macosx/mavericks/contrib",rv)
 dirwin <- file.path("minicran/bin/windows/contrib",rv)
 
+
 if (!file.exists(dirsrc)) dir.create(dirsrc, recursive = TRUE)
 if (!file.exists(dirmac)) dir.create(dirmac, recursive = TRUE)
 if (!file.exists(dirwin)) dir.create(dirwin, recursive = TRUE)
