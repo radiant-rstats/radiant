@@ -4,14 +4,19 @@
 #'
 #' @export
 radiant <- function() {
-  if (!"package:radiant" %in% search())
-    if (!require(radiant)) stop("Calling radiant start function but radiant is not installed.")
-  runApp(system.file("app", package = "radiant"), launch.browser = TRUE)
+  message("Starting Radiant ...")
+  if (!"package:radiant" %in% search()) {
+    if (!suppressMessages(require(radiant)))
+      stop("Calling radiant start function but radiant is not installed.")
+  }
+  shiny::runApp(system.file("app", package = "radiant"), launch.browser = TRUE)
 }
 
 #' Update Radiant
 #' @export
 update_radiant <- function() {
+
+  message("Updating Radiant ...")
   ## cleanup old session files
   unlink("~/radiant.sessions/*.rds", force = TRUE)
 
