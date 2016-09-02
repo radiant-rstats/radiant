@@ -8,8 +8,8 @@ Description: A platform-independent browser-based interface for business
     analytics in R, based on the Shiny package.
 Depends:
     R (>= 3.3.0),
-    radiant.data (>= 0.5.19),
-    radiant.design (>= 0.5.7),
+    radiant.data (>= 0.5.21),
+    radiant.design (>= 0.5.9),
     radiant.basics (>= 0.5.9),
     radiant.model (>= 0.5.10),
     radiant.multivariate (>= 0.5.8)
