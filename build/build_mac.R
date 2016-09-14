@@ -16,7 +16,8 @@ update_app <- function(app, mess = "Update [ci skip]", git = FALSE, github = FAL
 
 apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
           "radiant.multivariate","radiant")
-sapply(apps, update_app, mess = "travis and docs", git = TRUE, github = TRUE)
+
+sapply(apps, update_app, mess = "update", git = TRUE, github = TRUE)
 # sapply(apps, update_app, git = FALSE, github = FALSE)
 
 ## build for mac
