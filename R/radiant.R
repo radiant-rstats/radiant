@@ -29,7 +29,8 @@ update_radiant <- function() {
   ## strange behavior on windows using cmd below
   # cmd <- paste0("install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "'); update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "'); pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "', ask = FALSE); if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "')")
 
-  ## try to unload libraries that are blocking the update (i.e., unable to remove)
+  ## restart R(studio) with a command to avoid having to unload libraries that
+  ## are blocking the update (i.e., "unable to remove" error)
   cmd <- ""
   if (os_type == "Windows") {
     pkgs <- new.packages(lib.loc = .libPaths()[1], repos = "https://radiant-rstats.github.io/minicran", type = "binary", ask = FALSE)
@@ -38,6 +39,7 @@ update_radiant <- function() {
     }
   }
 
+  ## message to alternative update command, temporary fail-safe
   message("Alternative update command:\n\nsource('https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/build.R')")
 
   ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
