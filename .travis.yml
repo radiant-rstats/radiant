@@ -1,15 +1,10 @@
 language: r
-warnings_are_errors: false
+cache: packages
+warnings_are_errors: true
 sudo: required
+dist: trusty
 
 r_github_packages:
-  - jimhester/covr
-  - rstudio/DT
   - kevinushey/sourcetools
-  - rstudio/shiny
-  - radiant-rstats/radiant.data
-  - radiant-rstats/radiant.design
-  - radiant-rstats/radiant.basics
   - radiant-rstats/radiant.model
-  - radiant-rstats/radiant.multivariate
 

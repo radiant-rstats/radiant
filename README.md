@@ -4,7 +4,7 @@
 <!-- [![Coverage Status](https://img.shields.io/coveralls/vnijs/radiant.svg)](https://coveralls.io/r/vnijs/radiant?branch=master) -->
 
 
-Radiant is an open-source platform-independent browser-based interface for business analytics in [R](http://www.r-project.org/). The application is based on the [Shiny](http://www.rstudio.com/shiny/) package and can be run locally or on a server. Radiant was developed by <a href="http://rady.ucsd.edu/faculty/directory/nijs/" target="\_blank">Vincent Nijs</a>. Please use the issue tracker on GitHub to suggest enhancements or report problems: https://github.com/radiant-rstats/radiant/issues. For other questions and comments please use radiant@rady.ucsd.edu.
+Radiant is an open-source platform-independent browser-based interface for business analytics in [R](https://www.r-project.org/). The application is based on the [Shiny](https://www.rstudio.com/shiny/) package and can be run locally or on a server. Radiant was developed by <a href="http://rady.ucsd.edu/faculty/directory/nijs/" target="\_blank">Vincent Nijs</a>. Please use the issue tracker on GitHub to suggest enhancements or report problems: https://github.com/radiant-rstats/radiant/issues. For other questions and comments please use radiant@rady.ucsd.edu.
 
 ## Key features
 
@@ -34,7 +34,7 @@ If you are using Radiant on a server you can even share the url (include the SSU
 
 #### Programming
 
-Although Radiant's web-interface can handle quite a few data and analysis tasks, you may prefer to write your own R-code. Radiant provides a bridge to programming in R(studio) by exporting the functions used for analysis (i.e., you can conduct your analysis using the Radiant web-interface or by calling Radiant's functions directly from R-code). For more information about programming with Radiant see the [programming](http://radiant-rstats.github.io/docs/programming.html) page on the documentation site.
+Although Radiant's web-interface can handle quite a few data and analysis tasks, you may prefer to write your own R-code. Radiant provides a bridge to programming in R(studio) by exporting the functions used for analysis (i.e., you can conduct your analysis using the Radiant web-interface or by calling Radiant's functions directly from R-code). For more information about programming with Radiant see the [programming](https://radiant-rstats.github.io/docs/programming.html) page on the documentation site.
 
 #### Context
 
@@ -44,7 +44,7 @@ Radiant focuses on business data and decisions. It offers tools, examples, and d
 
 - Required: [R](https://cran.r-project.org/) version 3.3.0 or later
 - Required: A modern browser (e.g., [Chrome](https://www.google.com/intl/en/chrome/browser/desktop/) or Safari). Internet Explorer (version 11 or higher) should work as well
-- Required: [Rstudio](http://www.rstudio.com/products/rstudio/download/)
+- Required: [Rstudio](https://www.rstudio.com/products/rstudio/download/)
 
 If you use Rstudio (version 0.99.893 or later) you can start and update Radiant through the `Addins` menu at the top of the screen. To install the latest version of Radiant for Windows or Mac, with complete documentation for off-line access, open R(studio) and copy-and-paste the command below:
 
@@ -58,7 +58,7 @@ Once all packages are installed select `Radiant` from the `Addins` menu in Rstud
 radiant::radiant()
 ```
 
-See the [installing radiant](http://radiant-rstats.github.io/docs/install.html) page for details.
+See the [installing radiant](https://radiant-rstats.github.io/docs/install.html) page for details.
 
 **Optional:** You can also create a launcher on your Desktop to start Radiant by typing `radiant::launcher()` in the R(studio) console and pressing return. A file called `radiant.bat` (windows) or `radiant.command` (mac) will be created that you can double-click to start Radiant in your default browser. The `launcher` command will also create a file called `update_radiant.bat` (windows) or `update_radiant.command` (mac) that you can double-click to update Radiant to the latest release.
 
@@ -66,9 +66,9 @@ When Radiant starts you will see data on diamond prices. To close the applicatio
 
 ## Documentation
 
-Documentation and tutorials are available at <http://radiant-rstats.github.io/docs/> and in the Radiant web interface (the <i title='Help' class='fa fa-question'></i> icons on each page and the <i title='Help' class='fa fa-question-circle'></i> icon in the navigation bar).
+Documentation and tutorials are available at <https://radiant-rstats.github.io/docs/> and in the Radiant web interface (the <i title='Help' class='fa fa-question'></i> icons on each page and the <i title='Help' class='fa fa-question-circle'></i> icon in the navigation bar).
 
-Want some help getting started? Watch the tutorials on the [documentation site](http://radiant-rstats.github.io/docs/tutorials.html).
+Want some help getting started? Watch the tutorials on the [documentation site](https://radiant-rstats.github.io/docs/tutorials.html).
 
 ## Reporting issues
 
@@ -98,7 +98,7 @@ To run your own server instance copy/fork the repo from github and [deploy to sh
 
 ## Running Radiant on shiny-server
 
-You can also host Radiant using [shiny-server](http://www.rstudio.com/products/rstudio/download-server/). First, install radiant on the server using the command below:
+You can also host Radiant using [shiny-server](https://www.rstudio.com/products/rstudio/download-server/). First, install radiant on the server using the command below:
 
 ```r
 install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/")
@@ -128,16 +128,16 @@ These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Rese
 
 ## Credits
 
-Radiant would not be possible without [R](https://cran.r-project.org/) and [Shiny](http://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmardown, and DT. For an overview of other packages that Radiant relies on please see the <a href="http://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
+Radiant would not be possible without [R](https://cran.r-project.org/) and [Shiny](http://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmardown, and DT. For an overview of other packages that Radiant relies on please see the <a href="https://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
 
 
 ## License
 
 
-Radiant is licensed under the <a href="http://www.tldrlegal.com/l/AGPL3" target="\_blank">AGPLv3</a>. The documentation and videos on this site as well as the Radiant help files are licensed under the creative commons attribution, non-commercial, share-alike license <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA</a>.
+Radiant is licensed under the <a href="https://www.tldrlegal.com/l/AGPL3" target="\_blank">AGPLv3</a>. The documentation and videos on this site as well as the Radiant help files are licensed under the creative commons attribution, non-commercial, share-alike license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA</a>.
 
 As a summary, the AGPLv3 license requires, attribution, including copyright and license information in copies of the software, stating changes if the code is modified, and disclosure of all source code. Details are in the COPYING file.
 
 If you are interested in using Radiant please email me at radiant@rady.ucsd.edu
 
-&copy; Vincent Nijs (2016) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/images/80x15.png" /></a>
+&copy; Vincent Nijs (2016) <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/images/80x15.png" /></a>
