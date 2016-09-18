@@ -3,3 +3,4 @@
 ^.*\.sublime-project$
 ^build$
 ^\.travis\.yml$
+cran-comments.md

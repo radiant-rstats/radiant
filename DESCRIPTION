@@ -4,8 +4,7 @@ Title: Radiant: Business Analytics using R and Shiny
 Version: 0.6.0
 Date: 2016-9-18
 Authors@R: person("Vincent", "Nijs", , "radiant@rady.ucsd.edu", c("aut", "cre"))
-Description: A platform-independent browser-based interface for business
-    analytics in R, based on the Shiny package. Combines the functionality of radiant.data, radiant.design, radiant.basics, radiant.model, and radiant.multivariate
+Description: Radiant is a platform-independent browser-based interface for business analytics in R, based on the Shiny package. The application combines the functionality of radiant.data, radiant.design, radiant.basics, radiant.model, and radiant.multivariate.
 Depends:
     R (>= 3.3.0),
     radiant.data (>= 0.6.0),
