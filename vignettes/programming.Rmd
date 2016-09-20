@@ -6,7 +6,7 @@ output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Programming with Radiant}
   %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r echo = FALSE}
@@ -142,4 +142,3 @@ head(shopping)
 ```
 
 See if you can reproduce this output in the radiant web-interface. Start `Radiant` from the `Addins` dropdown in Rstudio. You can also run code inside the Radiant app in the _R > Code_ tab. See <a href="/docs/data/code.html" target="_blank">Code</a> page for details.
-
