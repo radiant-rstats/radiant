@@ -1,9 +1,15 @@
 ## Resubmission
 
-* I was already using R 3.3.1 for the previous submissions and (re-)building and knitting the vignette worked fine. I did various searches online and, as far as I can tell, I followed the appropriate devtools process. The message continued to show up however. I asked for additional guidance but didn't receive any and so I decided to remove the vignette to avoid wasting more CRAN time. Also, the text that was in the vignette is also available on the Radiant documentation site at the following link: https://radiant-rstats.github.io/docs/programming.html
-* Radiant is an rstudio addin and a shiny app. The UI code is in inst/app and must be tested interactively. The code in R/ is for running and updating the application and is only used in interactive sessions. In sum, testing, including examples, must be done by the package maintainer and the end-user. The analysis code used as part of the different Radiant menu's is in the packages radiant.data, radiant.design, radiant.basics, radiant.model, and radiant.multivariate that I recently submitted to CRAN and is tested there.
+This is a resubmission. In this version I have:
+
+* added a vignette to document the package
 
 ## Previous cran-comments
+
+## Resubmission
+
+* I was already using R 3.3.1 for the previous submissions and (re-)building and knitting the vignette worked fine. I did various searches online and, as far as I can tell, I followed the appropriate devtools process. The message continued to show up however. I asked for additional guidance but didn't receive any and so I decided to remove the vignette to avoid wasting more CRAN time. Also, the text that was in the vignette is also available on the Radiant documentation site at the following link: https://radiant-rstats.github.io/docs/programming.html
+* Radiant is an rstudio addin and a shiny app. The UI code is in inst/app and must be tested interactively. The code in R/ is for running and updating the application and is only used in interactive sessions. In sum, testing, including examples, must be done by the package maintainer and the end-user. The analysis code used as part of the different Radiant menu's is in the packages radiant.data, radiant.design, radiant.basics, radiant.model, and radiant.multivariate that I recently submitted to CRAN and is tested there.
 
 ## Resubmission
 

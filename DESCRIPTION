@@ -2,9 +2,12 @@ Package: radiant
 Type: Package
 Title: Business Analytics using R and Shiny
 Version: 0.6.0
-Date: 2016-9-18
+Date: 2016-9-21
 Authors@R: person("Vincent", "Nijs", , "radiant@rady.ucsd.edu", c("aut", "cre"))
-Description: A platform-independent browser-based interface for business analytics in R, based on the 'shiny' package. The application combines the functionality of 'radiant.data', 'radiant.design', 'radiant.basics', 'radiant.model', and 'radiant.multivariate'.
+Description: A platform-independent browser-based interface for business
+    analytics in R, based on the 'shiny' package. The application combines the
+    functionality of 'radiant.data', 'radiant.design', 'radiant.basics',
+    'radiant.model', and 'radiant.multivariate'.
 Depends:
     R (>= 3.3.0),
     radiant.data (>= 0.6.0),
@@ -19,9 +22,12 @@ Imports:
     import (>= 1.1.0)
 Suggests:
     testthat (>= 1.0.0),
-    covr (>= 1.2.0)
+    covr (>= 1.2.0),
+    knitr,
+    rmarkdown
 URL: https://github.com/radiant-rstats/radiant
 BugReports: https://github.com/radiant-rstats/radiant/issues
 License: AGPL-3 | file LICENSE
 LazyData: true
 RoxygenNote: 5.0.1
+VignetteBuilder: knitr

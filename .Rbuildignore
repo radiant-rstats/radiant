@@ -1,6 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^.*\.sublime-project$
-^build$
 ^\.travis\.yml$
+^.*\.sublime-project$
 cran-comments.md
