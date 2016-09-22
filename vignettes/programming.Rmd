@@ -17,7 +17,7 @@ data("salary")
 data("shopping")
 ```
 
-Radiant's goal is to provide access to the power of R for business analytics. Although Radiant's web-interface can handle quite a few data and analysis tasks, you may prefer to write your own code. Radiant provides a bridge to programming in R(studio) by exporting the functions used for analysis. For example, you can run your analyses in Radiant and output the relevant function calls to an [Rmarkdown](http://rmarkdown.rstudio.com/) document. Most pages in the app have an icon you can click (e.g., the book icon on the bottom left on the _Basics > Means > Single mean_ page) to start working on your report. Press the `Knit report` button on the _R > Report_ page to render the report to HTML. See the <a href="https://radiant-rstats.github.io/docs/data/report.html">Report</a> page for details. The function manuals can be viewd using the commands below:
+Radiant's goal is to provide access to the power of R for business analytics. Although Radiant's web-interface can handle quite a few data and analysis tasks, you may prefer to write your own code. Radiant provides a bridge to programming in R(studio) by exporting the functions used for analysis. For example, you can run your analyses in Radiant and output the relevant function calls to an [Rmarkdown](http://rmarkdown.rstudio.com/) document. Most pages in the app have an icon you can click (e.g., the book icon on the bottom left on the _Basics > Means > Single mean_ page) to start working on your report. Press the `Knit report` button on the _R > Report_ page to render the report to HTML. The function manuals can be viewed using the commands below:
 
 ```{r eval = FALSE}
 help(package = radiant.data)
@@ -44,12 +44,10 @@ visualize(diamonds, xvar = "carat", yvar = "price", type = "scatter",
           facet_row = "clarity", color = "clarity")
 ```
 
-As an example, you can render the [`single_mean.Rmd`](https://radiant-rstats.github.io/docs/examples/single_mean.Rmd) file into html (or PDF or Word if you prefer) in Rstudio. Try the code in [`radiant_rcode.R`](https://radiant-rstats.github.io/docs/examples/radiant_rcode.R) for a more extensive example.
-
 To install the latest version of Radiant with complete documentation for offline access, open R(studio) and copy-and-paste the commands below:
 
 ```r
-install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/")
+install.packages("radiant")
 library(radiant)
 ```
 
@@ -111,7 +109,7 @@ As another example, imagine that you want to segment a sample of respondents bas
 library(radiant.multivariate)
 
 ## load the data directly from a url
-shopping <- loadrda_url("https://github.com/radiant-rstats/radiant.multivariate/blob/master/data/shopping.rda?raw=true")
+data("shopping")
 
 ## run hierarchical cluster analysis on the shopping data, variables v1 through v6
 result <- hier_clus(shopping, "v1:v6")
@@ -139,8 +137,8 @@ summary(result)
 plot(result)
 shopping <- store(result)
 
-## was the data really ?
+## was the data really changed?
 head(shopping)
 ```
 
-See if you can reproduce this output in the radiant web-interface. Start `Radiant` from the `Addins` dropdown in Rstudio. You can also run code inside the Radiant app in the _R > Code_ tab. See <a href="https://radiant-rstats.github.io/docs/data/code.html" target="_blank">Code</a> page for details.
+See if you can reproduce this output in the radiant web-interface. Start `Radiant` from the `Addins` dropdown in Rstudio.

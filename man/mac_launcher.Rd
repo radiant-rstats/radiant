@@ -16,4 +16,10 @@ Create a launcher and updater for Mac (.command)
 \details{
 On Mac a file named 'radiant.command' and one named 'update_radiant.command' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version
 }
+\examples{
+\dontrun{
+mac_launcher()
+}
+
+}
 

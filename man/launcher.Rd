@@ -16,6 +16,12 @@ Create a launcher on the desktop for Windows (.bat), Mac (.command), or Linux (.
 \details{
 On Windows/Mac/Linux a file named radiant.bat/radiant.command/radiant.sh will be put on the desktop. Double-click the file to launch the specified Radiant app
 }
+\examples{
+\dontrun{
+launcher("radiant")
+}
+
+}
 \seealso{
 \code{\link{win_launcher}} to create a shortcut on Windows
 

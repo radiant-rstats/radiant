@@ -16,4 +16,10 @@ Create a launcher and updater for Windows (.bat)
 \details{
 On Windows a file named 'radiant.bat' and one named 'update_radiant.bat' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version
 }
+\examples{
+\dontrun{
+win_launcher()
+}
+
+}
 

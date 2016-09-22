@@ -9,4 +9,10 @@ update_radiant()
 \description{
 Update Radiant
 }
+\examples{
+\dontrun{
+update_radiant()
+}
+
+}
 

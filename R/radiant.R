@@ -2,6 +2,10 @@
 #'
 #' @details See \url{http://radiant-rstats.github.io/docs} for documentation and tutorials
 #'
+#' @examples
+#' \dontrun{
+#' radiant()
+#' }
 #' @export
 radiant <- function() {
   message("Starting Radiant ...")
@@ -13,6 +17,12 @@ radiant <- function() {
 }
 
 #' Update Radiant
+#'
+#' @examples
+#' \dontrun{
+#' update_radiant()
+#' }
+#'
 #' @export
 update_radiant <- function() {
 
@@ -51,6 +61,11 @@ update_radiant <- function() {
 #' @details On Windows a file named 'radiant.bat' and one named 'update_radiant.bat' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version
 #'
 #' @param app App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"
+#'
+#' @examples
+#' \dontrun{
+#' win_launcher()
+#' }
 #'
 #' @export
 win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate")) {
@@ -103,6 +118,11 @@ win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 #'
 #' @param app App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"
 #'
+#' @examples
+#' \dontrun{
+#' mac_launcher()
+#' }
+#'
 #' @export
 mac_launcher <- function(app = c("radiant","radiant.data","radiant.design","radiant.basics","radiant.model","radiant.multivariate")) {
 
@@ -142,6 +162,11 @@ mac_launcher <- function(app = c("radiant","radiant.data","radiant.design","radi
 #' @details On Linux a file named 'radiant.sh' and one named 'update_radiant.sh' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version
 #'
 #' @param app App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"
+#'
+#' @examples
+#' \dontrun{
+#' lin_launcher("radiant")
+#' }
 #'
 #' @export
 lin_launcher <- function(app = c("radiant","radiant.data","radiant.design","radiant.basics","radiant.model","radiant.multivariate")) {
@@ -186,6 +211,11 @@ lin_launcher <- function(app = c("radiant","radiant.data","radiant.design","radi
 #' @seealso \code{\link{lin_launcher}} to create a shortcut on Linux
 #'
 #' @param app App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"
+#'
+#' @examples
+#' \dontrun{
+#' launcher("radiant")
+#' }
 #'
 #' @export
 launcher <- function(app = c("radiant","radiant.data","radiant.design","radiant.basics","radiant.model","radiant.multivariate")) {

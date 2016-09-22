@@ -1,4 +1,3 @@
-## superfluous tests to avoid "checking for code which exercises the package ... WARNING No examples, no tests, no vignettes" warning
 context("Installed")
 
 test_that("radiant.data", {

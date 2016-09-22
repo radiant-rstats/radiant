@@ -1,5 +1,25 @@
 ## Resubmission
 
+This is a resubmission. In this version I have tried to make all requested changes as follows:
+
+"You still refer to multiple help pages on Github, e.g. https://radiant-rstats.github.io/docs/radiant.multivariate.pdf."
+
+* There are no more links to GitHub in the vignette
+
+"You refer to local files (at least "/docs/data/code.html") that will not exist on your users' systems."
+
+* There are no references to files that are not on the user's system in the vignette
+
+"You still have no examples in your help pages."
+
+* I have added examples to the help pages. Please note, however, that they are set to 'dontrun' because the functions exported in the radiant package should not be run as a part of automated testing.
+
+I apologize if I missed something or did not provided the expected changes. I'm happy to fix or change whatever is required.
+
+## Previous cran-comments
+
+## Resubmission
+
 This is a resubmission. In this version I have:
 
 * Fixed the links in the vignette. Thanks!

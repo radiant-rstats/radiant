@@ -16,4 +16,10 @@ Create a launcher and updater for Linux (.sh)
 \details{
 On Linux a file named 'radiant.sh' and one named 'update_radiant.sh' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version
 }
+\examples{
+\dontrun{
+lin_launcher("radiant")
+}
+
+}
 
