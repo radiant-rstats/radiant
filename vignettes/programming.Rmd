@@ -79,15 +79,9 @@ radiant()
 We can now use the `compare_means` function to evaluate salary data for professors of different ranks using:
 
 ```{r}
-result <- compare_means(salary, "rank", "salary")
+result <- compare_means("salary", "rank", "salary")
 summary(result)
 plot(result)
-```
-
-An alternative way to write this code is to use `piping` (see [dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/introduction.html) and [magrittr](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) vignettes):
-
-```{r}
-salary %>% compare_means("rank", "salary") %>% {summary(.); plot(.)}
 ```
 
 We can also run regressions and get output in a format that would require many lines of code to produce from scratch:
@@ -108,7 +102,7 @@ As another example, imagine that you want to segment a sample of respondents bas
 ## load the radiant library (not needed if run in Radiant's R > Code tab)
 library(radiant.multivariate)
 
-## load the data directly from a url
+## load the data
 data("shopping")
 
 ## run hierarchical cluster analysis on the shopping data, variables v1 through v6
