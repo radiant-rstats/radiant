@@ -13,7 +13,7 @@ Depends:
     radiant.data (>= 0.6.5),
     radiant.design (>= 0.6.0),
     radiant.basics (>= 0.6.0),
-    radiant.model (>= 0.6.0),
+    radiant.model (>= 0.6.4),
     radiant.multivariate (>= 0.6.0)
 Imports:
     psych (>= 1.6.6),
