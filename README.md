@@ -31,7 +31,7 @@ Radiant works on Windows, Mac, or Linux. It can run without an Internet connecti
 
 To conduct high-quality analysis, simply saving output is not enough. You need the ability to reproduce results for the same data and/or when new data become available. Moreover, others may want to review your analysis and results. Save and load the state of the application to continue your work at a later time or on another computer. Share state-files with others and create reproducible reports using [Rmarkdown](http://rmarkdown.rstudio.com/). See also the section on `Saving and loading state` below
 
-If you are using Radiant on a server you can even share the url (include the SSUID) with others so they can see what you are working on. Thanks for this feature go to [Joe Cheng](https://github.com/jcheng5).
+If you are using Radiant on a server you can even share the URL (include the SSUID) with others so they can see what you are working on. Thanks for this feature go to [Joe Cheng](https://github.com/jcheng5).
 
 #### Programming
 
@@ -75,27 +75,17 @@ Want some help getting started? Watch the tutorials on the [documentation site](
 
 Please use the GitHub issue tracker at <a href="https://github.com/radiant-rstats/radiant/issues" target="_blank">github.com/radiant-rstats/radiant/issues</a> if you have any problems using Radiant.
 
-<!--
-## Online
+## Try Radiant online
 
-Not ready to install Radiant on your computer? Try it online at the links below:
+Not ready to install Radiant on your computer? Try it online at the link below:
 
-<a href="https://vnijs.shinyapps.io/analytics" target="_blank">vnijs.shinyapps.io/analytics</a>
+<a href="https://vnijs.shinyapps.io/radiant" target="_blank">vnijs.shinyapps.io/radiant</a>
 
-<a href="https://vnijs.shinyapps.io/marketing" target="_blank">vnijs.shinyapps.io/marketing</a>
+Do **not** upload sensitive data to this public server. The size of data upload has been restricted to 5MB for security reasons.
 
-<a href="https://vnijs.shinyapps.io/quant" target="_blank">vnijs.shinyapps.io/quant</a>
+## Running Radiant on shinyapps.io
 
-<a href="https://vnijs.shinyapps.io/base" target="_blank">vnijs.shinyapps.io/base</a>
-
-Please **do not** upload sensitive data to these public servers. Note that data upload for the example applications is has been restricted 5MB for security reseasons.
-
-## Running Radiant on shinyapps.io / shiny-server
-
-You can run Radiant on shinyapps.io or a (linux) server supported by Shiny server.
-
-To run your own server instance copy/fork the repo from github and [deploy to shinyapps.io as usual](http://shiny.rstudio.com/articles/shinyapps.html). Shinyapps.io may complain about paths but you shouldn’t have any trouble if you know how to deploy to shinyapps.io. If you do run into difficulties, also clone the repo at <a href="https://github.com/vnijs/shinyapps" target="_blank">https://github.com/vnijs/shinyapps</a> and run the deploy2shinyapp.R file in the Radiant/build folder.
--->
+To run Radiant on shinyapps.io clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and [deploy](http://shiny.rstudio.com/articles/shinyapps.html).
 
 ## Running Radiant on shiny-server
 
@@ -129,7 +119,7 @@ These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Rese
 
 ## Credits
 
-Radiant would not be possible without [R](https://cran.r-project.org/) and [Shiny](http://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmardown, and DT. For an overview of other packages that Radiant relies on please see the <a href="https://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
+Radiant would not be possible without [R](https://cran.r-project.org/) and [Shiny](http://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmarkdown, and DT. For an overview of other packages that Radiant relies on please see the <a href="https://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
 
 
 ## License
