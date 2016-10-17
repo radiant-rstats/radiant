@@ -85,7 +85,7 @@ Do **not** upload sensitive data to this public server. The size of data upload 
 
 ## Running Radiant on shinyapps.io
 
-To run Radiant on shinyapps.io clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and [deploy](http://shiny.rstudio.com/articles/shinyapps.html).
+To run your own instance of Radiant on shinyapps.io clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and [deploy](http://shiny.rstudio.com/articles/shinyapps.html).
 
 ## Running Radiant on shiny-server
 
