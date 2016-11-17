@@ -5,6 +5,10 @@ sudo: required
 dist: trusty
 
 r_github_packages:
-  - kevinushey/sourcetools
+  - radiant-rstats/radiant.data
+  - radiant-rstats/radiant.design
+  - radiant-rstats/radiant.basics
   - radiant-rstats/radiant.model
+  - radiant-rstats/radiant.multivariate
+  - kevinushey/sourcetools
 

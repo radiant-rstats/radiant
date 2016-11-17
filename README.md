@@ -79,7 +79,7 @@ Please use the GitHub issue tracker at <a href="https://github.com/radiant-rstat
 
 Not ready to install Radiant on your computer? Try it online at the link below:
 
-<a href="https://vnijs.shinyapps.io/radiant" target="_blank">vnijs.shinyapps.io/radiant</a>
+<a href="https://vnijs.shinyapps.io/radiant" target="_blank">https://vnijs.shinyapps.io/radiant</a>
 
 Do **not** upload sensitive data to this public server. The size of data upload has been restricted to 5MB for security reasons.
 
