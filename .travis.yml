@@ -10,5 +10,4 @@ r_github_packages:
   - radiant-rstats/radiant.basics
   - radiant-rstats/radiant.model
   - radiant-rstats/radiant.multivariate
-  - kevinushey/sourcetools
 
