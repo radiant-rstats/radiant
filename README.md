@@ -50,13 +50,25 @@ Radiant focuses on business data and decisions. It offers tools, examples, and d
 If you use Rstudio (version 0.99.893 or later) you can start and update Radiant through the `Addins` menu at the top of the screen. To install the latest version of Radiant for Windows or Mac, with complete documentation for off-line access, open R(studio) and copy-and-paste the command below:
 
 ```r
-install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/", type = 'binary')
+install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/", type = "binary")
 ```
 
 Once all packages are installed select `Radiant` from the `Addins` menu in Rstudio or use the command below to launch the app:
 
 ```r
 radiant::radiant()
+```
+
+To update Radiant select `Update Radiant` from the `Addins` menu in Rstudio or use the command below:
+
+```r
+radiant::update_radiant()
+```
+
+Alternatively Radiant can be updated using the command:
+
+```r
+source("https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/build.R")
 ```
 
 See the [installing radiant](https://radiant-rstats.github.io/docs/install.html) page for details.
@@ -108,7 +120,7 @@ Loading and saving state also works with Rstudio. If you start Radiant from Rstu
 **Technical note**: Loading state works as follows in Radiant: When an input is initialized in a Shiny app you set a default value in the call to, for example, numericInput. In Radiant, when a state-file has been loaded and an input is initialized it looks to see if there is a value for an input of that name in a list called `r_state`. If there is, this value is used. The `r_state` list is created when saving state using `reactiveValuesToList(input)`. An example of a call to `numericInput` is given below where the `state_init` function from `radiant.R` is used to check if a value from `r_state` can be used.
 
 ```r
-numericInput("sm_comp_value", "Comparison value:", state_init('sm_comp_value', 0))
+numericInput("sm_comp_value", "Comparison value:", state_init("sm_comp_value", 0))
 ```
 
 ## Source code
