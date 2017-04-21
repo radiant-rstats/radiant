@@ -143,4 +143,4 @@ As a summary, the AGPLv3 license requires, attribution, including copyright and 
 
 If you are interested in using Radiant please email me at radiant@rady.ucsd.edu
 
-&copy; Vincent Nijs (2016) <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/images/80x15.png" /></a>
+&copy; Vincent Nijs (2017) <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/images/80x15.png" /></a>
