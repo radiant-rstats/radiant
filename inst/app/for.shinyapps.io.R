@@ -1,3 +1,6 @@
+## restart before installing from github
+.rs.restartR()
+
 ## install the latest version from github so it will be used on shinyapps.io
 devtools::install_github("radiant-rstats/radiant.data")
 devtools::install_github("radiant-rstats/radiant.design")

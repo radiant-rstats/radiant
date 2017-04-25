@@ -29,4 +29,3 @@ launcher("radiant")
 
 \code{\link{lin_launcher}} to create a shortcut on Linux
 }
-

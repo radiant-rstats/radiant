@@ -22,4 +22,3 @@ lin_launcher("radiant")
 }
 
 }
-

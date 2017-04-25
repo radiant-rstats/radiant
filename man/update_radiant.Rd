@@ -15,4 +15,3 @@ update_radiant()
 }
 
 }
-

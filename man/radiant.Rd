@@ -4,6 +4,7 @@
 \name{radiant}
 \alias{radiant}
 \alias{radiant-package}
+\alias{radiant}
 \title{radiant}
 \usage{
 radiant()
@@ -21,4 +22,3 @@ See \url{http://radiant-rstats.github.io/docs} for documentation and tutorials
 radiant()
 }
 }
-

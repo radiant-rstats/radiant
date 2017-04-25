@@ -127,7 +127,7 @@ numericInput("sm_comp_value", "Comparison value:", state_init("sm_comp_value", 0
 
 The source code is available on GitHub at <https://github.com/radiant-rstats>. `radiant.data`, offers data loading, saving, viewing, visualizing, combining, and transforming tools. `radiant.design` builds on `radiant.data` and adds tools for experimental design, sampling, and sample size calculation. `radiant.basics` covers the basics of statistical analysis (e.g., comparing means and proportions, cross-tabs, correlation, etc.) and includes a probability calculator. `radiant.model` covers model estimation (e.g., logistic regression and neural networks), model evaluation (e.g., gains chart, profit curve, confusion matrix, etc.), and decision tools (e.g., decision analysis and simulation). Finally, `radiant.multivariate` includes tools to generate brand maps and conduct cluster, factor, and conjoint analysis.
 
-These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Research for Marketing Decisions_, _Consumer behavior_, _Experiments in firms_, and _Customer Analytics_ classes at the Rady School of Management (UCSD).
+These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Research for Marketing Decisions_, _Consumer behavior_, _Experiments in firms_, _Pricing_, and _Customer Analytics_ classes at the Rady School of Management (UCSD).
 
 ## Credits
 
