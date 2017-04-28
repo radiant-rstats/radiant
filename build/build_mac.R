@@ -14,7 +14,8 @@ update_app <- function(app, mess = "Update [ci skip]", git = FALSE, github = FAL
 	invisible()
 }
 
-apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
+# apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
+apps <- c("radiant.design","radiant.basics", "radiant.model",
           "radiant.multivariate","radiant")
 
 sapply(apps, update_app, mess = "update", git = TRUE, github = TRUE)

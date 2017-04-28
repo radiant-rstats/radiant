@@ -1,9 +1,21 @@
 ## building radiant packages for mac and windows
 setwd("~/gh/")
+
 rv <- R.Version()
 rv <- paste0(rv$major,".", strsplit(rv$minor,".", fixed = TRUE)[[1]][1])
+
+rvprompt <- readline(prompt = paste0("Running for R version: ", rv, ". Is that what you wanted y/n: "))
+if (grepl("[nN]", rvprompt))
+  stop("Change R-version using RSwitch")
+
 dirsrc <- file.path("minicran/src/contrib")
-dirmac <- file.path("minicran/bin/macosx/mavericks/contrib",rv)
+
+if (rv == "3.3") {
+  dirmac <- file.path("minicran/bin/macosx/mavericks/contrib",rv)
+} else {
+  dirmac <- file.path("minicran/bin/macosx/el-capitan/contrib",rv)
+}
+
 dirwin <- file.path("minicran/bin/windows/contrib",rv)
 
 if (!file.exists(dirsrc)) dir.create(dirsrc, recursive = TRUE)
@@ -20,7 +32,8 @@ rem_old <- function(app) {
 sapply("radiant", rem_old)
 
 apps <- c("radiant", "radiant.design","radiant.basics", "radiant.model",
-          "radiant.multivariate", "radiant.data")
+          "radiant.multivariate")
+          # "radiant.multivariate", "radiant.data")
 
 ## probably need to restart Rstudion before building
 ## avoid 'loaded namespace' stuff when building for mac
