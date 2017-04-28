@@ -32,8 +32,7 @@ rem_old <- function(app) {
 sapply("radiant", rem_old)
 
 apps <- c("radiant", "radiant.design","radiant.basics", "radiant.model",
-          "radiant.multivariate")
-          # "radiant.multivariate", "radiant.data")
+          "radiant.multivariate", "radiant.data")
 
 ## probably need to restart Rstudion before building
 ## avoid 'loaded namespace' stuff when building for mac
