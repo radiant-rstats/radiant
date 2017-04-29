@@ -1,6 +1,6 @@
 ## Resubmission
 
-This is a resubmission (0.8.0). In this version I have updated all dependencies to the `radiant.*` packages. 
+This is a resubmission (0.8.0). In this version I have updated all dependencies to the `radiant.*` packages and fixed notes show at https://cran.rstudio.com/web/checks/check_results_radiant.html. 
 
 Please note that this version addresses the reverse dependency check warnings from radiant.data for the `radiant.*` packages. Deprecating the `*_each` commands used in the 0.6.0 versions of the `radiant.*` packages is related to the deprecation of the `*_each` functions in dplyr.
 
@@ -13,7 +13,7 @@ Please note that this version addresses the reverse dependency check warnings fr
 
 ## R CMD check results
 
-There were no ERRORs or WARNINGs. There was one NOTE about a possibly mis-spelled word ("Analytics"). The spelling is correct however. Could this word be added to the spell check database perhaps?
+There were no ERRORs or WARNINGs. There was one NOTE about possibly mis-spelled words ("Analytics" and "analytics"). The spelling is correct however. 
 
 ## Previous cran-comments
 

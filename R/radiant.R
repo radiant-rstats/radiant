@@ -4,7 +4,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' radiant()
+#' radiant::radiant()
 #' }
 #' @export
 radiant <- function() {
@@ -20,7 +20,7 @@ radiant <- function() {
 #'
 #' @examples
 #' \dontrun{
-#' update_radiant()
+#' radiant::update_radiant()
 #' }
 #'
 #' @export
@@ -64,7 +64,7 @@ update_radiant <- function() {
 #'
 #' @examples
 #' \dontrun{
-#' win_launcher()
+#' radiant::win_launcher()
 #' }
 #'
 #' @export
@@ -120,7 +120,7 @@ win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 #'
 #' @examples
 #' \dontrun{
-#' mac_launcher()
+#' radiant::mac_launcher()
 #' }
 #'
 #' @export
@@ -165,7 +165,7 @@ mac_launcher <- function(app = c("radiant","radiant.data","radiant.design","radi
 #'
 #' @examples
 #' \dontrun{
-#' lin_launcher("radiant")
+#' radiant::lin_launcher("radiant")
 #' }
 #'
 #' @export
@@ -214,7 +214,7 @@ lin_launcher <- function(app = c("radiant","radiant.data","radiant.design","radi
 #'
 #' @examples
 #' \dontrun{
-#' launcher("radiant")
+#' radiant::launcher("radiant.model")
 #' }
 #'
 #' @export
