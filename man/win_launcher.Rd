@@ -18,7 +18,7 @@ On Windows a file named 'radiant.bat' and one named 'update_radiant.bat' will be
 }
 \examples{
 \dontrun{
-win_launcher()
+radiant::win_launcher()
 }
 
 }

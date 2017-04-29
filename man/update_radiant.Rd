@@ -11,7 +11,7 @@ Update Radiant
 }
 \examples{
 \dontrun{
-update_radiant()
+radiant::update_radiant()
 }
 
 }

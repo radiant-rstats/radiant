@@ -18,7 +18,7 @@ On Linux a file named 'radiant.sh' and one named 'update_radiant.sh' will be put
 }
 \examples{
 \dontrun{
-lin_launcher("radiant")
+radiant::lin_launcher("radiant")
 }
 
 }

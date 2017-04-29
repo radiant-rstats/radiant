@@ -1,6 +1,6 @@
 ## Resubmission
 
-This is a resubmission (0.8.0). In this version I have updated all dependencies to the `radiant.*` packages and fixed notes show at https://cran.rstudio.com/web/checks/check_results_radiant.html. 
+This is a resubmission (0.8.0). In this version I have updated all dependencies to the `radiant.*` packages and fixed notes shown at https://cran.rstudio.com/web/checks/check_results_radiant.html. 
 
 Please note that this version addresses the reverse dependency check warnings from radiant.data for the `radiant.*` packages. Deprecating the `*_each` commands used in the 0.6.0 versions of the `radiant.*` packages is related to the deprecation of the `*_each` functions in dplyr.
 
@@ -42,9 +42,9 @@ I apologize if I missed something or did not provided the expected changes. I'm 
 This is a resubmission. In this version I have:
 
 * Fixed the links in the vignette. Thanks!
-* Radiant is a shiny app and all help associated with its sub-packages (e.g., radiant.data) is available when your run the app (see inst/app/tools/help in 'radiant.data' for its source markdown files). Having access to these help files through the user interface is more convenient than through R or Rstudio help because you also see it directly in the browser. See https://youtu.be/9qAQio9Hb7k?t=53 for an illustration. Note that users have acces to these helpfiles even if they are offline (i.e., they are part of the radiant packages).
+* Radiant is a shiny app and all help associated with its sub-packages (e.g., radiant.data) is available when your run the app (see inst/app/tools/help in 'radiant.data' for its source markdown files). Having access to these help files through the user interface is more convenient than through R or Rstudio help because you also see it directly in the browser. See https://youtu.be/9qAQio9Hb7k?t=53 for an illustration. Note that users have access to these help files even if they are offline (i.e., they are part of the radiant packages).
 * I still have links to the _Report_ and _Code_ page on github in the vignette. These are not function manuals but illustrate how to use the shiny user interface.
-* For reference, maybe it is usefull to mention that the structure of the radiant package is somewhat similar to the recently released 'tidyverse' package that pools functionality across several packages
+* For reference, maybe it is useful to mention that the structure of the radiant package is somewhat similar to the recently released 'tidyverse' package that pools functionality across several packages
 * I now show `help(package = radiant.data)` rather than the github links to the manuals. I hope that is what you were looking for
 * There are no examples because the package is an rstudio addin and a shiny app. The UI code is in inst/app and must be tested interactively. The code in R/ is for running and updating the application and is only used in interactive sessions. In sum, testing, including examples, must be done by the package maintainer and the end-user. The analysis code used as part of the different Radiant menu's is in the packages radiant.data, radiant.design, radiant.basics, radiant.model, and radiant.multivariate that I recently submitted to CRAN and is tested there.
 

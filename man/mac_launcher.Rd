@@ -18,7 +18,7 @@ On Mac a file named 'radiant.command' and one named 'update_radiant.command' wil
 }
 \examples{
 \dontrun{
-mac_launcher()
+radiant::mac_launcher()
 }
 
 }

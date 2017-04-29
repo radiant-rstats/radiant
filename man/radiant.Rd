@@ -19,6 +19,6 @@ See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 }
 \examples{
 \dontrun{
-radiant()
+radiant::radiant()
 }
 }
