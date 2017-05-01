@@ -2,9 +2,9 @@ name: radiant
 title:
 account: vnijs
 server: shinyapps.io
-appId: 127637
-bundleId: 797788
+appId: 176949
+bundleId: 810893
 url: https://vnijs.shinyapps.io/radiant/
-when: 1492741387.95967
+when: 1493666225.24682
 asMultiple: FALSE
 asStatic: FALSE
