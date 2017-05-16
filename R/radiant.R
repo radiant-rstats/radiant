@@ -23,6 +23,8 @@ radiant <- function() {
 #' radiant::update_radiant()
 #' }
 #'
+#' @importFrom rstudioapi isAvailable
+#'
 #' @export
 update_radiant <- function() {
 
@@ -52,8 +54,16 @@ update_radiant <- function() {
   ## message to alternative update command, temporary fail-safe
   message("Alternative update command:\n\nsource('https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/build.R')")
 
-  ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
-  ret <- .rs.restartR(cmd)
+  ## check if run from Rstudio
+  if (rstudioapi::isAvailable()) {
+    ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
+    ret <- .rs.restartR(cmd)
+  } else {
+    if (cmd != "") {
+      message("Please restart R and run the following command to complete the update:\n\n", cmd)
+    }
+  }
+
 }
 
 #' Create a launcher and updater for Windows (.bat)
