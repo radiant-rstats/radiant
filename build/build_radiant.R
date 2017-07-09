@@ -34,8 +34,6 @@ sapply("radiant", rem_old)
 apps <- c("radiant", "radiant.design","radiant.basics", "radiant.model",
           "radiant.multivariate", "radiant.data")
 
-apps <- "radiant"
-
 ## probably need to restart Rstudion before building
 ## avoid 'loaded namespace' stuff when building for mac
 system(paste0(Sys.which("R"), " -e \"source('radiant/build/build_mac.R')\""))

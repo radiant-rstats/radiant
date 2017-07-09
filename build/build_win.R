@@ -9,8 +9,6 @@ if (grepl("[nN]", rvprompt))
 apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
           "radiant.multivariate","radiant")
 
-apps <- "radiant"
-
 path <- "Z:/Desktop/GitHub"
 curr <- getwd(); setwd(path)
 build_app <- function(app) {
