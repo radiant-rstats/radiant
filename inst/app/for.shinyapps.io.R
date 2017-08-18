@@ -9,7 +9,6 @@ devtools::install_github("radiant-rstats/radiant.model")
 devtools::install_github("radiant-rstats/radiant.multivariate")
 devtools::install_github("radiant-rstats/radiant")
 
-
 ## last pre-dplyr 0.7.1 release
 # devtools::install_github("radiant-rstats/radiant.data@v0.8.6", force = TRUE)
 # devtools::install_github("radiant-rstats/radiant.design@v0.8.1")
