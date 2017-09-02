@@ -1,4 +1,4 @@
-# CHANGES IN radiant 0.8.7.2
+# CHANGES IN radiant 0.8.7.3
 
 * Upgraded tidyr dependency to 0.7
 
