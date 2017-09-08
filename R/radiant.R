@@ -31,15 +31,16 @@ update_radiant <- function() {
   ## cleanup old session files
   unlink("~/radiant.sessions/*.rds", force = TRUE)
 
+  ## command to run after R session is restarted
   cmd <- "source('https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/update.R')"
 
   ## check if run from Rstudio
   if (rstudioapi::isAvailable()) {
-    message("\nUpdating Radiant. Your R session will now restart")
+    message("\nUpdating Radiant. Your R session will now restart ...")
     ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
     ret <- .rs.restartR(cmd)
   } else {
-    message("Please restart R and run the following command to complete the update:\n\n", cmd)
+    message("Please restart R, copy and paste the 'source' command below into the R console, and press return\n\n", cmd)
   }
 }
 

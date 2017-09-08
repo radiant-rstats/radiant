@@ -1,3 +1,7 @@
+# CHANGES IN radiant 0.8.7.5
+
+* Improved `update_radiant` function
+
 # CHANGES IN radiant 0.8.7.4
 
 * Upgraded tidyr dependency to 0.7
