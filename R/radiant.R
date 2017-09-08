@@ -28,42 +28,19 @@ radiant <- function() {
 #' @export
 update_radiant <- function() {
 
-  message("Updating Radiant ...")
   ## cleanup old session files
   unlink("~/radiant.sessions/*.rds", force = TRUE)
 
-  os_type <- Sys.info()["sysname"]
-  type <- ifelse (os_type == "Linux", "source", "binary")
-
-  ## avoid problems with loaded packages, new.packages added for windoze
-  system(paste0(Sys.which("R"), " -e \"install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "'); update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "'); pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "', ask = FALSE); if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "')\""))
-
-  ## strange behavior on windows using cmd below
-  # cmd <- paste0("install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "'); update.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', ask = FALSE, type = '", type, "'); pkgs <- new.packages(lib.loc = .libPaths()[1], repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "', ask = FALSE); if (length(pkgs) > 0) install.packages(pkgs, repos = 'https://radiant-rstats.github.io/minicran', type = '", type, "')")
-
-  ## restart R(studio) with a command to avoid having to unload libraries that
-  ## are blocking the update (i.e., "unable to remove" error)
-  cmd <- ""
-  if (os_type == "Windows") {
-    pkgs <- new.packages(lib.loc = .libPaths()[1], repos = "https://radiant-rstats.github.io/minicran", type = "binary", ask = FALSE)
-    if (length(pkgs) > 0) {
-      cmd <- paste0("install.packages(c('", paste0(pkgs, collapse = "', '"), "'), repos = 'https://radiant-rstats.github.io/minicran', type = 'binary')")
-    }
-  }
-
-  ## message to alternative update command, temporary fail-safe
-  message("Alternative update command:\n\nsource('https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/build.R')")
+  cmd <- "source('https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/update.R')"
 
   ## check if run from Rstudio
   if (rstudioapi::isAvailable()) {
+    message("\nUpdating Radiant. Your R session will now restart")
     ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
     ret <- .rs.restartR(cmd)
   } else {
-    if (cmd != "") {
-      message("Please restart R and run the following command to complete the update:\n\n", cmd)
-    }
+    message("Please restart R and run the following command to complete the update:\n\n", cmd)
   }
-
 }
 
 #' Create a launcher and updater for Windows (.bat)
