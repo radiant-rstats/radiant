@@ -20,7 +20,7 @@ Imports:
     AlgDesign (>= 1.1.7.3),
     shiny (>= 1.0.5),
     import (>= 1.1.0),
-    rstudioapi (>= 0.6)
+    rstudioapi (>= 0.7)
 Suggests:
     testthat (>= 1.0.0),
     knitr,

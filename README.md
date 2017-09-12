@@ -68,7 +68,7 @@ radiant::update_radiant()
 Alternatively Radiant can be updated using the command:
 
 ```r
-source("https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/build.R")
+source("https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/udate.R")
 ```
 
 See the [installing radiant](https://radiant-rstats.github.io/docs/install.html) page for details.
@@ -97,7 +97,7 @@ Do **not** upload sensitive data to this public server. The size of data upload 
 
 ## Running Radiant on shinyapps.io
 
-To run your own instance of Radiant on shinyapps.io clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and [deploy](http://shiny.rstudio.com/articles/shinyapps.html).
+To run your own instance of Radiant on shinyapps.io first <a href = "https://radiant-rstats.github.io/docs/install.html" target = "_blank">install Radiant and its dependencies</a>. Then clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and ensure you have the latest version of the Radiant packages installed by running `radiant/inst/app/for.shinyapps.io.R`. Finally, open `radiant/inst/app/ui.R` and [deploy](http://shiny.rstudio.com/articles/shinyapps.html) the application.
 
 ## Running Radiant on shiny-server
 
