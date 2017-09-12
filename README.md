@@ -68,7 +68,7 @@ radiant::update_radiant()
 Alternatively Radiant can be updated using the command:
 
 ```r
-source("https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/udate.R")
+source("https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/update.R")
 ```
 
 See the [installing radiant](https://radiant-rstats.github.io/docs/install.html) page for details.
