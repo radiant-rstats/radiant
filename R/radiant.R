@@ -10,10 +10,10 @@
 radiant <- function() {
   message("Starting Radiant ...")
   if (!"package:radiant" %in% search()) {
-    if (!suppressMessages(require(radiant)))
+    if (!sshhr(require(radiant)))
       stop("Calling radiant start function but radiant is not installed.")
   }
-  shiny::runApp(system.file("app", package = "radiant"), launch.browser = TRUE)
+  suppressPackageStartupMessages(shiny::runApp(system.file("app", package = "radiant"), launch.browser = TRUE))
 }
 
 #' Update Radiant

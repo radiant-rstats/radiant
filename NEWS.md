@@ -1,6 +1,7 @@
-# CHANGES IN radiant 0.8.7.5
+# CHANGES IN radiant 0.8.7.6
 
-* Improved `update_radiant` function
+* Improved `update_radiant` function for Windows and Mac
+* Suppress package start-up messages
 
 # CHANGES IN radiant 0.8.7.4
 
