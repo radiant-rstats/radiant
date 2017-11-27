@@ -23,7 +23,7 @@ radiant <- function() {
 #' radiant::update_radiant()
 #' }
 #'
-#' @importFrom rstudioapi isAvailable
+#' @importFrom rstudioapi isAvailable restartSession
 #'
 #' @export
 update_radiant <- function() {
@@ -38,7 +38,8 @@ update_radiant <- function() {
   if (rstudioapi::isAvailable()) {
     message("\nUpdating Radiant. Your R session will now restart ...")
     ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
-    ret <- .rs.restartR(cmd)
+    # ret <- .rs.restartR(cmd)
+    rstudioapi::restartSession(cmd)
   } else {
     message("Please restart R, copy and paste the 'source' command below into the R console, and press return\n\n", cmd)
   }

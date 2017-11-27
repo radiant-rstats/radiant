@@ -109,6 +109,13 @@ install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/"
 
 Then clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and point shiny-server to the `inst/app/` directory. As a courtesy, please let me know if you intend to use Radiant on a server.
 
+When running Radiant on a server, by default, file uploads are limited to 10MB and R-code in _R > Report_ and _R > Code_ will not be evaluated for security reasons. If you have `sudo` access to the server and have appropriate security in place you can change these settings by adding the following lines to `.Rprofile` for the `shiny` user on the server. 
+
+```bash
+options(radiant.maxRequestSize = -1)  ## no file size limit
+options(radiant.report = TRUE)
+```
+
 ## Saving and loading state
 
 To save your analyses save the state of the app to a file by clicking on the <i title='Save' class='fa fa-save'></i> icon in the navbar and then on `Save state` (see also the `Data > Manage` tab). You can open this state-file at a later time or on another computer to continue where you left off. You can also share the file with others that may want to replicate your analyses. As an example, load the state-file [`radiant-state.rda`](https://radiant-rstats.github.io/docs/examples/radiant-state.rda) through the _Data > Manage_ tab. Go to _Data > View_ and _Data > Visualize_ to see some of the settings. There is also a report in _R > Report_ that was created using the Radiant interface. The html file <a href="https://radiant-rstats.github.io/docs/examples/radiant-state.html" target="_blank">`radiant-state.html`</a> contains the output.
