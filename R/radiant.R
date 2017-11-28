@@ -23,7 +23,7 @@ radiant <- function() {
 #' radiant::update_radiant()
 #' }
 #'
-#' @importFrom rstudioapi isAvailable restartSession
+#' @importFrom rstudioapi isAvailable restartSession versionInfo
 #'
 #' @export
 update_radiant <- function() {
@@ -38,8 +38,12 @@ update_radiant <- function() {
   if (rstudioapi::isAvailable()) {
     message("\nUpdating Radiant. Your R session will now restart ...")
     ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
-    # ret <- .rs.restartR(cmd)
-    rstudioapi::restartSession(cmd)
+    if (rstudioapi::versionInfo()$version >= "1.1.383") {
+      rstudioapi::restartSession(cmd)
+    } else {
+      ret <- .rs.restartR(cmd)
+    }
+
   } else {
     message("Please restart R, copy and paste the 'source' command below into the R console, and press return\n\n", cmd)
   }
