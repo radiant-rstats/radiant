@@ -6,9 +6,8 @@ rvprompt <- readline(prompt = paste0("Running for R version: ", rv, ". Is that w
 if (grepl("[nN]", rvprompt))
   stop("Change R-version using Rstudio > Tools > Global Options > Rversion")
 
-# apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
-          # "radiant.multivariate","radiant")
-apps <- c("radiant")
+apps <- c("radiant.data","radiant.design","radiant.basics", "radiant.model",
+          "radiant.multivariate","radiant")
 
 path <- "Z:/Desktop/GitHub"
 curr <- getwd(); setwd(path)
