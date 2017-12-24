@@ -25,21 +25,21 @@ if (!file.exists(dirwin)) dir.create(dirwin, recursive = TRUE)
 
 ## delete older version of radiant
 rem_old <- function(app) {
-  unlink(paste0(dirsrc, "/", app, "*"))
-  unlink(paste0(dirmac, "/", app, "*"))
-  unlink(paste0(dirwin, "/", app, "*"))
+  unlink(paste0(dirsrc, "/", app))
+  unlink(paste0(dirmac, "/", app))
+  unlink(paste0(dirwin, "/", app))
 }
 
-sapply("radiant", rem_old)
-
 apps <- c(
-  # "radiant.design", 
-  # "radiant.basics", 
+  # "radiant.design",
+  # "radiant.basics",
   # "radiant.model",
-  # "radiant.multivariate", 
+  # "radiant.multivariate",
   # "radiant.data",
   "radiant"
 )
+
+sapply(apps, rem_old)
 
 ## probably need to restart Rstudio before building
 ## avoid 'loaded namespace' stuff when building for mac
