@@ -11,10 +11,10 @@ Description: A platform-independent browser-based interface for business
 Depends:
     R (>= 3.3.0),
     radiant.data (>= 0.8.9),
-    radiant.design (>= 0.8.7.4),
-    radiant.basics (>= 0.8.7.4),
-    radiant.model (>= 0.8.7.9),
-    radiant.multivariate (>= 0.8.7.4)
+    radiant.design (>= 0.8.9),
+    radiant.basics (>= 0.8.9),
+    radiant.model (>= 0.8.9),
+    radiant.multivariate (>= 0.8.9)
 Imports:
     psych (>= 1.6.6),
     AlgDesign (>= 1.1.7.3),
