@@ -25,17 +25,17 @@ if (!file.exists(dirwin)) dir.create(dirwin, recursive = TRUE)
 
 ## delete older version of radiant
 rem_old <- function(app) {
-  unlink(paste0(dirsrc, "/", app))
-  unlink(paste0(dirmac, "/", app))
-  unlink(paste0(dirwin, "/", app))
+  unlink(paste0(dirsrc, "/", app, "_.*"))
+  unlink(paste0(dirmac, "/", app, "_.*"))
+  unlink(paste0(dirwin, "/", app, "_.*"))
 }
 
 apps <- c(
-  # "radiant.design",
-  # "radiant.basics",
-  # "radiant.model",
-  # "radiant.multivariate",
-  # "radiant.data",
+  "radiant.data",
+  "radiant.design",
+  "radiant.basics",
+  "radiant.model",
+  "radiant.multivariate",
   "radiant"
 )
 

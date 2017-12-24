@@ -4,6 +4,7 @@
 * Suppress package start-up messages
 * Show Rstudio project information in navbar if available
 * Option to start Radiant in Browser or Rstudio Viewer
+* Applied `styler` to code
 
 # CHANGES IN radiant 0.8.7.4
 
