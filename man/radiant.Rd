@@ -10,12 +10,12 @@
 radiant(run = "browser")
 }
 \arguments{
-\item{run}{Run radiant in an external browser ("browser") or in the the Rstudio viewer ("viewer")}
+\item{run}{Run radiant in an external browser ("browser") or in the Rstudio viewer ("viewer")}
 }
 \description{
 radiant
 
-Launch Radiant in the default browser
+Launch radiant in default browser or Rstudio Viewer
 }
 \details{
 See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials

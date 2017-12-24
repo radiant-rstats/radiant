@@ -1,8 +1,8 @@
-#' Launch Radiant in the default browser
+#' Launch radiant in default browser or Rstudio Viewer
 #'
 #' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 #'
-#' @param run Run radiant in an external browser ("browser") or in the the Rstudio viewer ("viewer")
+#' @param run Run radiant in an external browser ("browser") or in the Rstudio viewer ("viewer")
 #'
 #' @examples
 #' \dontrun{
@@ -12,14 +12,14 @@
 radiant <- function(run = "browser") {
   if (!"package:radiant" %in% search()) {
     if (!sshhr(require(radiant))) {
-      stop("Calling radiant start function but radiant is not installed.")
+      stop("\nCalling radiant start function but radiant is not installed.")
     }
   }
   run <- if (run == "viewer") {
-    message("Starting Radiant in Rstudio Viewer ...")
+    message("\nStarting Radiant in Rstudio Viewer ...")
     rstudioapi::viewer
   } else {
-    message("Starting Radiant in default browser ...\n\nUse radiant::radiant_viewer() to open Radiant in Rstudio Viewer")
+    message("\nStarting Radiant in default browser ...\n\nUse radiant::radiant_viewer() to open Radiant in Rstudio Viewer")
     TRUE
   }
   suppressPackageStartupMessages(
