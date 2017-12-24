@@ -7,7 +7,10 @@
 \alias{radiant}
 \title{radiant}
 \usage{
-radiant()
+radiant(run = "browser")
+}
+\arguments{
+\item{run}{Run radiant in an external browser ("browser") or in the the Rstudio viewer ("viewer")}
 }
 \description{
 radiant

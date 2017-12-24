@@ -1,6 +1,11 @@
-Name: Radiant
-Description: Start Radiant
+Name: Radiant - Browser
+Description: Start Radiant in default browser
 Binding: radiant
+Interactive: true
+
+Name: Radiant - Viewer
+Description: Start Radiant in Rstudio Viewer
+Binding: radiant_viewer
 Interactive: true
 
 Name: Update Radiant

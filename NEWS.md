@@ -1,8 +1,9 @@
-# CHANGES IN radiant 0.8.8
+# CHANGES IN radiant 0.8.9
 
 * Improved `update_radiant` function for Windows and Mac
 * Suppress package start-up messages
 * Show Rstudio project information if available
+* Option to start Radiant in Browser or Rstudio Viewer
 
 # CHANGES IN radiant 0.8.7.4
 
