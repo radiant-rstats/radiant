@@ -73,7 +73,7 @@ radiant::radiant()
 Lets see if the example data is available in `r_data`, if not, we will load the data using the `data` function:
 
 ```{r}
-if (exists("r_data")) {
+if (exists("r_data") && is.data.frame(r_data[["salary"]])) {
   message("Retrieving data from radiant's r_data list")
   salary <- r_data[["salary"]]
   shopping <- r_data[["shopping"]]
