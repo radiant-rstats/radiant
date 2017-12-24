@@ -12,16 +12,16 @@ options(radiant.path.multivariate = system.file(package = "radiant.multivariate"
 source(file.path(getOption("radiant.path.data"), "app/global.R"), encoding = getOption("radiant.encoding", default = "UTF-8"), local = TRUE)
 
 ## setting path for figures in help files
-addResourcePath("figures_design", file.path(getOption("radiant.path.design"),"app/tools/help/figures/"))
-addResourcePath("figures_basics", file.path(getOption("radiant.path.basics"),"app/tools/help/figures/"))
-addResourcePath("figures_model", file.path(getOption("radiant.path.model"),"app/tools/help/figures/"))
-addResourcePath("figures_multivariate", file.path(getOption("radiant.path.multivariate"),"app/tools/help/figures/"))
+addResourcePath("figures_design", file.path(getOption("radiant.path.design"), "app/tools/help/figures/"))
+addResourcePath("figures_basics", file.path(getOption("radiant.path.basics"), "app/tools/help/figures/"))
+addResourcePath("figures_model", file.path(getOption("radiant.path.model"), "app/tools/help/figures/"))
+addResourcePath("figures_multivariate", file.path(getOption("radiant.path.multivariate"), "app/tools/help/figures/"))
 
 ## setting path for www resources
-addResourcePath("www_design", file.path(getOption("radiant.path.design"),"app/www/"))
-addResourcePath("www_basics", file.path(getOption("radiant.path.basics"),"app/www/"))
-addResourcePath("www_model", file.path(getOption("radiant.path.model"),"app/www/"))
-addResourcePath("www_multivariate", file.path(getOption("radiant.path.multivariate"),"app/www/"))
+addResourcePath("www_design", file.path(getOption("radiant.path.design"), "app/www/"))
+addResourcePath("www_basics", file.path(getOption("radiant.path.basics"), "app/www/"))
+addResourcePath("www_model", file.path(getOption("radiant.path.model"), "app/www/"))
+addResourcePath("www_multivariate", file.path(getOption("radiant.path.multivariate"), "app/www/"))
 
 ## loading url information
 source(file.path(getOption("radiant.path.design"), "app/init.R"), encoding = getOption("radiant.encoding"), local = TRUE)
