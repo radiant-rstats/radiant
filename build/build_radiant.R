@@ -25,9 +25,9 @@ if (!file.exists(dirwin)) dir.create(dirwin, recursive = TRUE)
 
 ## delete older version of radiant
 rem_old <- function(app) {
-  unlink(paste0(dirsrc, "/", app, "_.*"))
-  unlink(paste0(dirmac, "/", app, "_.*"))
-  unlink(paste0(dirwin, "/", app, "_.*"))
+  unlink(paste0(dirsrc, "/", app))
+  unlink(paste0(dirmac, "/", app))
+  unlink(paste0(dirwin, "/", app))
 }
 
 apps <- c(
