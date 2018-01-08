@@ -2,18 +2,18 @@
 % Please edit documentation in R/radiant.R
 \name{radiant_viewer}
 \alias{radiant_viewer}
-\title{Launch Radiant in the Rstudio Viewer}
+\title{Launch radiant in the Rstudio viewer}
 \usage{
 radiant_viewer()
 }
 \description{
-Launch Radiant in the Rstudio Viewer
+Launch radiant in the Rstudio viewer
 }
 \details{
 See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 }
 \examples{
 \dontrun{
-radiant::radiant_viewer()
+radiant_viewer()
 }
 }

@@ -1,14 +1,14 @@
-Name: Radiant (browser)
-Description: Start Radiant in default browser
-Binding: radiant
-Interactive: true
-
-Name: Radiant (viewer)
-Description: Start Radiant in Rstudio Viewer
+Name: Start radiant (viewer)
+Description: Start radiant in rstudio viewer
 Binding: radiant_viewer
 Interactive: true
 
-Name: Update Radiant
-Description: Update Radiant to the latest version
+Name: Start radiant (browser)
+Description: Start radiant in default browser
+Binding: radiant
+Interactive: true
+
+Name: Update radiant
+Description: Update radiant to the latest version
 Binding: update_radiant
 Interactive: true
