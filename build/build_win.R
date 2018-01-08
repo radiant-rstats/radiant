@@ -16,6 +16,9 @@ apps <- c(
   "radiant"
 )
 
+## build for packages ahead of CRAN
+apps <- c("shinyAce", "rstudioapi", apps)
+
 path <- "Z:/Desktop/GitHub"
 curr <- getwd()
 setwd(path)

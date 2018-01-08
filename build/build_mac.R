@@ -25,6 +25,9 @@ apps <- c(
 
 sapply(apps, update_app, mess = "update", git = TRUE, github = TRUE)
 
+## build for packages ahead of CRAN
+apps <- c("shinyAce", "rstudioapi", apps)
+
 ## build for mac
 path <- "~/gh"
 curr <- getwd()
@@ -42,6 +45,9 @@ setwd(curr)
 # 	devtools::build(file.path("..",app))
 # 	devtools::build(file.path("..",app), binary = TRUE)
 # }
-#
+
+# path <- "Z:/Desktop/GitHub"
+# path <- "~/gh"
 # ncapps <- c("shiny","DT","DiagrammeR", "NeuralNetTools")
+# ncapps <- c("DiagrammeR")
 # sapply(ncapps, build_app)
