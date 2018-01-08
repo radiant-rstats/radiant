@@ -17,7 +17,8 @@ apps <- c(
 )
 
 ## build for packages ahead of CRAN
-apps <- c("shinyAce", "rstudioapi", apps)
+# apps <- c("shinyAce", "rstudioapi", apps)
+apps <- c("shinyAce")
 
 path <- "Z:/Desktop/GitHub"
 curr <- getwd()

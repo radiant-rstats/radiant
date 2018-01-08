@@ -26,7 +26,8 @@ apps <- c(
 sapply(apps, update_app, mess = "update", git = TRUE, github = TRUE)
 
 ## build for packages ahead of CRAN
-apps <- c("shinyAce", "rstudioapi", apps)
+# apps <- c("shinyAce", "rstudioapi", apps)
+apps <- c("shinyAce")
 
 ## build for mac
 path <- "~/gh"
