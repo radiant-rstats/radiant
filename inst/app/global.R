@@ -9,7 +9,7 @@ options(radiant.path.model = system.file(package = "radiant.model"))
 options(radiant.path.multivariate = system.file(package = "radiant.multivariate"))
 
 # sourcing from radiant base, note that path is set in base/global.R
-source(file.path(getOption("radiant.path.data"), "app/global.R"), encoding = getOption("radiant.encoding", default = "UTF-8"), local = TRUE)
+# source(file.path(getOption("radiant.path.data"), "app/global.R"), encoding = getOption("radiant.encoding", default = "UTF-8"), local = TRUE)
 
 ## setting path for figures in help files
 addResourcePath("figures_design", file.path(getOption("radiant.path.design"), "app/tools/help/figures/"))

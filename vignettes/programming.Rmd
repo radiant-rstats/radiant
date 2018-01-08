@@ -13,7 +13,12 @@ vignette: >
 
 ```{r setup, include = FALSE}
 library(radiant)
-knitr::opts_chunk$set(comment = NA, cache = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(
+  comment = NA, 
+  cache = FALSE, 
+  message = FALSE, 
+  warning = FALSE
+)
 ```
 
 Radiant's goal is to provide access to the power of R for business analytics. Although Radiant's web-interface can handle quite a few data and analysis tasks, you may prefer to write your own code. Radiant provides a bridge to programming in R(studio) by exporting the functions used for analysis. For example, you can run your analyses in Radiant and output the relevant function calls to an [Rmarkdown](http://rmarkdown.rstudio.com/) document. Most pages in the app have an <i title='Report results' class='fa fa-edit'></i> icon on the bottom left of your screen that you can click to generate a (reproducible) report with your analysis in the _R > Report_ tab. As an alternative to clicking the <i title='Report results' class='fa fa-edit'></i> icon you can also press `ALT-enter` on your keyboard. Click the `Knit report` button on the _R > Report_ page to render the report to HTML or press the `Save report` button to produce a Notebook, HTML, PDF, Word, or Rmarkdown file. Radiant's function manuals can be viewed using the commands below:
@@ -40,9 +45,16 @@ plot(result)
 You can also call functions for visualization (see below) and access help from the console using `?visualize`
 
 ```{r fig.height = 4, fig.width = 5}
-visualize(diamonds, xvar = "carat", yvar = "price", type = "scatter",
-          facet_row = "clarity", color = "clarity", custom = TRUE) +
-  labs(title = "Diamond Prices ($)")
+visualize(
+  diamonds, 
+  xvar = "carat", 
+  yvar = "price", 
+  type = "scatter",
+  facet_row = "clarity", 
+  color = "clarity", 
+  custom = TRUE
+) +
+labs(title = "Diamond Prices ($)")
 ```
 
 Use `library(radiant)` to load the library. To see the index of functions currently available in, for example, Radiant's Model menu use the `help(package = "radiant.model")` command
@@ -50,7 +62,12 @@ Use `library(radiant)` to load the library. To see the index of functions curren
 Lets start by comparing the mean of a variable to a (population) value using R's built-in `mtcars` dataset. This functionality is in the Radiant menu _Basics > Means > Single mean_. The analysis is conducted in function `single_mean`. Calling the `summary` method on the result object will show tabular output. Calling `plot` on the same result object will produce relevant plots.
 
 ```{r fig.height = 6, fig.width = 5}
-result <- single_mean(mtcars, var = "mpg", comp_value = 20, alternative = "greater")
+result <- single_mean(
+  mtcars, 
+  var = "mpg", 
+  comp_value = 20, 
+  alternative = "greater"
+)
 summary(result)
 plot(result, plots = c("hist","simulate"))
 ```
@@ -58,7 +75,12 @@ plot(result, plots = c("hist","simulate"))
 To compare the mean price of diamonds across different levels of clarity we can call the `compare_means` function:
 
 ```{r fig.height = 5, fig.width = 4}
-result <- compare_means(diamonds, var1 = "clarity", var2 = "price", adjust = "bonf")
+result <- compare_means(
+  diamonds, 
+  var1 = "clarity", 
+  var2 = "price", 
+  adjust = "bonf"
+)
 summary(result)
 plot(result, plots = c("bar","density"))
 ```
@@ -73,10 +95,10 @@ radiant::radiant()
 Lets see if the example data is available in `r_data`, if not, we will load the data using the `data` function:
 
 ```{r}
-if (exists("r_data") && is.data.frame(r_data[["salary"]])) {
+if (exists("r_data") && !is.null(r_data$salary) && !is.null(r_data$shopping)) {
   message("Retrieving data from radiant's r_data list")
-  salary <- r_data[["salary"]]
-  shopping <- r_data[["shopping"]]
+  salary <- r_data$salary
+  shopping <- r_data$shopping
 } else {
   message("Retrieving data from radiant package")
   data("salary")
@@ -97,11 +119,13 @@ We can also run regressions and get output in a format that would require quite 
 ```{r}
 result <- regress(diamonds, rvar = "price", evar = c("carat","clarity"))
 summary(result, sum_check = "confint")
-predict(result, pred_cmd = "carat = 1:10")
+pred <- predict(result, pred_cmd = "carat = 1:10")
+print(pred, n = 10)
 ```
 ```{r fig.width = 6, fig.height = 4}
 plot(result, plots = "coef")
 ```
+
 ```{r fig.width = 5, fig.height = 7}
 plot(result, plots = "dashboard", lines = "line")
 ```

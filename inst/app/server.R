@@ -10,9 +10,10 @@ shinyServer(function(input, output, session) {
       file.path(getOption("radiant.path.data"), "app/tools/app"),
       file.path(getOption("radiant.path.data"), "app/tools/data")
     ),
-    pattern = "\\.(r|R)$", full.names = TRUE
-  ))
+    pattern = "\\.(r|R)$", 
+    full.names = TRUE)) {
     source(file, encoding = getOption("radiant.encoding"), local = TRUE)
+  }
 
   ## list of radiant menu's to include
   rmenus <- c("radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate")
