@@ -44,22 +44,29 @@ Radiant focuses on business data and decisions. It offers tools, examples, and d
 ## How to install Radiant
 
 - Required: [R](https://cran.r-project.org/) version 3.3.0 or later
+- Required: [Rstudio](https://www.rstudio.com/products/rstudio/download/) version 1.1.383 or later
 - Required: A modern browser (e.g., [Chrome](https://www.google.com/intl/en/chrome/browser/desktop/) or Safari). Internet Explorer (version 11 or higher) should work as well
-- Required: [Rstudio](https://www.rstudio.com/products/rstudio/download/)
 
-If you use Rstudio (version 0.99.893 or later) you can start and update Radiant through the `Addins` menu at the top of the screen. To install the latest version of Radiant for Windows or Mac, with complete documentation for off-line access, open R(studio) and copy-and-paste the command below:
+In Rstudio you can start and update Radiant through the `Addins` menu at the top of the screen. To install the latest version of Radiant for Windows or Mac, with complete documentation for off-line access, open R(studio) and copy-and-paste the command below:
 
 ```r
 install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/", type = "binary")
 ```
 
-Once all packages are installed select `Radiant` from the `Addins` menu in Rstudio or use the command below to launch the app:
+Once all packages are installed select `Start radiant (browser)` from the `Addins` menu in Rstudio or use the command below to launch the app:
 
 ```r
 radiant::radiant()
 ```
 
-To update Radiant select `Update Radiant` from the `Addins` menu in Rstudio or use the command below:
+To launch Radiant in Rstudio's viewer pane select `Start radiant (viewer)` from the `Addins` menu in Rstudio or use the command below:
+
+```r
+radiant::radiant_viewer()
+```
+
+
+To update Radiant select `Update radiant` from the `Addins` menu in Rstudio or use the command below:
 
 ```r
 radiant::update_radiant()
@@ -109,7 +116,7 @@ install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/"
 
 Then clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and point shiny-server to the `inst/app/` directory. As a courtesy, please let me know if you intend to use Radiant on a server.
 
-When running Radiant on a server, by default, file uploads are limited to 10MB and R-code in _R > Report_ and _R > Code_ will not be evaluated for security reasons. If you have `sudo` access to the server and have appropriate security in place you can change these settings by adding the following lines to `.Rprofile` for the `shiny` user on the server. 
+When running Radiant on a server, by default, file uploads are limited to 10MB and R-code in _Report > Rmd_ and _Report > R_ will not be evaluated for security reasons. If you have `sudo` access to the server and have appropriate security in place you can change these settings by adding the following lines to `.Rprofile` for the `shiny` user on the server. 
 
 ```bash
 options(radiant.maxRequestSize = -1)  ## no file size limit
@@ -118,11 +125,11 @@ options(radiant.report = TRUE)
 
 ## Saving and loading state
 
-To save your analyses save the state of the app to a file by clicking on the <i title='Save' class='fa fa-save'></i> icon in the navbar and then on `Save state` (see also the `Data > Manage` tab). You can open this state-file at a later time or on another computer to continue where you left off. You can also share the file with others that may want to replicate your analyses. As an example, load the state-file [`radiant-state.rda`](https://radiant-rstats.github.io/docs/examples/radiant-state.rda) through the _Data > Manage_ tab. Go to _Data > View_ and _Data > Visualize_ to see some of the settings. There is also a report in _R > Report_ that was created using the Radiant interface. The html file <a href="https://radiant-rstats.github.io/docs/examples/radiant-state.html" target="_blank">`radiant-state.html`</a> contains the output.
+To save your analyses save the state of the app to a file by clicking on the <i title='Save' class='fa fa-save'></i> icon in the navbar and then on `Save radiant state file` (see also the `Data > Manage` tab). You can open this state-file at a later time or on another computer to continue where you left off. You can also share the file with others that may want to replicate your analyses. As an example, load the state-file [`radiant-state.rda`](https://radiant-rstats.github.io/docs/examples/radiant-state.rda) through the _Data > Manage_ tab. Go to _Data > View_ and _Data > Visualize_ to see some of the settings. There is also a report in _Report > Rmd_ that was created using the Radiant interface. The html file <a href="https://radiant-rstats.github.io/docs/examples/radiant-state.html" target="_blank">`radiant-state.html`</a> contains the output.
 
 A related feature in Radiant is that state is maintained if you accidentally navigate to another page, close (and reopen) the browser, and/or hit refresh. Use `Refresh` in the <i title='Power off' class='fa fa-power-off'></i> menu in the navigation bar to return to a clean/new state.
 
-Loading and saving state also works with Rstudio. If you start Radiant from Rstudio and use <i title='Power off' class='fa fa-power-off'></i> > `Stop` to stop the app, lists called `r_data` and `r_state` will be put into Rstudio's global workspace. If you start radiant again using `radiant()` it will use these lists to restore state. This can be convenient if you want to make changes to a data file in Rstudio and load it back into Radiant. Also, if you load a state-file directly into Rstudio it will be used when you start Radiant to recreate a previous state.
+Loading and saving state also works with Rstudio. If you start Radiant from Rstudio and use <i title='Power off' class='fa fa-power-off'></i> > `Stop` to stop the app, lists called `r_data` and `r_state` will be put into Rstudio's global workspace. If you start radiant again using `radiant::radiant()` it will use these lists to restore state. This can be convenient if you want to make changes to a data file in Rstudio and load it back into Radiant. Also, if you load a state-file directly into Rstudio it will be used when you start Radiant to recreate a previous state.
 
 **Technical note**: Loading state works as follows in Radiant: When an input is initialized in a Shiny app you set a default value in the call to, for example, numericInput. In Radiant, when a state-file has been loaded and an input is initialized it looks to see if there is a value for an input of that name in a list called `r_state`. If there is, this value is used. The `r_state` list is created when saving state using `reactiveValuesToList(input)`. An example of a call to `numericInput` is given below where the `state_init` function from `radiant.R` is used to check if a value from `r_state` can be used.
 

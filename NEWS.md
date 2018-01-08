@@ -1,5 +1,6 @@
-# CHANGES IN radiant 0.8.9
+# CHANGES IN radiant 0.9.0
 
+* Addins to launch in default browser or Rstudio viewer
 * Improved `update_radiant` function for Windows and Mac
 * Suppress package start-up messages
 * Show Rstudio project information in navbar if available
