@@ -39,7 +39,7 @@ apps <- c(
   "radiant"
 )
 
-# sapply(apps, rem_old)
+sapply(apps, rem_old)
 
 ## probably need to restart Rstudio before building
 ## avoid 'loaded namespace' stuff when building for mac
