@@ -10,6 +10,7 @@ devtools::install_github("radiant-rstats/radiant.multivariate", force = TRUE)
 devtools::install_github("radiant-rstats/radiant", force = TRUE)
 devtools::install_github("rstudio/rstudioapi", force = TRUE)
 devtools::install_github("rstudio/shiny", force = TRUE)
+devtools::install_github("vnijs/shinyAce", force = TRUE)
 
 ## by listing the call to the radiant library it will get picked up as a dependency
 library(radiant)
