@@ -24,38 +24,6 @@ radiant <- function() radiant.data::launch(package = "radiant", run = "browser")
 #' @export
 radiant_viewer <- function() radiant.data::launch(package = "radiant", run = "viewer")
 
-#' Update Radiant
-#'
-#' @examples
-#' \dontrun{
-#' radiant::update_radiant()
-#' }
-#'
-#' @importFrom rstudioapi isAvailable restartSession versionInfo
-#'
-#' @export
-update_radiant <- function() {
-
-  ## cleanup old session files
-  unlink("~/radiant.sessions/*.rds", force = TRUE)
-
-  ## command to run after R session is restarted
-  cmd <- "source('https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/update.R')"
-
-  ## check if run from Rstudio
-  if (rstudioapi::isAvailable()) {
-    message("\nUpdating Radiant. Your R session will now restart ...")
-    ## Restarting Rstudio session from http://stackoverflow.com/a/25934774/1974918
-    if (rstudioapi::versionInfo()$version >= "1.1.383") {
-      rstudioapi::restartSession(cmd)
-    } else {
-      ret <- .rs.restartR(cmd)
-    }
-  } else {
-    message("Please restart R, copy and paste the 'source' command below into the R console, and press return\n\n", cmd)
-  }
-}
-
 #' Create a launcher and updater for Windows (.bat)
 #'
 #' @details On Windows a file named 'radiant.bat' and one named 'update_radiant.bat' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version

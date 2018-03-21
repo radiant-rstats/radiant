@@ -1,6 +1,6 @@
 apps <- c(
   "radiant.data", "radiant.design", "radiant.basics", "radiant.model",
-  "radiant.multivariate", "radiant"
+  "radiant.multivariate", "radiant.update", "radiant"
 )
 
 ## build for mac

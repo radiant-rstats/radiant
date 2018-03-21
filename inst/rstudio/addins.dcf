@@ -7,8 +7,3 @@ Name: Start radiant (browser)
 Description: Start radiant in default browser
 Binding: radiant
 Interactive: true
-
-Name: Update radiant
-Description: Update radiant to the latest version
-Binding: update_radiant
-Interactive: true

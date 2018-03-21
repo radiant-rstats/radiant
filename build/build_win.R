@@ -13,6 +13,7 @@ apps <- c(
   "radiant.basics",
   "radiant.model",
   "radiant.multivariate",
+  "radiant.update",
   "radiant"
 )
 
