@@ -25,8 +25,6 @@ Radiant is interactive. Results update immediately when inputs are changed (i.e.
 
 Radiant works on Windows, Mac, or Linux. It can run without an Internet connection and no data will leave your computer. You can also run the app as a web application on a server.
 
-> **Note:** For Windows users with data that contain multibyte characters please make sure your data are in ANSI format so R(adiant) can load characters correctly.
-
 #### Reproducible
 
 To conduct high-quality analysis, simply saving output is not enough. You need the ability to reproduce results for the same data and/or when new data become available. Moreover, others may want to review your analysis and results. Save and load the state of the application to continue your work at a later time or on another computer. Share state-files with others and create reproducible reports using [Rmarkdown](http://rmarkdown.rstudio.com/). See also the section on `Saving and loading state` below
@@ -69,7 +67,7 @@ radiant::radiant_viewer()
 To update Radiant select `Update radiant` from the `Addins` menu in Rstudio or use the command below:
 
 ```r
-radiant::update_radiant()
+radiant.update::radiant.update()
 ```
 
 Alternatively Radiant can be updated using the command:

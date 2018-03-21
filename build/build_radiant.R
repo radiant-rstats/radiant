@@ -67,7 +67,7 @@ if (grepl("[yY]", win)) {
   system("git add --all .")
   # mess <- paste0("radiant package updates: ", format(Sys.Date(), format = "%m-%d-%Y"))
   # mess <- "code wrapping"
-  mess <- "0.9.0"
+  mess <- "0.9.1"
   system(paste0("git commit -m '", mess, "'"))
   system("git push")
   setwd("~/gh/radiant")

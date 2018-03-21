@@ -1,3 +1,9 @@
+# CHANGES IN radiant 0.9.1
+
+* Moved `update_radiant` function to a separate package. The new function is radiant.update::radiant.update() and can be installed using:
+
+install.packages("radiant.update", repos = "https://radiant-rstats.github.io/minicran/")
+
 # CHANGES IN radiant 0.9.0
 
 * Addins to launch in default browser or Rstudio viewer
