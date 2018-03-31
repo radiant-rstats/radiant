@@ -1,5 +1,8 @@
-# CHANGES IN radiant 0.9.1
+# CHANGES IN radiant 0.9.2
 
+* `Esitmate model` buttons update when model input changes so the user know to re-estimate the model
+* Addins option to start app in Rstudio window
+* Upload and download data using the Rstudio file browser. Allows using relative paths to files (e.g., data or images inside an Rstudio project)
 * Moved `update_radiant` function to a separate package. The new function is radiant.update::radiant.update() and can be installed using:
 
 install.packages("radiant.update", repos = "https://radiant-rstats.github.io/minicran/")

@@ -1,4 +1,4 @@
-#' Launch radiant in default browser
+#' Launch radiant in the default browser
 #'
 #' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 #'
@@ -10,6 +10,19 @@
 #' }
 #' @export
 radiant <- function() radiant.data::launch(package = "radiant", run = "browser")
+
+#' Launch radiant in an Rstudio window
+#'
+#' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
+#'
+#' @importFrom radiant.data launch
+#'
+#' @examples
+#' \dontrun{
+#' radiant_window()
+#' }
+#' @export
+radiant_window <- function() radiant.data::launch(package = "radiant", run = "window")
 
 #' Launch radiant in the Rstudio viewer
 #'
