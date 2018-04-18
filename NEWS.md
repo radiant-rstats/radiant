@@ -1,3 +1,7 @@
+# CHANGES IN radiant 0.9.3
+
+* Various changes to the code to accomodate the use of `shiny::makeReactiveBinding`. The advantage is that the code generated for _Report > Rmd_ and _Report > R_ will no longer have to use `r_data` to store and access data. This means that code generated and used in the Radiant browser interface will be directly usable without the browser interface as well.
+
 # CHANGES IN radiant 0.9.2
 
 * `Esitmate model` buttons update when model input changes so the user know to re-estimate the model

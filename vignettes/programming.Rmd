@@ -11,17 +11,18 @@ vignette: >
   \usepackage[utf8]{inputenc}
 ---
 
-```{r setup, include = FALSE}
+```{r r_setup, include = FALSE}
 library(radiant)
 knitr::opts_chunk$set(
   comment = NA, 
   cache = FALSE, 
   message = FALSE, 
-  warning = FALSE
+  warning = FALSE,
+  dpi = 144
 )
 ```
 
-Radiant's goal is to provide access to the power of R for business analytics. Although Radiant's web-interface can handle quite a few data and analysis tasks, you may prefer to write your own code. Radiant provides a bridge to programming in R(studio) by exporting the functions used for analysis. For example, you can run your analyses in Radiant and output the relevant function calls to an [Rmarkdown](http://rmarkdown.rstudio.com/) document. Most pages in the app have an <i title='Report results' class='fa fa-edit'></i> icon on the bottom left of your screen that you can click to generate a (reproducible) report with your analysis in the _Report > Rmd_ (or _Report > R_) tab. As an alternative to clicking the <i title='Report results' class='fa fa-edit'></i> icon you can also press `ALT-enter` on your keyboard. Click the `Knit report` button on the _Report > Rmd_ page to render the report to HTML or press the `Save report` button to produce a Notebook, HTML, PDF, Word, or Rmarkdown file. Radiant's function manuals can be viewed using the commands below:
+Radiant's goal is to provide access to the power of R for business analytics and data science. Although Radiant's web-interface can handle many data and analysis tasks, you may prefer to write your own code. Radiant provides a bridge to programming in R(studio) by exporting the functions used for analysis. For example, you can run your analyses in Radiant and output the relevant function calls to an R or [Rmarkdown](http://rmarkdown.rstudio.com/) document. Most pages in the app have an <i title='Report results' class='fa fa-edit'></i> icon on the bottom left of your screen that you can click to generate a (reproducible) report with your analysis in the _Report > Rmd_ (or _Report > R_) tab. As an alternative to clicking the <i title='Report results' class='fa fa-edit'></i> icon you can also press `ALT-enter` on your keyboard. Click the `Knit report` button on the _Report > Rmd_ page to render the report to HTML or press the `Save report` button to produce a Notebook, HTML, PDF, Word, or Rmarkdown file. Radiant's function manuals can be viewed using the commands below:
 
 ```r
 help(package = radiant.data)
@@ -36,7 +37,7 @@ You can also use Rstudio to render and edit Rmarkdown documents generated in Rad
 If you close Radiant by clicking the <i title='Power off' class='fa fa-power-off'></i> icon in the navigation bar and then click `Stop` after launching it from R(studio), you can paste the commands below into the command console to get the same output as in the browser interface.
 
 ```{r fig.height = 3, fig.width = 5}
-data("diamonds") ## getting the diamonds data
+library(radiant)
 result <- single_mean(diamonds, "price")
 summary(result)
 plot(result)
@@ -54,7 +55,7 @@ visualize(
   color = "clarity", 
   custom = TRUE
 ) +
-labs(title = "Diamond Prices ($)")
+  labs(title = "Diamond Prices ($)")
 ```
 
 Use `library(radiant)` to load the library. To see the index of functions currently available in, for example, Radiant's Model menu use the `help(package = "radiant.model")` command
@@ -85,28 +86,14 @@ summary(result)
 plot(result, plots = c("bar","density"))
 ```
 
-These datasets are available after loading the radiant library and using the `data` function. We can also load data through Radiant's web interface and then access the data from the console after closing the app. Start radiant using the command below and then click select `Examples` from the `Load data of type` dropdown in the _Data > Manage_ tab. Then close the app by clicking the <i title='Power off' class='fa fa-power-off'></i> icon in the navbar and then clicking `Stop`. The datasets loaded through the web-interface are now available in the `r_data` list .
+These datasets are available after loading the radiant library by using the `data` function. We can also load data through Radiant's browser interface and then access the data from the console after closing the app. Start radiant using the command below and then click select `Examples` from the `Load data of type` dropdown in the _Data > Manage_ tab. Then close the app by clicking the <i title='Power off' class='fa fa-power-off'></i> icon in the navbar and then clicking `Stop`. The datasets loaded through the web-interface are now available in the `r_data` environment as well. To use them directly in your code use `attach(r_data)`.
 
 ```{r eval = FALSE}
 ## start radiant in Rstudio, load the example data, then click the power icon and Stop
 radiant::radiant()
 ```
 
-Lets see if the example data is available in `r_data`, if not, we will load the data using the `data` function:
-
-```{r}
-if (exists("r_data") && !is.null(r_data$salary) && !is.null(r_data$shopping)) {
-  message("Retrieving data from radiant's r_data list")
-  salary <- r_data$salary
-  shopping <- r_data$shopping
-} else {
-  message("Retrieving data from radiant package")
-  data("salary")
-  data("shopping")
-}
-```
-
-We can now use the `compare_means` function to evaluate salary data for professors of different ranks using:
+Because we already loaded the radiant library we already have access to all the data we need here. Lets use the `compare_means` function to evaluate salary data for professors of different ranks using:
 
 ```{r}
 result <- compare_means(salary, var1 = "rank", var2 = "salary")
@@ -139,8 +126,9 @@ result <- hclus(shopping, "v1:v6")
 ## summary - not much here - plots are more important
 summary(result)
 
-## check the help file on how to plot results from hierarchical cluster analysis
-## default plots - looks like there is a big jump in overall within-cluster
+## check the help file on how to plot results from hierarchical cluster
+## analysis default plots
+## it looks like there is a big jump in overall within-cluster
 ## heterogeneity in the step from 3 to 2 segments
 plot(result)
 ```
@@ -157,10 +145,10 @@ plot(result, plots = "dendro", cutoff = 0.05)
 result <- kclus(shopping, vars = "v1:v6", nr_clus = 3)
 summary(result)
 plot(result, plots = c("density","bar"))
-shopping <- store(result)
+shopping <- store(shopping, result, name = "clus")
 
 ## was the data really changed?
 head(shopping)
 ```
 
-See if you can reproduce this output in the radiant web-interface. Start `Radiant` from the `Addins` dropdown in Rstudio.
+See if you can reproduce this output in the radiant browser interface. Start `Radiant` from the `Addins` dropdown in Rstudio.
