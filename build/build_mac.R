@@ -24,7 +24,7 @@ apps <- c(
   "radiant"
 )
 
-sapply(apps, update_app, mess = "update", git = TRUE, github = TRUE)
+sapply(apps, update_app, mess = "MRB", git = TRUE, github = TRUE)
 
 ## build for packages ahead of CRAN
 # apps <- c("shinyAce", "rstudioapi", apps)
