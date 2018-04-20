@@ -1,5 +1,14 @@
+setwd("~/gh")
+
 ## building radiant packages for mac and windows
-setwd("~/gh/")
+dev <- TRUE
+
+if (isTRUE(dev)) {
+  devprompt <- readline(prompt = paste0("Are you sure you want to build a developement version y/n: "))
+  if (grepl("[nN]", devprompt)) {
+    stop("Step 'dev' to FALSE")
+  }
+}
 
 rv <- R.Version()
 rv <- paste0(rv$major, ".", strsplit(rv$minor, ".", fixed = TRUE)[[1]][1])
@@ -9,15 +18,22 @@ if (grepl("[nN]", rvprompt)) {
   stop("Change R-version using RSwitch")
 }
 
-dirsrc <- file.path("minicran/src/contrib")
-
-if (rv == "3.3") {
-  dirmac <- file.path("minicran/bin/macosx/mavericks/contrib", rv)
+if (isTRUE(dev)) {
+  base <- "minicran/dev"
 } else {
-  dirmac <- file.path("minicran/bin/macosx/el-capitan/contrib", rv)
+  base <- "minicran"
 }
 
-dirwin <- file.path("minicran/bin/windows/contrib", rv)
+dirsrc <- file.path(base, "src/contrib")
+
+if (rv == "3.3") {
+  dirmac <- file.path(base, "bin/macosx/mavericks/contrib", rv)
+} else {
+  dirmac <- file.path(base, "bin/macosx/el-capitan/contrib", rv)
+}
+
+dirwin <- file.path(base, "bin/windows/contrib", rv)
+dirwin
 
 if (!file.exists(dirsrc)) dir.create(dirsrc, recursive = TRUE)
 if (!file.exists(dirmac)) dir.create(dirmac, recursive = TRUE)
@@ -46,29 +62,29 @@ sapply(apps, rem_old)
 ## avoid 'loaded namespace' stuff when building for mac
 system(paste0(Sys.which("R"), " -e \"source('radiant/build/build_mac.R')\""))
 
-win <- readline(prompt = "Did you build on Windows? y/n: ")
-if (grepl("[yY]", win)) {
-
-  ## move packages to radiant_miniCRAN. must package in Windows first
-  setwd("~/gh/")
-  sapply(list.files(".", pattern = "*.tar.gz"), file.copy, dirsrc)
-  unlink("*.tar.gz")
-  sapply(list.files(".", pattern = "*.tgz"), file.copy, dirmac)
-  unlink("*.tgz")
-  sapply(list.files(".", pattern = "*.zip"), file.copy, dirwin)
-  unlink("*.zip")
-
-  tools::write_PACKAGES(dirmac, type = "mac.binary")
-  tools::write_PACKAGES(dirwin, type = "win.binary")
-  tools::write_PACKAGES(dirsrc, type = "source")
-
-  # commit to repo
-  setwd("~/gh/minicran")
-  system("git add --all .")
-  # mess <- paste0("radiant package updates: ", format(Sys.Date(), format = "%m-%d-%Y"))
-  # mess <- "code wrapping"
-  mess <- "0.9.1"
-  system(paste0("git commit -m '", mess, "'"))
-  system("git push")
-  setwd("~/gh/radiant")
-}
+# win <- readline(prompt = "Did you build on Windows? y/n: ")
+# if (grepl("[yY]", win)) {
+#
+#   ## move packages to radiant_miniCRAN. must package in Windows first
+#   setwd("~/gh/")
+#   sapply(list.files(".", pattern = "*.tar.gz"), file.copy, dirsrc)
+#   unlink("*.tar.gz")
+#   sapply(list.files(".", pattern = "*.tgz"), file.copy, dirmac)
+#   unlink("*.tgz")
+#   sapply(list.files(".", pattern = "*.zip"), file.copy, dirwin)
+#   unlink("*.zip")
+#
+#   tools::write_PACKAGES(dirmac, type = "mac.binary")
+#   tools::write_PACKAGES(dirwin, type = "win.binary")
+#   tools::write_PACKAGES(dirsrc, type = "source")
+#
+#   # commit to repo
+#   setwd("~/gh/minicran")
+#   system("git add --all .")
+#   # mess <- paste0("radiant package updates: ", format(Sys.Date(), format = "%m-%d-%Y"))
+#   # mess <- "code wrapping"
+#   mess <- "MRB"
+#   system(paste0("git commit -m '", mess, "'"))
+#   system("git push")
+#   setwd("~/gh/radiant")
+# }
