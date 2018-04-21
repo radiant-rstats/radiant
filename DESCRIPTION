@@ -2,7 +2,7 @@ Package: radiant
 Type: Package
 Title: Business Analytics using R and Shiny
 Version: 0.9.3.0
-Date: 2018-4-18
+Date: 2018-4-20
 Authors@R: person("Vincent", "Nijs", , "radiant@rady.ucsd.edu", c("aut", "cre"))
 Description: A platform-independent browser-based interface for business
     analytics in R, based on the shiny package. The application combines the
