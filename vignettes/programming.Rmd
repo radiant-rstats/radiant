@@ -32,12 +32,11 @@ help(package = radiant.model)
 help(package = radiant.multivariate)
 ```
 
-You can also use Rstudio to render and edit Rmarkdown documents generated in Radiant. When you install and load Radiant it exports functions that can be called from R-code and/or an Rmarkdown document.
-
-If you close Radiant by clicking the <i title='Power off' class='fa fa-power-off'></i> icon in the navigation bar and then click `Stop` after launching it from R(studio), you can paste the commands below into the command console to get the same output as in the browser interface.
+You can also use Rstudio to render and edit Rmarkdown documents generated in Radiant. When you install and load Radiant it exports functions that can be called from R-code and/or an Rmarkdown document. For example, you can paste the commands below into the command console to get the same output as in the browser interface.
 
 ```{r fig.height = 3, fig.width = 5}
 library(radiant)
+data(diamonds)
 result <- single_mean(diamonds, "price")
 summary(result)
 plot(result)
@@ -70,7 +69,7 @@ result <- single_mean(
   alternative = "greater"
 )
 summary(result)
-plot(result, plots = c("hist","simulate"))
+plot(result, plots = c("hist", "simulate"))
 ```
 
 To compare the mean price of diamonds across different levels of clarity we can call the `compare_means` function:
@@ -83,7 +82,7 @@ result <- compare_means(
   adjust = "bonf"
 )
 summary(result)
-plot(result, plots = c("bar","density"))
+plot(result, plots = c("bar", "density"))
 ```
 
 These datasets are available after loading the radiant library by using the `data` function. We can also load data through Radiant's browser interface and then access the data from the console after closing the app. Start radiant using the command below and then click select `Examples` from the `Load data of type` dropdown in the _Data > Manage_ tab. Then close the app by clicking the <i title='Power off' class='fa fa-power-off'></i> icon in the navbar and then clicking `Stop`. The datasets loaded through the web-interface are now available in the `r_data` environment as well. To use them directly in your code use `attach(r_data)`.
