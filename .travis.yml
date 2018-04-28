@@ -1,11 +1,13 @@
 language: r
-cache: packages
 warnings_are_errors: true
 sudo: required
 dist: trusty
 
+r_packages:
+  - devtools
+
 r_github_packages:
-  - vnijs/shinyAce
+  - trestletech/shinyAce
   - radiant-rstats/radiant.data
   - radiant-rstats/radiant.design
   - radiant-rstats/radiant.basics
