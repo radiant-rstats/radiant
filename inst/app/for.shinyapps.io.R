@@ -15,7 +15,7 @@ ret <- sapply(
   function(p) {
     devtools::install_github(
       paste0("radiant-rstats/", p),
-      ref = "MRB",
+      # ref = "MRB",
       dependencies = FALSE
     )
   }
