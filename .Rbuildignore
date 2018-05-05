@@ -2,4 +2,5 @@
 ^\.Rproj\.user$
 ^\.travis\.yml$
 ^.*\.sublime-project$
+^docs$
 cran-comments.md

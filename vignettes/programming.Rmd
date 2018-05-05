@@ -1,6 +1,6 @@
 ---
 title: Programming with Radiant
-author: "Vincent R. Nijs</br>Rady School of Management (UCSD)"
+author: "Vincent R. Nijs, Rady School of Management (UCSD)"
 date: "`r Sys.Date()`"
 output: 
   rmarkdown::html_vignette:
@@ -151,3 +151,5 @@ head(shopping)
 ```
 
 See if you can reproduce this output in the radiant browser interface. Start `Radiant` from the `Addins` dropdown in Rstudio.
+
+&copy; Vincent Nijs (2018) <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width: 0" src="./images/by-sa.png"/></a>
