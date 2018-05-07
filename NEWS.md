@@ -7,7 +7,7 @@
 * Various changes to the code to accomodate the use of `shiny::makeReactiveBinding`. The advantage is that the code generated for _Report > Rmd_ and _Report > R_ will no longer have to use `r_data` to store and access data. This means that code generated and used in the Radiant browser interface will be directly usable without the browser interface as well.
 * Improved auto completion in _Report > Rmd_ and _Report > R_
 
-# radiant 0.9.2
+# radiant 0.9.2.0
 
 ## Major changes
 
@@ -21,7 +21,7 @@ install.packages("radiant.update", repos = "https://radiant-rstats.github.io/min
 
 * Addins option to start app in Rstudio window
 
-# radiant 0.9.0
+# radiant 0.9.0.0
 
 ## Minor changes
 
