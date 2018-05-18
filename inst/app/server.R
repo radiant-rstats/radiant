@@ -1,8 +1,10 @@
 shinyServer(function(input, output, session) {
 
+  enc <- getOption("radiant.encoding")
+
   ## source shared functions
-  source(file.path(getOption("radiant.path.data"), "app/init.R"), encoding = getOption("radiant.encoding"), local = TRUE)
-  source(file.path(getOption("radiant.path.data"), "app/radiant.R"), encoding = getOption("radiant.encoding"), local = TRUE)
+  source(file.path(getOption("radiant.path.data"), "app/init.R"), encoding = enc, local = TRUE)
+  source(file.path(getOption("radiant.path.data"), "app/radiant.R"), encoding = enc, local = TRUE)
 
   ## source data & app tools from radiant.data
   for (file in list.files(
@@ -10,9 +12,9 @@ shinyServer(function(input, output, session) {
       file.path(getOption("radiant.path.data"), "app/tools/app"),
       file.path(getOption("radiant.path.data"), "app/tools/data")
     ),
-    pattern = "\\.(r|R)$", 
+    pattern = "\\.(r|R)$",
     full.names = TRUE)) {
-    source(file, encoding = getOption("radiant.encoding"), local = TRUE)
+    source(file, encoding = enc, local = TRUE)
   }
 
   ## list of radiant menu's to include
@@ -28,15 +30,15 @@ shinyServer(function(input, output, session) {
     ipath <- paste0(strsplit(i, "\\.")[[1]], collapse = ".path.")
 
     ## help ui
-    source(file.path(getOption(ipath), "app/help.R"), encoding = getOption("radiant.encoding"), local = TRUE)
+    source(file.path(getOption(ipath), "app/help.R"), encoding = enc, local = TRUE)
 
     ## source analysis tools for each app
     for (file in list.files(file.path(getOption(ipath), "app/tools/analysis"), pattern = "\\.(r|R)$", full.names = TRUE))
-      source(file, encoding = getOption("radiant.encoding"), local = TRUE)
+      source(file, encoding = enc, local = TRUE)
   }
 
   ## ui creation functions
-  source(file.path(getOption("radiant.path.model"), "app/radiant.R"), encoding = getOption("radiant.encoding"), local = TRUE)
+  source(file.path(getOption("radiant.path.model"), "app/radiant.R"), encoding = enc, local = TRUE)
 
   ## help ui
   output$help_ui <- renderUI({

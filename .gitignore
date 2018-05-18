@@ -5,3 +5,4 @@
 inst/doc
 .DS_Store
 radiant.Rproj
+^inst/app/tests$

@@ -3,4 +3,5 @@
 ^\.travis\.yml$
 ^.*\.sublime-project$
 ^docs$
+^inst/app/tests$
 cran-comments.md
