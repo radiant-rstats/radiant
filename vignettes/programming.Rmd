@@ -18,8 +18,8 @@ knitr::opts_chunk$set(
   cache = FALSE, 
   message = FALSE, 
   warning = FALSE,
-  dev = "svg"
-  # dpi = 144
+  # dev = "svg"
+  dpi = 144
 )
 ```
 
