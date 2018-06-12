@@ -1,5 +1,24 @@
 ## Resubmission
 
+This is a resubmission. In this version I have fixed several bugs and added several new features (see NEWS.md for details).
+
+radiant depends on all radiant.* packages. From the last time I submitted updates to CRAN I seem to recall Uwe Ligges suggested I submit all radiant packages to be updated at the same time. I hope my recollection is correct and that this is indeed the preferred approach that will minimize workload for CRAN.
+
+## Test environments
+
+* local OS X install, R 3.5.0
+* local Windows install, R 3.5.0
+* ubuntu "trusty" (on travis-ci), R release and devel
+* win-builder
+
+## R CMD check results
+
+There were no ERRORs, WARNINGs, or NOTEs. 
+
+## Previous cran-comments
+
+## Resubmission
+
 This is a resubmission (0.8.0). In this version I have updated all dependencies to the `radiant.*` packages and fixed notes shown at https://cran.rstudio.com/web/checks/check_results_radiant.html. 
 
 Please note that this version addresses the reverse dependency check warnings from radiant.data for the `radiant.*` packages. Deprecating the `*_each` commands used in the 0.6.0 versions of the `radiant.*` packages is related to the deprecation of the `*_each` functions in dplyr.
@@ -14,8 +33,6 @@ Please note that this version addresses the reverse dependency check warnings fr
 ## R CMD check results
 
 There were no ERRORs or WARNINGs. There was one NOTE about possibly mis-spelled words ("Analytics" and "analytics"). The spelling is correct however. 
-
-## Previous cran-comments
 
 ## Resubmission
 
