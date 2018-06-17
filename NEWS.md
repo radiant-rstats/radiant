@@ -1,3 +1,7 @@
+# radiant 0.9.6.0
+
+* Remove `rstudioapi`, `psych`, and `AlgDesign` as a direct imports
+
 # radiant 0.9.5.0
 
 ## Major changes
