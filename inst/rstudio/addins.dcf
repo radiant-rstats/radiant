@@ -1,14 +1,4 @@
-Name: Start radiant (window)
-Description: Start radiant in an Rstudio window
-Binding: radiant_window
-Interactive: true
-
-Name: Start radiant (viewer)
-Description: Start radiant in the Rstudio viewer
-Binding: radiant_viewer
-Interactive: true
-
-Name: Start radiant (browser)
+Name: Start radiant
 Description: Start radiant in the default browser
 Binding: radiant
 Interactive: true

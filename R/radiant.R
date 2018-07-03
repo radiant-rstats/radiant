@@ -75,7 +75,6 @@ win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 
     fn1 <- file.path(pt, "radiant.bat")
     launch_string <- paste0("\"", Sys.which("R"), "\" -e \"if (!require(radiant)) { install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary') }; library(radiant); shiny::runApp(system.file('app', package='", app[1], "'), port = 4444, launch.browser = TRUE)\"")
-    launch_string
     cat(launch_string, file = fn1, sep = "\n")
     Sys.chmod(fn1, mode = "0755")
 
