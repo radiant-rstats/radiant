@@ -21,28 +21,30 @@ ret <- sapply(
   }
 )
 devtools::install_github("rstudio/rstudioapi", force = TRUE)
-devtools::install_github("rstudio/httpuv", force = TRUE)
-devtools::install_github("rstudio/shiny", force = TRUE)
-devtools::install_github("trestletech/shinyAce", force = TRUE)
+# devtools::install_github("rstudio/httpuv", force = TRUE)
+# devtools::install_github("rstudio/shiny", force = TRUE)
+# devtools::install_github("trestletech/shinyAce", force = TRUE)
+devtools::install_github("vnijs/shinyFiles", force = TRUE)
 
 ## to install the release version
-packages <- c(
-  "radiant.data", "radiant.design", "radiant.basics",
-  "radiant.model", "radiant.multivariate", "radiant",
-  "shiny", "httpuv", "later", "rstudioapi"
-)
+# packages <- c(
+#   "radiant.data", "radiant.design", "radiant.basics",
+#   "radiant.model", "radiant.multivariate", "radiant",
+#   "shiny", "httpuv", "later", "rstudioapi"
+# )
+
 # packages <- c(
 #   "radiant.data", "radiant.design", "radiant.basics",
 #   "radiant.model", "radiant.multivariate", "radiant"
 # )
-ret <- sapply(
-  packages,
-  install.packages,
-  repos = c(
-    "https://radiant-rstats.github.io/minicran/dev/",
-    "https://radiant-rstats.github.io/minicran/"
-  )
-)
+# ret <- sapply(
+#   packages,
+#   install.packages,
+#   repos = c(
+#     "https://radiant-rstats.github.io/minicran/dev/",
+#     "https://radiant-rstats.github.io/minicran/"
+#   )
+# )
 
 ## by listing the call to the radiant library it will get picked up as a dependency
-library(radiant)
+# library(radiant)

@@ -11,7 +11,7 @@ Radiant is an open-source platform-independent browser-based interface for busin
 
 - Explore: Quickly and easily summarize, visualize, and analyze your data
 - Cross-platform: It runs in a browser on Windows, Mac, and Linux
-- Reproducible: Recreate results and share work with others as a state-file or an [Rmarkdown](http://rmarkdown.rstudio.com/) report
+- Reproducible: Recreate results and share work with others as a state file or an [Rmarkdown](http://rmarkdown.rstudio.com/) report
 - Programming: Integrate Radiant's analysis functions with your own R-code
 - Context: Data and examples focus on business applications
 
@@ -27,7 +27,7 @@ Radiant works on Windows, Mac, or Linux. It can run without an Internet connecti
 
 #### Reproducible
 
-To conduct high-quality analysis, simply saving output is not enough. You need the ability to reproduce results for the same data and/or when new data become available. Moreover, others may want to review your analysis and results. Save and load the state of the application to continue your work at a later time or on another computer. Share state-files with others and create reproducible reports using [Rmarkdown](http://rmarkdown.rstudio.com/). See also the section on `Saving and loading state` below
+To conduct high-quality analysis, simply saving output is not enough. You need the ability to reproduce results for the same data and/or when new data become available. Moreover, others may want to review your analysis and results. Save and load the state of the application to continue your work at a later time or on another computer. Share state files with others and create reproducible reports using [Rmarkdown](http://rmarkdown.rstudio.com/). See also the section on `Saving and loading state` below
 
 If you are using Radiant on a server you can even share the URL (include the SSUID) with others so they can see what you are working on. Thanks for this feature go to [Joe Cheng](https://github.com/jcheng5).
 
@@ -50,19 +50,19 @@ In Rstudio you can start and update Radiant through the `Addins` menu at the top
 install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/")
 ```
 
-Once all packages are installed, select `Start radiant (browser)` from the `Addins` menu in Rstudio or use the command below to launch the app:
+Once all packages are installed, select `Start radiant` from the `Addins` menu in Rstudio or use the command below to launch the app:
 
 ```r
 radiant::radiant()
 ```
 
-To launch Radiant in Rstudio's viewer pane select `Start radiant (viewer)` from the `Addins` menu in Rstudio or use the command below:
+To launch Radiant in Rstudio's viewer pane use the command below:
 
 ```r
 radiant::radiant_viewer()
 ```
 
-To launch Radiant in an Rstudio Window select `Start radiant (window)` from the `Addins` menu in Rstudio or use the command below:
+To launch Radiant in an Rstudio Window use the command below:
 
 ```r
 radiant::radiant_window()
@@ -80,15 +80,7 @@ Then select `Update radiant` from the `Addins` menu in Rstudio or use the comman
 radiant.update::radiant.update()
 ```
 
-<!--
-Alternatively Radiant can be updated using the command:
-
-```r
-source("https://raw.githubusercontent.com/radiant-rstats/minicran/gh-pages/update.R")
-```
--->
-
-See the [installing radiant](https://radiant-rstats.github.io/docs/install.html) page for details.
+See the [installing radiant](https://radiant-rstats.github.io/docs/install.html) page additional for details.
 
 **Optional:** You can also create a launcher on your Desktop to start Radiant by typing `radiant::launcher()` in the R(studio) console and pressing return. A file called `radiant.bat` (windows) or `radiant.command` (mac) will be created that you can double-click to start Radiant in your default browser. The `launcher` command will also create a file called `update_radiant.bat` (windows) or `update_radiant.command` (mac) that you can double-click to update Radiant to the latest release.
 
@@ -120,7 +112,7 @@ Not ready to install Radiant on your computer? Try it online at the link below:
 
 <a href="https://vnijs.shinyapps.io/radiant" target="_blank">https://vnijs.shinyapps.io/radiant</a>
 
-Do **not** upload sensitive data to this public server. The size of data upload has been restricted to 5MB for security reasons.
+Do **not** upload sensitive data to this public server. The size of data upload has been restricted to 10MB for security reasons.
 
 ## Running Radiant on shinyapps.io
 
@@ -143,15 +135,19 @@ options(radiant.maxRequestSize = -1)  ## no file size limit
 options(radiant.report = TRUE)
 ```
 
+## Running Radiant in the cloud (e.g., AWS)
+
+To run radiant in the cloud you can use the customized Docker container. See  <a href = "https://github.com/radiant-rstats/docker" target="_blank">https://github.com/radiant-rstats/docker</a> for details
+
 ## Saving and loading state
 
-To save your analyses save the state of the app to a file by clicking on the <i title='Save' class='fa fa-save'></i> icon in the navbar and then on `Save radiant state file` (see also the `Data > Manage` tab). You can open this state-file at a later time or on another computer to continue where you left off. You can also share the file with others that may want to replicate your analyses. As an example, load the state-file [`radiant-state.rda`](https://radiant-rstats.github.io/docs/examples/radiant-state.rda) by clicking on the <i title='Save' class='fa fa-save'></i> icon in the navbar and then on `Load radiant state file`. Go to _Data > View_ and _Data > Visualize_ to see some of the settings. There is also a report in _Report > Rmd_ that was created using the Radiant interface. The html file <a href="https://radiant-rstats.github.io/docs/examples/radiant-state.html" target="_blank">`radiant-state.html`</a> contains the output.
+To save your analyses save the state of the app to a file by clicking on the <i title='Save' class='fa fa-save'></i> icon in the navbar and then on `Save radiant state file` (see also the `Data > Manage` tab). You can open this state file at a later time or on another computer to continue where you left off. You can also share the file with others that may want to replicate your analyses. As an example, load the state file [`radiant-state.rda`](https://radiant-rstats.github.io/docs/examples/radiant-state.rda) by clicking on the <i title='Save' class='fa fa-save'></i> icon in the navbar and then on `Load radiant state file`. Go to _Data > View_ and _Data > Visualize_ to see some of the settings from the previous "state" of the app. There is also a report in _Report > Rmd_ that was created using the Radiant interface. The html file <a href="https://radiant-rstats.github.io/docs/examples/radiant-state.html" target="_blank">`radiant-state.html`</a> contains the output.
 
 A related feature in Radiant is that state is maintained if you accidentally navigate to another web page, close (and reopen) the browser, and/or hit refresh. Use `Refresh` in the <i title='Power off' class='fa fa-power-off'></i> menu in the navigation bar to return to a clean/new state.
 
-Loading and saving state also works with Rstudio. If you start Radiant from Rstudio and use <i title='Power off' class='fa fa-power-off'></i> > `Stop` to stop the app, lists called `r_data`, `r_info`, and `r_state` will be put into Rstudio's global workspace. If you start radiant again using `radiant::radiant()` it will use these lists to restore state. This can be convenient if you want to make changes to a data file in Rstudio and load it back into Radiant. Also, if you load a state-file directly into Rstudio it will be used when you start Radiant to recreate a previous state.
+Loading and saving state also works with Rstudio. If you start Radiant from Rstudio and use <i title='Power off' class='fa fa-power-off'></i> > `Stop` to stop the app, lists called `r_data`, `r_info`, and `r_state` will be put into Rstudio's global workspace. If you start radiant again using `radiant::radiant()` it will use these lists to restore state. Also, if you load a state file directly into Rstudio it will be used when you start Radiant to recreate a previous state.
 
-**Technical note**: Loading state works as follows in Radiant: When an input is initialized in a Shiny app you set a default value in the call to, for example, numericInput. In Radiant, when a state-file has been loaded and an input is initialized it looks to see if there is a value for an input of that name in a list called `r_state`. If there is, this value is used. The `r_state` list is created when saving state using `reactiveValuesToList(input)`. An example of a call to `numericInput` is given below where the `state_init` function from `radiant.R` is used to check if a value from `r_state` can be used.
+**Technical note**: Loading state works as follows in Radiant: When an input is initialized in a Shiny app you set a default value in the call to, for example, numericInput. In Radiant, when a state file has been loaded and an input is initialized it looks to see if there is a value for an input of that name in a list called `r_state`. If there is, this value is used. The `r_state` list is created when saving state using `reactiveValuesToList(input)`. An example of a call to `numericInput` is given below where the `state_init` function from `radiant.R` is used to check if a value from `r_state` can be used.
 
 ```r
 numericInput("sm_comp_value", "Comparison value:", state_init("sm_comp_value", 0))
@@ -159,7 +155,7 @@ numericInput("sm_comp_value", "Comparison value:", state_init("sm_comp_value", 0
 
 ## Source code
 
-The source code is available on GitHub at <https://github.com/radiant-rstats>. `radiant.data`, offers data loading, saving, viewing, visualizing, combining, and transforming tools. `radiant.design` builds on `radiant.data` and adds tools for experimental design, sampling, and sample size calculation. `radiant.basics` covers the basics of statistical analysis (e.g., comparing means and proportions, cross-tabs, correlation, etc.) and includes a probability calculator. `radiant.model` covers model estimation (e.g., logistic regression and neural networks), model evaluation (e.g., gains chart, profit curve, confusion matrix, etc.), and decision tools (e.g., decision analysis and simulation). Finally, `radiant.multivariate` includes tools to generate brand maps and conduct cluster, factor, and conjoint analysis.
+The source code for the radiant application is available on GitHub at <https://github.com/radiant-rstats>. `radiant.data`, offers tools to load, save, view, visualize, summarize, combine, and transform data. `radiant.design` builds on `radiant.data` and adds tools for experimental design, sampling, and sample size calculation. `radiant.basics` covers the basics of statistical analysis (e.g., comparing means and proportions, cross-tabs, correlation, etc.) and includes a probability calculator. `radiant.model` covers model estimation (e.g., logistic regression and neural networks), model evaluation (e.g., gains chart, profit curve, confusion matrix, etc.), and decision tools (e.g., decision analysis and simulation). Finally, `radiant.multivariate` includes tools to generate brand maps and conduct cluster, factor, and conjoint analysis.
 
 These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Research for Marketing Decisions_, _Consumer behavior_, _Experiments in firms_, _Pricing_, and _Customer Analytics_ classes at the Rady School of Management (UCSD).
 

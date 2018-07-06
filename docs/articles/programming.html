@@ -8,8 +8,8 @@
 <title>Programming with Radiant • radiant</title>
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script><script src="../pkgdown.js"></script><meta property="og:title" content="Programming with Radiant">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Programming with Radiant">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
@@ -29,7 +29,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">radiant</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.9.5</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.9.6.1</span>
       </span>
     </div>
 
@@ -82,7 +82,7 @@
       <h1>Programming with Radiant</h1>
                         <h4 class="author">Vincent R. Nijs, Rady School of Management (UCSD)</h4>
             
-            <h4 class="date">2018-06-12</h4>
+            <h4 class="date">2018-07-05</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/radiant-rstats/radiant/blob/master/vignettes/programming.Rmd"><code>vignettes/programming.Rmd</code></a></small>
       <div class="hidden name"><code>programming.Rmd</code></div>
@@ -92,16 +92,16 @@
     
     
 <p>Radiant’s goal is to provide access to the power of R for business analytics and data science. Although Radiant’s web-interface can handle many data and analysis tasks, you may prefer to write your own code. Radiant provides a bridge to programming in R(studio) by exporting the functions used for analysis. For example, you can run your analyses in Radiant and output the relevant function calls to an R or <a href="http://rmarkdown.rstudio.com/">Rmarkdown</a> document. Most pages in the app have an <i title="Report results" class="fa fa-edit"></i> icon on the bottom left of your screen that you can click to generate a (reproducible) report with your analysis in the <em>Report &gt; Rmd</em> (or <em>Report &gt; R</em>) tab. As an alternative to clicking the <i title="Report results" class="fa fa-edit"></i> icon you can also press <code>ALT-enter</code> on your keyboard. Click the <code>Knit report</code> button on the <em>Report &gt; Rmd</em> page to render the report to HTML or press the <code>Save report</code> button to produce a Notebook, HTML, PDF, Word, or Rmarkdown file. Radiant’s function manuals can be viewed using the commands below:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">help</span>(<span class="dt">package =</span> radiant.data)
-<span class="kw">help</span>(<span class="dt">package =</span> radiant.design)
-<span class="kw">help</span>(<span class="dt">package =</span> radiant.basics)
-<span class="kw">help</span>(<span class="dt">package =</span> radiant.model)
-<span class="kw">help</span>(<span class="dt">package =</span> radiant.multivariate)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">help</span>(<span class="dt">package =</span> radiant.data)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">help</span>(<span class="dt">package =</span> radiant.design)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">help</span>(<span class="dt">package =</span> radiant.basics)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">help</span>(<span class="dt">package =</span> radiant.model)</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">help</span>(<span class="dt">package =</span> radiant.multivariate)</a></code></pre></div>
 <p>You can also use Rstudio to render and edit Rmarkdown documents generated in Radiant. When you install and load Radiant it exports functions that can be called from R-code and/or an Rmarkdown document. For example, you can paste the commands below into the command console to get the same output as in the browser interface.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(radiant)
-<span class="kw">data</span>(diamonds)
-result &lt;-<span class="st"> </span><span class="kw">single_mean</span>(diamonds, <span class="st">"price"</span>)
-<span class="kw">summary</span>(result)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(radiant)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">data</span>(diamonds)</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">result &lt;-<span class="st"> </span><span class="kw">single_mean</span>(diamonds, <span class="st">"price"</span>)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw">summary</span>(result)</a></code></pre></div>
 <pre><code>Single mean test
 Data      : diamonds 
 Variable  : price 
@@ -116,29 +116,29 @@ Alt. hyp. : the mean of price is not equal to 0
  3907.186 72.243  54.084  &lt; .001 2999 3765.535 4048.837 ***
 
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(result)</code></pre></div>
-<p><img src="programming_files/figure-html/single_mean_price-1.png" width="480"></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">plot</span>(result)</a></code></pre></div>
+<p><img src="programming_files/figure-html/single_mean_price-1.png" width="720"></p>
 <p>You can also call functions for visualization (see below) and access help from the console using <code>?visualize</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visualize</span>(
-  diamonds, 
-  <span class="dt">xvar =</span> <span class="st">"carat"</span>, 
-  <span class="dt">yvar =</span> <span class="st">"price"</span>, 
-  <span class="dt">type =</span> <span class="st">"scatter"</span>,
-  <span class="dt">facet_row =</span> <span class="st">"clarity"</span>, 
-  <span class="dt">color =</span> <span class="st">"clarity"</span>, 
-  <span class="dt">custom =</span> <span class="ot">TRUE</span>
-) <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"Diamond Prices ($)"</span>)</code></pre></div>
-<p><img src="programming_files/figure-html/scatter-1.png" width="480"></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">visualize</span>(</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">  diamonds, </a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">  <span class="dt">xvar =</span> <span class="st">"carat"</span>, </a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">  <span class="dt">yvar =</span> <span class="st">"price"</span>, </a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">  <span class="dt">type =</span> <span class="st">"scatter"</span>,</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">  <span class="dt">facet_row =</span> <span class="st">"clarity"</span>, </a>
+<a class="sourceLine" id="cb5-7" data-line-number="7">  <span class="dt">color =</span> <span class="st">"clarity"</span>, </a>
+<a class="sourceLine" id="cb5-8" data-line-number="8">  <span class="dt">custom =</span> <span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9">) <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">"Diamond Prices ($)"</span>)</a></code></pre></div>
+<p><img src="programming_files/figure-html/scatter-1.png" width="720"></p>
 <p>Use <code>library(radiant)</code> to load the library. To see the index of functions currently available in, for example, Radiant’s Model menu use the <code>help(package = "radiant.model")</code> command</p>
 <p>Lets start by comparing the mean of a variable to a (population) value using R’s built-in <code>mtcars</code> dataset. This functionality is in the Radiant menu <em>Basics &gt; Means &gt; Single mean</em>. The analysis is conducted in function <code>single_mean</code>. Calling the <code>summary</code> method on the result object will show tabular output. Calling <code>plot</code> on the same result object will produce relevant plots.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">result &lt;-<span class="st"> </span><span class="kw">single_mean</span>(
-  mtcars, 
-  <span class="dt">var =</span> <span class="st">"mpg"</span>, 
-  <span class="dt">comp_value =</span> <span class="dv">20</span>, 
-  <span class="dt">alternative =</span> <span class="st">"greater"</span>
-)
-<span class="kw">summary</span>(result)</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">result &lt;-<span class="st"> </span><span class="kw">single_mean</span>(</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">  mtcars, </a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">  <span class="dt">var =</span> <span class="st">"mpg"</span>, </a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">  <span class="dt">comp_value =</span> <span class="dv">20</span>, </a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">  <span class="dt">alternative =</span> <span class="st">"greater"</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6">)</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="kw">summary</span>(result)</a></code></pre></div>
 <pre><code>Single mean test
 Data      : mtcars 
 Variable  : mpg 
@@ -153,16 +153,16 @@ Alt. hyp. : the mean of mpg is &gt; 20
  0.091 1.065   0.085   0.466 31 18.284  Inf  
 
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="kw">c</span>(<span class="st">"hist"</span>, <span class="st">"simulate"</span>))</code></pre></div>
-<p><img src="programming_files/figure-html/single_mean_mpg-1.png" width="480"></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="kw">c</span>(<span class="st">"hist"</span>, <span class="st">"simulate"</span>))</a></code></pre></div>
+<p><img src="programming_files/figure-html/single_mean_mpg-1.png" width="720"></p>
 <p>To compare the mean price of diamonds across different levels of clarity we can call the <code>compare_means</code> function:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">result &lt;-<span class="st"> </span><span class="kw">compare_means</span>(
-  diamonds, 
-  <span class="dt">var1 =</span> <span class="st">"clarity"</span>, 
-  <span class="dt">var2 =</span> <span class="st">"price"</span>, 
-  <span class="dt">adjust =</span> <span class="st">"bonf"</span>
-)
-<span class="kw">summary</span>(result)</code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">result &lt;-<span class="st"> </span><span class="kw">compare_means</span>(</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">  diamonds, </a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">  <span class="dt">var1 =</span> <span class="st">"clarity"</span>, </a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">  <span class="dt">var2 =</span> <span class="st">"price"</span>, </a>
+<a class="sourceLine" id="cb9-5" data-line-number="5">  <span class="dt">adjust =</span> <span class="st">"bonf"</span></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6">)</a>
+<a class="sourceLine" id="cb9-7" data-line-number="7"><span class="kw">summary</span>(result)</a></code></pre></div>
 <pre><code>Pairwise mean comparisons (t-test)
 Data      : diamonds 
 Variables : clarity, price 
@@ -211,14 +211,14 @@ Adjustment: Bonferroni
  VVS1 = IF     VVS1 not equal to IF      196.763 1      
 
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="kw">c</span>(<span class="st">"bar"</span>, <span class="st">"density"</span>))</code></pre></div>
-<p><img src="programming_files/figure-html/compare_means_diamonds-1.png" width="384"></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="kw">c</span>(<span class="st">"bar"</span>, <span class="st">"density"</span>))</a></code></pre></div>
+<p><img src="programming_files/figure-html/compare_means_diamonds-1.png" width="576"></p>
 <p>These datasets are available after loading the radiant library by using the <code>data</code> function. We can also load data through Radiant’s browser interface and then access the data from the console after closing the app. Start radiant using the command below and then click select <code>Examples</code> from the <code>Load data of type</code> dropdown in the <em>Data &gt; Manage</em> tab. Then close the app by clicking the <i title="Power off" class="fa fa-power-off"></i> icon in the navbar and then clicking <code>Stop</code>. The datasets loaded through the web-interface are now available in the <code>r_data</code> environment as well. To use them directly in your code use <code>attach(r_data)</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## start radiant in Rstudio, load the example data, then click the power icon and Stop
-radiant<span class="op">::</span><span class="kw">radiant</span>()</code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">## start radiant in Rstudio, load the example data, then click the power icon and Stop</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">radiant<span class="op">::</span><span class="kw">radiant</span>()</a></code></pre></div>
 <p>Because we already loaded the radiant library we already have access to all the data we need here. Lets use the <code>compare_means</code> function to evaluate salary data for professors of different ranks using:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">result &lt;-<span class="st"> </span><span class="kw">compare_means</span>(salary, <span class="dt">var1 =</span> <span class="st">"rank"</span>, <span class="dt">var2 =</span> <span class="st">"salary"</span>)
-<span class="kw">summary</span>(result)</code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">result &lt;-<span class="st"> </span><span class="kw">compare_means</span>(salary, <span class="dt">var1 =</span> <span class="st">"rank"</span>, <span class="dt">var2 =</span> <span class="st">"salary"</span>)</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2"><span class="kw">summary</span>(result)</a></code></pre></div>
 <pre><code>Pairwise mean comparisons (t-test)
 Data      : salary 
 Variables : rank, salary 
@@ -241,11 +241,11 @@ Adjustment: None
  &lt; .001 
 
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(result)</code></pre></div>
-<p><img src="programming_files/figure-html/compare_means_salary-1.png" width="384"></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">plot</span>(result)</a></code></pre></div>
+<p><img src="programming_files/figure-html/compare_means_salary-1.png" width="576"></p>
 <p>We can also run regressions and get output in a format that would require quite a few lines of code to produce from scratch:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">result &lt;-<span class="st"> </span><span class="kw">regress</span>(diamonds, <span class="dt">rvar =</span> <span class="st">"price"</span>, <span class="dt">evar =</span> <span class="kw">c</span>(<span class="st">"carat"</span>,<span class="st">"clarity"</span>))
-<span class="kw">summary</span>(result, <span class="dt">sum_check =</span> <span class="st">"confint"</span>)</code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">result &lt;-<span class="st"> </span><span class="kw">regress</span>(diamonds, <span class="dt">rvar =</span> <span class="st">"price"</span>, <span class="dt">evar =</span> <span class="kw">c</span>(<span class="st">"carat"</span>,<span class="st">"clarity"</span>))</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="kw">summary</span>(result, <span class="dt">sum_check =</span> <span class="st">"confint"</span>)</a></code></pre></div>
 <pre><code>Linear regression (OLS)
 Data     : diamonds 
 Response variable    : price 
@@ -280,8 +280,8 @@ clarity|VS1     4461.956  4060.801  4863.111 401.155
 clarity|VVS2    5109.476  4697.311  5521.640 412.165
 clarity|VVS1    5027.669  4607.574  5447.764 420.095
 clarity|IF      5265.170  4807.024  5723.317 458.147</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pred &lt;-<span class="st"> </span><span class="kw">predict</span>(result, <span class="dt">pred_cmd =</span> <span class="st">"carat = 1:10"</span>)
-<span class="kw">print</span>(pred, <span class="dt">n =</span> <span class="dv">10</span>)</code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">pred &lt;-<span class="st"> </span><span class="kw">predict</span>(result, <span class="dt">pred_cmd =</span> <span class="st">"carat = 1:10"</span>)</a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw">print</span>(pred, <span class="dt">n =</span> <span class="dv">10</span>)</a></code></pre></div>
 <pre><code>Linear regression (OLS)
 Data                 : diamonds 
 Response variable    : price 
@@ -300,36 +300,36 @@ Prediction command   : carat = 1:10
      SI1     8  64331.781 63609.787 65053.775 721.994
      SI1     9  72769.811 71948.301 73591.322 821.511
      SI1    10  81207.842 80286.667 82129.017 921.175</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="st">"coef"</span>)</code></pre></div>
-<p><img src="programming_files/figure-html/regress_coeff-1.png" width="576"></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="st">"dashboard"</span>, <span class="dt">lines =</span> <span class="st">"line"</span>)</code></pre></div>
-<p><img src="programming_files/figure-html/regress_dashboard-1.png" width="480"></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="st">"coef"</span>)</a></code></pre></div>
+<p><img src="programming_files/figure-html/regress_coeff-1.png" width="864"></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="st">"dashboard"</span>, <span class="dt">lines =</span> <span class="st">"line"</span>)</a></code></pre></div>
+<p><img src="programming_files/figure-html/regress_dashboard-1.png" width="720"></p>
 <p>As another example, imagine that you want to segment a sample of respondents based on their toothpaste attitudes. Below is the required code to produce results using functions from the Radiant package. For help on the commands and options for cluster analysis use <code>?hclus</code>, <code>?plot.hclus</code>, and <code>?klus</code>. See also the Radiant function manuals linked above.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## run hierarchical cluster analysis on the shopping data, variables v1 through v6
-result &lt;-<span class="st"> </span><span class="kw">hclus</span>(shopping, <span class="st">"v1:v6"</span>)
-
-## summary - not much here - plots are more important
-<span class="kw">summary</span>(result)</code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">## run hierarchical cluster analysis on the shopping data, variables v1 through v6</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2">result &lt;-<span class="st"> </span><span class="kw">hclus</span>(shopping, <span class="st">"v1:v6"</span>)</a>
+<a class="sourceLine" id="cb22-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb22-4" data-line-number="4">## summary - not much here - plots are more important</a>
+<a class="sourceLine" id="cb22-5" data-line-number="5"><span class="kw">summary</span>(result)</a></code></pre></div>
 <pre><code>Hierarchical cluster analysis
 Data        : shopping 
 Variables   : v1, v2, v3, v4, v5, v6 
 Method      : ward.D 
 Distance    : sq.euclidian 
 Observations: 20 </code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## check the help file on how to plot results from hierarchical cluster
-## analysis default plots
-## it looks like there is a big jump in overall within-cluster
-## heterogeneity in the step from 3 to 2 segments
-<span class="kw">plot</span>(result)</code></pre></div>
-<p><img src="programming_files/figure-html/hclus-1.png" width="384"></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## show the dendrogram with cutoff at 0.05
-<span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="st">"dendro"</span>, <span class="dt">cutoff =</span> <span class="fl">0.05</span>)</code></pre></div>
-<p><img src="programming_files/figure-html/dendro-1.png" width="384"></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## plots created above suggest 3 clusters may be  most appropriate
-## use kclus to create the clusters
-## generate output and store cluster membership
-result &lt;-<span class="st"> </span><span class="kw">kclus</span>(shopping, <span class="dt">vars =</span> <span class="st">"v1:v6"</span>, <span class="dt">nr_clus =</span> <span class="dv">3</span>)
-<span class="kw">summary</span>(result)</code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">## check the help file on how to plot results from hierarchical cluster</a>
+<a class="sourceLine" id="cb24-2" data-line-number="2">## analysis default plots</a>
+<a class="sourceLine" id="cb24-3" data-line-number="3">## it looks like there is a big jump in overall within-cluster</a>
+<a class="sourceLine" id="cb24-4" data-line-number="4">## heterogeneity in the step from 3 to 2 segments</a>
+<a class="sourceLine" id="cb24-5" data-line-number="5"><span class="kw">plot</span>(result)</a></code></pre></div>
+<p><img src="programming_files/figure-html/hclus-1.png" width="576"></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">## show the dendrogram with cutoff at 0.05</a>
+<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="st">"dendro"</span>, <span class="dt">cutoff =</span> <span class="fl">0.05</span>)</a></code></pre></div>
+<p><img src="programming_files/figure-html/dendro-1.png" width="576"></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">## plots created above suggest 3 clusters may be  most appropriate</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2">## use kclus to create the clusters</a>
+<a class="sourceLine" id="cb26-3" data-line-number="3">## generate output and store cluster membership</a>
+<a class="sourceLine" id="cb26-4" data-line-number="4">result &lt;-<span class="st"> </span><span class="kw">kclus</span>(shopping, <span class="dt">vars =</span> <span class="st">"v1:v6"</span>, <span class="dt">nr_clus =</span> <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb26-5" data-line-number="5"><span class="kw">summary</span>(result)</a></code></pre></div>
 <pre><code>K-means cluster analysis
 Data         : shopping 
 Variables    : v1, v2, v3, v4, v5, v6 
@@ -353,12 +353,12 @@ Cluster 3 33.71%
 
 Between cluster heterogeneity accounts for 73.93% of the
 total heterogeneity in the data (higher is better).</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="kw">c</span>(<span class="st">"density"</span>,<span class="st">"bar"</span>))</code></pre></div>
-<p><img src="programming_files/figure-html/kclus-1.png" width="480"></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">shopping &lt;-<span class="st"> </span><span class="kw">store</span>(shopping, result, <span class="dt">name =</span> <span class="st">"clus"</span>)
-
-## was the data really changed?
-<span class="kw">head</span>(shopping)</code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw">plot</span>(result, <span class="dt">plots =</span> <span class="kw">c</span>(<span class="st">"density"</span>,<span class="st">"bar"</span>))</a></code></pre></div>
+<p><img src="programming_files/figure-html/kclus-1.png" width="720"></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1">shopping &lt;-<span class="st"> </span><span class="kw">store</span>(shopping, result, <span class="dt">name =</span> <span class="st">"clus"</span>)</a>
+<a class="sourceLine" id="cb29-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb29-3" data-line-number="3">## was the data really changed?</a>
+<a class="sourceLine" id="cb29-4" data-line-number="4"><span class="kw">head</span>(shopping)</a></code></pre></div>
 <pre><code>  id v1 v2 v3 v4 v5 v6 clus
 1  1  6  4  7  3  2  3    1
 2  2  2  3  1  4  5  4    2
