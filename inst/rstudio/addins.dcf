@@ -1,4 +1,4 @@
-Name: Start radiant
+Name: Start radiant (browser)
 Description: Start radiant in the default browser
 Binding: radiant
 Interactive: true

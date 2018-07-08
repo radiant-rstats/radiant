@@ -24,7 +24,7 @@ devtools::install_github("rstudio/rstudioapi", force = TRUE)
 # devtools::install_github("rstudio/httpuv", force = TRUE)
 # devtools::install_github("rstudio/shiny", force = TRUE)
 # devtools::install_github("trestletech/shinyAce", force = TRUE)
-devtools::install_github("vnijs/shinyFiles", force = TRUE)
+# devtools::install_github("vnijs/shinyFiles", force = TRUE)
 
 ## to install the release version
 # packages <- c(
@@ -48,3 +48,9 @@ devtools::install_github("vnijs/shinyFiles", force = TRUE)
 
 ## by listing the call to the radiant library it will get picked up as a dependency
 # library(radiant)
+
+library(radiant.data)
+library(radiant.design)
+library(radiant.basics)
+library(radiant.model)
+library(radiant.multivariate)
