@@ -8,12 +8,12 @@ if (grepl("[nN]", rvprompt)) {
 }
 
 apps <- c(
-  "radiant.data",
-  "radiant.design",
-  "radiant.basics",
-  "radiant.model",
-  "radiant.multivariate",
-  "radiant.update",
+  # "radiant.data",
+  # "radiant.design",
+  # "radiant.basics",
+  # "radiant.model",
+  # "radiant.multivariate",
+  # "radiant.update",
   "radiant"
 )
 
