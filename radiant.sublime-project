@@ -8,28 +8,34 @@
 			"path": "."
 		},
 		{
-			"path": "/Users/vnijs/Desktop/GitHub/radiant.data"
+			"path": "/Users/vnijs/GitHub/radiant.data"
 		},
 		{
-			"path": "/Users/vnijs/Desktop/GitHub/radiant.design"
+			"path": "/Users/vnijs/GitHub/radiant.design"
 		},
 		{
-			"path": "/Users/vnijs/Desktop/GitHub/radiant.basics"
+			"path": "/Users/vnijs/GitHub/radiant.basics"
 		},
 		{
-			"path": "/Users/vnijs/Desktop/GitHub/radiant.model"
+			"path": "/Users/vnijs/GitHub/radiant.model"
 		},
 		{
-			"path": "/Users/vnijs/Desktop/GitHub/radiant.multivariate"
+			"path": "/Users/vnijs/GitHub/radiant.multivariate"
 		},
 		{
-			"path": "/Users/vnijs/Desktop/GitHub/docs"
+			"path": "/Users/vnijs/GitHub/radiant.update"
 		},
 		{
-			"path": "/Users/vnijs/Desktop/GitHub/minicran"
+			"path": "/Users/vnijs/GitHub/docker"
 		},
 		{
-			"path": "/Users/vnijs/Desktop/Github/gitgadget"
+			"path": "/Users/vnijs/GitHub/shinyAce"
+		},
+		{
+			"path": "/Users/vnijs/GitHub/shinyFiles_r"
+		},
+		{
+			"path": "/Users/vnijs/GitHub/docs"
 		}
 	]
 }
