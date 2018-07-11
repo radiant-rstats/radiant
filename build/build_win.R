@@ -9,7 +9,7 @@ if (grepl("[nN]", rvprompt)) {
 
 apps <- c(
   "DT",
-  # "shinyFiles_r",
+  "shinyFiles_r",
   "radiant.data",
   "radiant.design",
   "radiant.basics",

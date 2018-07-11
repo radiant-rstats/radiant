@@ -16,7 +16,7 @@ update_app <- function(app, mess = "Update [ci skip]", git = FALSE, github = FAL
 
 apps <- c(
   "DT",
-  # "shinyFiles_r",
+  "shinyFiles_r",
   "radiant.data",
   "radiant.design",
   "radiant.basics",
