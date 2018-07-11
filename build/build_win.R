@@ -22,7 +22,7 @@ apps <- c(
 ## build for packages ahead of CRAN
 # apps <- c("shinyAce", "rstudioapi", apps)
 
-path <- "Z:/Desktop/GitHub"
+path <- "Z:/GitHub"
 curr <- getwd()
 setwd(path)
 build_app <- function(app) {
