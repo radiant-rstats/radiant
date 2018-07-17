@@ -1,12 +1,5 @@
 {
-	"folders":
-	[
-		{
-			"path": "/Users/vnijs/Dropbox/TODO"
-		},
-		{
-			"path": "."
-		},
+	"folders": [
 		{
 			"path": "/Users/vnijs/GitHub/radiant.data"
 		},
@@ -24,18 +17,9 @@
 		},
 		{
 			"path": "/Users/vnijs/GitHub/radiant.update"
-		},
+		}
 		{
-			"path": "/Users/vnijs/GitHub/docker"
-		},
-		{
-			"path": "/Users/vnijs/GitHub/shinyAce"
-		},
-		{
-			"path": "/Users/vnijs/GitHub/shinyFiles_r"
-		},
-		{
-			"path": "/Users/vnijs/GitHub/docs"
+			"path": "/Users/vnijs/GitHub/radiant"
 		}
 	]
 }
