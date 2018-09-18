@@ -20,11 +20,11 @@ ret <- sapply(
     )
   }
 )
-devtools::install_github("rstudio/rstudioapi", force = TRUE)
-# devtools::install_github("rstudio/httpuv", force = TRUE)
-# devtools::install_github("rstudio/shiny", force = TRUE)
-# devtools::install_github("trestletech/shinyAce", force = TRUE)
-# devtools::install_github("vnijs/shinyFiles", force = TRUE)
+
+devtools::install_github("rstudio/rstudioapi")
+devtools::install_github("rstudio/DT")
+devtools::install_github("trestletech/shinyAce")
+devtools::install_github("vnijs/shinyFiles")
 
 ## to install the release version
 # packages <- c(
@@ -54,3 +54,8 @@ library(radiant.design)
 library(radiant.basics)
 library(radiant.model)
 library(radiant.multivariate)
+library(rstudioapi)
+library(shinyAce)
+library(shinyFiles)
+library(DT)
+
