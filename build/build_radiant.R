@@ -47,15 +47,15 @@ rem_old <- function(app) {
 }
 
 apps <- c(
-  "DT",
-  "shinyFiles_r",
-  "shinyAce",
+  # "DT",
+  # "shinyFiles",
+  # "shinyAce",
   "radiant.data",
   "radiant.design",
   "radiant.basics",
   "radiant.model",
   "radiant.multivariate",
-  "radiant.update",
+  # "radiant.update",
   "radiant"
 )
 

@@ -15,19 +15,19 @@ update_app <- function(app, mess = "Update [ci skip]", git = FALSE, github = FAL
 }
 
 apps <- c(
-  "DT",
-  "shinyFiles_r",
-  "shinyAce",
+  # "DT",
+  # "shinyFiles",
+  # "shinyAce",
   "radiant.data",
   "radiant.design",
   "radiant.basics",
   "radiant.model",
   "radiant.multivariate",
-  "radiant.update",
+  # "radiant.update",
   "radiant"
 )
 
-sapply(apps, update_app, mess = "MRB", git = TRUE, github = TRUE)
+sapply(apps, update_app, mess = "CRAN", git = TRUE, github = TRUE)
 
 ## build for packages ahead of CRAN
 # apps <- c("shinyAce", "rstudioapi", apps)
