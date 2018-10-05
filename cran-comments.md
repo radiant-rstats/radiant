@@ -1,5 +1,22 @@
 ## Resubmission
 
+radiant was recently archived and removed from CRAN. Uwe Ligges confirmed that multiple emails were sent to my radiant@rady.ucsd.edu email address but, unfortunately, I cannot find any such emails in my inbox. I hope you will accept radiant as a resubmission.
+
+## Test environments
+
+* local OS X install, R 3.5.1
+* local Windows install, R 3.5.1
+* Ubuntu "trusty" (on travis-ci), R oldrel, release, and devel
+* win-builder
+
+## R CMD check results
+
+There were no ERRORs, WARNINGs, or NOTEs. 
+
+# Previous cran-comments
+
+## Resubmission
+
 This is a resubmission. In this version I have fixed several bugs and added several new features (see NEWS.md for details).
 
 radiant depends on all radiant.* packages. From the last time I submitted updates to CRAN I seem to recall Uwe Ligges suggested I submit all radiant packages to be updated at the same time. I hope my recollection is correct and that this is indeed the preferred approach that will minimize workload for CRAN.

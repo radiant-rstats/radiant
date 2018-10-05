@@ -1,3 +1,7 @@
+# radiant 0.9.7.0
+
+* Update dependencies and convert all package data to tibbles
+
 # radiant 0.9.6.0
 
 * Remove `rstudioapi`, `psych`, and `AlgDesign` as a direct imports

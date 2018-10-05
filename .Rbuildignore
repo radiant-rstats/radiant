@@ -1,7 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.travis\.yml$
-^.*\.sublime-project$
 ^docs$
 ^inst/app/tests$
 cran-comments.md
+radiant.code-workspace
