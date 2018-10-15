@@ -6,7 +6,10 @@
 \alias{radiant-package}
 \title{radiant}
 \usage{
-radiant()
+radiant(state)
+}
+\arguments{
+\item{state}{Path to state file to load}
 }
 \description{
 radiant
@@ -19,5 +22,6 @@ See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 \examples{
 \dontrun{
 radiant()
+radiant("https://github.com/radiant-rstats/docs/raw/gh-pages/examples/demo-dvd-rnd.state.rda")
 }
 }

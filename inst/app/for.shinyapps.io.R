@@ -24,7 +24,7 @@ ret <- sapply(
 devtools::install_github("rstudio/rstudioapi")
 devtools::install_github("rstudio/DT")
 devtools::install_github("trestletech/shinyAce")
-devtools::install_github("vnijs/shinyFiles")
+devtools::install_github("thomasp85/shinyFiles")
 
 ## to install the release version
 # packages <- c(

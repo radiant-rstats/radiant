@@ -2,16 +2,21 @@
 #'
 #' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 #'
+#' @param state Path to state file to load
+#'
 #' @importFrom radiant.data launch
 #'
 #' @examples
 #' \dontrun{
 #' radiant()
+#' radiant("https://github.com/radiant-rstats/docs/raw/gh-pages/examples/demo-dvd-rnd.state.rda")
 #' }
 #' @export
-radiant <- function() radiant.data::launch(package = "radiant", run = "browser")
+radiant <- function(state) radiant.data::launch(package = "radiant", run = "browser", state)
 
 #' Launch radiant in an Rstudio window
+#'
+#' @param state Path to state file to load
 #'
 #' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 #'
@@ -22,11 +27,13 @@ radiant <- function() radiant.data::launch(package = "radiant", run = "browser")
 #' radiant_window()
 #' }
 #' @export
-radiant_window <- function() radiant.data::launch(package = "radiant", run = "window")
+radiant_window <- function(state) radiant.data::launch(package = "radiant", run = "window", state)
 
 #' Launch radiant in the Rstudio viewer
 #'
 #' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
+#'
+#' @param state Path to state file to load
 #'
 #' @importFrom radiant.data launch
 #'
@@ -35,7 +42,7 @@ radiant_window <- function() radiant.data::launch(package = "radiant", run = "wi
 #' radiant_viewer()
 #' }
 #' @export
-radiant_viewer <- function() radiant.data::launch(package = "radiant", run = "viewer")
+radiant_viewer <- function(state) radiant.data::launch(package = "radiant", run = "viewer", state)
 
 #' Create a launcher and updater for Windows (.bat)
 #'
