@@ -1,4 +1,4 @@
-# radiant 0.9.7.1
+# radiant 0.9.7.2
 
 * Load a state file on startup by providing a (relative) file path or a url. For example, radiant::radiant("https://github.com/radiant-rstats/docs/raw/gh-pages/examples/demo-dvd-rnd.state.rda") 
 * Update dependencies and convert all package data to tibbles
