@@ -3,6 +3,7 @@
 #' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 #'
 #' @param state Path to state file to load
+#' @param ... additional arguments to pass to shiny::runApp (e.g, port = 8080)
 #'
 #' @importFrom radiant.data launch
 #'
@@ -12,11 +13,12 @@
 #' radiant("https://github.com/radiant-rstats/docs/raw/gh-pages/examples/demo-dvd-rnd.state.rda")
 #' }
 #' @export
-radiant <- function(state) radiant.data::launch(package = "radiant", run = "browser", state)
+radiant <- function(state, ...) radiant.data::launch(package = "radiant", run = "browser", state, ...)
 
 #' Launch radiant in an Rstudio window
 #'
 #' @param state Path to state file to load
+#' @param ... additional arguments to pass to shiny::runApp (e.g, port = 8080)
 #'
 #' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 #'
@@ -27,13 +29,14 @@ radiant <- function(state) radiant.data::launch(package = "radiant", run = "brow
 #' radiant_window()
 #' }
 #' @export
-radiant_window <- function(state) radiant.data::launch(package = "radiant", run = "window", state)
+radiant_window <- function(state, ...) radiant.data::launch(package = "radiant", run = "window", state, ...)
 
 #' Launch radiant in the Rstudio viewer
 #'
 #' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
 #'
 #' @param state Path to state file to load
+#' @param ... additional arguments to pass to shiny::runApp (e.g, port = 8080)
 #'
 #' @importFrom radiant.data launch
 #'
@@ -42,7 +45,7 @@ radiant_window <- function(state) radiant.data::launch(package = "radiant", run 
 #' radiant_viewer()
 #' }
 #' @export
-radiant_viewer <- function(state) radiant.data::launch(package = "radiant", run = "viewer", state)
+radiant_viewer <- function(state, ...) radiant.data::launch(package = "radiant", run = "viewer", state, ...)
 
 #' Create a launcher and updater for Windows (.bat)
 #'
