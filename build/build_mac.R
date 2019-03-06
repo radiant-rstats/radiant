@@ -18,6 +18,7 @@ apps <- c(
   # "DT",
   # "shinyFiles",
   # "shinyAce",
+  "tinytex",
   "radiant.data",
   "radiant.design",
   "radiant.basics",
