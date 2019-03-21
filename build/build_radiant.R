@@ -50,7 +50,7 @@ apps <- c(
   # "DT",
   # "shinyFiles",
   # "shinyAce",
-  "tinytex",
+  "gitgadget",
   "radiant.data",
   "radiant.design",
   "radiant.basics",
