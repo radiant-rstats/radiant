@@ -84,7 +84,6 @@ if (grepl("[yY]", win)) {
 
   # commit to repo
   setwd(file.path(rstudioapi::getActiveProject(), "../minicran"))
-  setwd(file.path(rstudioapi::getActiveProject(), ".."))
   system("git add --all .")
   mess <- paste0("radiant package updates: ", format(Sys.Date(), format = "%m-%d-%Y"))
   system(paste0("git commit -m '", mess, "'"))
