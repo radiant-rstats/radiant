@@ -1,4 +1,4 @@
-setwd("~/GitHub")
+setwd(file.path(rstudioapi::getActiveProject(), ".."))
 
 ## building radiant packages for mac and windows
 dev <- FALSE
@@ -47,9 +47,8 @@ rem_old <- function(app) {
 }
 
 apps <- c(
-  # "DT",
-  # "shinyFiles",
   # "shinyAce",
+  "shinyFiles",
   "gitgadget",
   "radiant.data",
   "radiant.design",
@@ -64,13 +63,14 @@ sapply(apps, rem_old)
 
 ## probably need to restart Rstudio before building
 ## avoid 'loaded namespace' stuff when building for mac
-system(paste0(Sys.which("R"), " -e \"source('radiant/build/build_mac.R')\""))
+dir2set <- file.path(rstudioapi::getActiveProject(), "..")
+system(paste0(Sys.which("R"), " -e \"setwd('", dir2set, "'); source('radiant/build/build_mac.R')\""))
 
 win <- readline(prompt = "Did you build on Windows? y/n: ")
 if (grepl("[yY]", win)) {
 
   ## move packages to radiant_miniCRAN. must package in Windows first
-  setwd("~/GitHub/")
+  setwd(file.path(rstudioapi::getActiveProject(), ".."))
   sapply(list.files(".", pattern = "*.tar.gz"), file.copy, dirsrc)
   unlink("*.tar.gz")
   sapply(list.files(".", pattern = "*.tgz"), file.copy, dirmac)
@@ -83,10 +83,10 @@ if (grepl("[yY]", win)) {
   tools::write_PACKAGES(dirsrc, type = "source")
 
   # commit to repo
-  setwd("~/GitHub/minicran")
+  setwd(file.path(rstudioapi::getActiveProject(), "../minicran"))
   system("git add --all .")
   mess <- paste0("radiant package updates: ", format(Sys.Date(), format = "%m-%d-%Y"))
   system(paste0("git commit -m '", mess, "'"))
   system("git push")
-  setwd("~/GitHub/radiant")
+  setwd(rstudioapi::getActiveProject())
 }
