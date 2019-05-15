@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
   warning = FALSE,
   dpi = 96
 )
+options(width = 150)
 ```
 
 Radiant's goal is to provide access to the power of R for business analytics and data science. Although Radiant's web-interface can handle many data and analysis tasks, you may prefer to write your own code. Radiant provides a bridge to programming in R(studio) by exporting the functions used for analysis. For example, you can run your analyses in Radiant and output the relevant function calls to an R or [Rmarkdown](http://rmarkdown.rstudio.com/) document. Most pages in the app have an <i title='Report results' class='fa fa-edit'></i> icon on the bottom left of your screen that you can click to generate a (reproducible) report with your analysis in the _Report > Rmd_ (or _Report > R_) tab. As an alternative to clicking the <i title='Report results' class='fa fa-edit'></i> icon you can also press `ALT-enter` on your keyboard. Click the `Knit report` button on the _Report > Rmd_ page to render the report to HTML or press the `Save report` button to produce a Notebook, HTML, PDF, Word, or Rmarkdown file. Radiant's function manuals can be viewed using the commands below:
@@ -52,16 +53,16 @@ visualize(
   type = "scatter",
   facet_row = "clarity", 
   color = "clarity", 
-  custom = TRUE
-) +
-  labs(title = "Diamond Prices ($)")
+  labs = labs(title = "Diamond Prices ($)"),
+  custom = FALSE
+) 
 ```
 
 Use `library(radiant)` to load the library. To see the index of functions currently available in, for example, Radiant's Model menu use the `help(package = "radiant.model")` command
 
 Lets start by comparing the mean of a variable to a (population) value using R's built-in `mtcars` dataset. This functionality is in the Radiant menu _Basics > Means > Single mean_. The analysis is conducted in function `single_mean`. Calling the `summary` method on the result object will show tabular output. Calling `plot` on the same result object will produce relevant plots.
 
-```{r single_mean_mpg, fig.height = 6, fig.width = 5}
+```{r single_mean_mpg, fig.height = 3, fig.width = 5}
 result <- single_mean(
   mtcars, 
   var = "mpg", 
@@ -69,7 +70,7 @@ result <- single_mean(
   alternative = "greater"
 )
 summary(result)
-plot(result, plots = c("hist", "simulate"))
+plot(result, plots = "hist")
 ```
 
 To compare the mean price of diamonds across different levels of clarity we can call the `compare_means` function:
@@ -88,7 +89,8 @@ plot(result, plots = c("bar", "density"))
 These datasets are available after loading the radiant library by using the `data` function. We can also load data through Radiant's browser interface and then access the data from the console after closing the app. Start radiant using the command below and then click select `Examples` from the `Load data of type` dropdown in the _Data > Manage_ tab. Then close the app by clicking the <i title='Power off' class='fa fa-power-off'></i> icon in the navbar and then clicking `Stop`. The datasets loaded through the web-interface are now available in the `r_data` environment as well. To use them directly in your code use `attach(r_data)`.
 
 ```{r eval = FALSE}
-## start radiant in Rstudio, load the example data, then click the power icon and Stop
+## start radiant in Rstudio, load the example data, then click the power 
+## icon in the navigation bar and click on Stop
 radiant::radiant()
 ```
 

@@ -1,15 +1,8 @@
 language: r
+r:
+  - oldrel
+  - release
+  - devel
 warnings_are_errors: true
 sudo: required
 dist: trusty
-
-r_packages:
-  - devtools
-
-r_github_packages:
-  - trestletech/shinyAce
-  - radiant-rstats/radiant.data
-  - radiant-rstats/radiant.design
-  - radiant-rstats/radiant.basics
-  - radiant-rstats/radiant.model
-  - radiant-rstats/radiant.multivariate
