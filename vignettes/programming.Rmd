@@ -18,8 +18,7 @@ knitr::opts_chunk$set(
   cache = FALSE, 
   message = FALSE, 
   warning = FALSE,
-  # dev = "svg"
-  dpi = 144
+  dpi = 96
 )
 ```
 
@@ -114,7 +113,7 @@ plot(result, plots = "coef")
 ```
 
 ```{r regress_dashboard, fig.width = 5, fig.height = 7}
-plot(result, plots = "dashboard", lines = "line")
+plot(result, plots = "dashboard", lines = "line", nrobs = 100)
 ```
 
 As another example, imagine that you want to segment a sample of respondents based on their toothpaste attitudes. Below is the required code to produce results using functions from the Radiant package. For help on the commands and options for cluster analysis use `?hclus`, `?plot.hclus`, and `?klus`. See also the Radiant function manuals linked above.
@@ -144,7 +143,7 @@ plot(result, plots = "dendro", cutoff = 0.05)
 ## generate output and store cluster membership
 result <- kclus(shopping, vars = "v1:v6", nr_clus = 3)
 summary(result)
-plot(result, plots = c("density","bar"))
+plot(result, plots = "bar")
 shopping <- store(shopping, result, name = "clus")
 
 ## was the data really changed?
