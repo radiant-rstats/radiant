@@ -136,7 +136,7 @@ plot(result)
 
 ```{r dendro, fig.width = 4, fig.height = 5}
 ## show the dendrogram with cutoff at 0.05
-plot(result, plots = "dendro", cutoff = 0.05)
+# plot(result, plots = "dendro", cutoff = 0.05)
 ```
 
 ```{r kclus, fig.width = 5, fig.height = 6}
