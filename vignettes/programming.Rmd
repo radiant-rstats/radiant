@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
   cache = FALSE, 
   message = FALSE, 
   warning = FALSE,
-  dpi = 96
+  dpi = 144
 )
 options(width = 150)
 ```
@@ -110,6 +110,7 @@ summary(result, sum_check = "confint")
 pred <- predict(result, pred_cmd = "carat = 1:10")
 print(pred, n = 10)
 ```
+
 ```{r regress_coeff, fig.width = 6, fig.height = 4}
 plot(result, plots = "coef")
 ```
@@ -136,7 +137,7 @@ plot(result)
 
 ```{r dendro, fig.width = 4, fig.height = 5}
 ## show the dendrogram with cutoff at 0.05
-# plot(result, plots = "dendro", cutoff = 0.05)
+plot(result, plots = "dendro", cutoff = 0.05)
 ```
 
 ```{r kclus, fig.width = 5, fig.height = 6}
@@ -145,7 +146,7 @@ plot(result)
 ## generate output and store cluster membership
 result <- kclus(shopping, vars = "v1:v6", nr_clus = 3)
 summary(result)
-plot(result, plots = "bar")
+plot(result, plots = c("density", "bar"))
 shopping <- store(shopping, result, name = "clus")
 
 ## was the data really changed?
