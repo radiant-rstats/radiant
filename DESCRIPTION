@@ -14,7 +14,7 @@ Depends:
     radiant.design (>= 0.9.9),
     radiant.basics (>= 0.9.9),
     radiant.model (>= 0.9.9),
-    radiant.multivariate (>= 0.9.9)
+    radiant.multivariate (>= 0.9.9.1)
 Imports:
     shiny (>= 1.2.0),
     import (>= 1.1.0)
