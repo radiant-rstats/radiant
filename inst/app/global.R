@@ -32,4 +32,6 @@ options(radiant.url.patterns = make_url_patterns())
 
 ## to use a alternative set of .rda files with data.frames as the default adapt and
 ## un-comment the line below
-# options(radiant.init.data = list.files(path = "~/gh/radiant.model/data", full.names = TRUE))
+## note that "data/" here points to inst/app/data in the radiant directory but can
+## be any (full) path on a erver
+options(radiant.init.data = list.files(path = "data/", full.names = TRUE))
