@@ -29,3 +29,7 @@ source(file.path(getOption("radiant.path.basics"), "app/init.R"), encoding = get
 source(file.path(getOption("radiant.path.model"), "app/init.R"), encoding = getOption("radiant.encoding"), local = TRUE)
 source(file.path(getOption("radiant.path.multivariate"), "app/init.R"), encoding = getOption("radiant.encoding"), local = TRUE)
 options(radiant.url.patterns = make_url_patterns())
+
+## to use a alternative set of .rda files with data.frames as the default adapt and
+## un-comment the line below
+# options(radiant.init.data = list.files(path = "~/gh/radiant.model/data", full.names = TRUE))
