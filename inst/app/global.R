@@ -34,4 +34,4 @@ options(radiant.url.patterns = make_url_patterns())
 ## un-comment the line below
 ## note that "data/" here points to inst/app/data in the radiant directory but can
 ## be any (full) path on a erver
-options(radiant.init.data = list.files(path = "data/", full.names = TRUE))
+# options(radiant.init.data = list.files(path = "data/", full.names = TRUE))
