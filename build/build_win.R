@@ -20,10 +20,10 @@ apps <- c(
   "radiant"
 )
 
-path <- normalizePath(setwd(file.path(rstudioapi::getActiveProject(), "..")), winslash = "/")
+path <- normalizePath(file.path(rstudioapi::getActiveProject(), ".."), winslash = "/")
 curr <- setwd(path)
 build_app <- function(app) {
-  f <- devtools::build(file.path(path, app), binary = TRUE)
+  f <- devtools::build(file.path(".", app), binary = TRUE)
 }
 sapply(apps, build_app)
 setwd(curr)
