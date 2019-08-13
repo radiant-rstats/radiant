@@ -7,24 +7,21 @@ packages <- c(
   "radiant.model", "radiant.multivariate", "radiant"
 )
 ## Use the code below to install the development version
-if (!require(devtools)) {
-  install.packages("devtools")
+if (!require(remotes)) {
+  install.packages("remotes")
 }
 ret <- sapply(
   packages,
   function(p) {
-    devtools::install_github(
+    remotes::install_github(
       paste0("radiant-rstats/", p),
-      dependencies = FALSE
+      dependencies = FALSE,
+      upgrade = "never"
     )
   }
 )
 
-# devtools::install_github("rstudio/rstudioapi")
-# devtools::install_github("rstudio/DT")
-# devtools::install_github("trestletech/shinyAce")
-# devtools::install_github("thomasp85/shinyFiles")
-install.packages(c("rstudioapi", "DT", "shinyAce", "shinyFiles"))
+install.packages(c("shinyAce", "shinyFiles"))
 
 ## to install the release version
 # packages <- c(
