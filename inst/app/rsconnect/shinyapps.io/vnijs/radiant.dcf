@@ -5,9 +5,9 @@ account: vnijs
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 195380
-bundleId: 2272372
+bundleId: 2343954
 url: https://vnijs.shinyapps.io/radiant/
-when: 1564360862.24356
+when: 1566454119.72213
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: tests/mytest.R

@@ -1,3 +1,7 @@
+# radiant 1.1.0.0
+
+* Numerous small code changes to support enhanced auto-completion, tooltips, and annotations in shinyAce 0.4.1
+
 # radiant 0.9.9.0
 
 * Option to pass additional arguments to `shiny::runApp` when starting radiant such as the port to use. For example, radiant::radiant("https://github.com/radiant-rstats/docs/raw/gh-pages/examples/demo-dvd-rnd.state.rda", port = 8080) 

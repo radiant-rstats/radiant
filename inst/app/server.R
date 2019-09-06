@@ -1,4 +1,10 @@
+if (isTRUE(getOption("radiant.from.package"))) {
+  library(radiant)
+}
+
 shinyServer(function(input, output, session) {
+
+  summary.correlation <- radiant.basics:::summary.correlation
 
   enc <- getOption("radiant.encoding")
 
@@ -25,11 +31,13 @@ shinyServer(function(input, output, session) {
 
   for (i in rmenus[-1]) {
     ## 'sourcing' radiant's package functions in the server.R environment
-    eval(parse(text = paste0("radiant.data::copy_all(", i, ")")))
-
-    ipath <- paste0(strsplit(i, "\\.")[[1]], collapse = ".path.")
+    if (!isTRUE(getOption("radiant.from.package"))) {
+      eval(parse(text = paste0("radiant.data::copy_all(", i, ")")))
+      cat(paste0("\nGetting ", i, " from source ...\n"))
+    }
 
     ## help ui
+    ipath <- paste0(strsplit(i, "\\.")[[1]], collapse = ".path.")
     source(file.path(getOption(ipath), "app/help.R"), encoding = enc, local = TRUE)
 
     ## source analysis tools for each app

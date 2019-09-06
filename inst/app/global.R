@@ -2,7 +2,9 @@
 options(radiant.path.data = system.file(package = "radiant.data"))
 source(file.path(getOption("radiant.path.data"), "app/global.R"), encoding = getOption("radiant.encoding", default = "UTF-8"), local = TRUE)
 
-options(radiant.path.data = system.file(package = "radiant.data"))
+ifelse(grepl("radiant", getwd()) && file.exists("../../inst"), "..", system.file(package = "radiant")) %>%
+  options(radiant.path = .)
+
 options(radiant.path.design = system.file(package = "radiant.design"))
 options(radiant.path.basics = system.file(package = "radiant.basics"))
 options(radiant.path.model = system.file(package = "radiant.model"))
@@ -30,7 +32,15 @@ source(file.path(getOption("radiant.path.model"), "app/init.R"), encoding = getO
 source(file.path(getOption("radiant.path.multivariate"), "app/init.R"), encoding = getOption("radiant.encoding"), local = TRUE)
 options(radiant.url.patterns = make_url_patterns())
 
-## to use a alternative set of .rda files with data.frames as the default adapt and
+if (!"package:radiant" %in% search() &&
+  isTRUE(getOption("radiant.development")) &&
+  getOption("radiant.path") == "..") {
+  options(radiant.from.package = FALSE)
+} else {
+  options(radiant.from.package = TRUE)
+}
+
+## to use an alternative set of .rda files with data.frames as the default adapt and
 ## un-comment the line below
 ## note that "data/" here points to inst/app/data in the radiant directory but can
 ## be any (full) path on a server

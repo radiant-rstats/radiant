@@ -47,7 +47,7 @@ rem_old <- function(app) {
 }
 
 apps <- c(
-  # "shinyAce",
+  "shinyAce",
   # "shinyFiles",
   # "gitgadget",
   "radiant.data",
