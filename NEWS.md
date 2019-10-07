@@ -1,3 +1,7 @@
+# radiant 1.1.1.0
+
+* Upgrade dependency to shiny 1.4.0
+
 # radiant 1.1.0.0
 
 * Numerous small code changes to support enhanced auto-completion, tooltips, and annotations in shinyAce 0.4.1

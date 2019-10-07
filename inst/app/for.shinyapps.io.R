@@ -2,10 +2,13 @@
 # rstudioapi::restartSession()
 
 ## install the latest version from github so it will be used on shinyapps.io
-packages <- c(
+packages <- paste0("radiant-rstats/", c(
   "radiant.data", "radiant.design", "radiant.basics",
   "radiant.model", "radiant.multivariate", "radiant"
-)
+))
+
+packages <- c(packages, "trestletech/shinyAce")
+
 ## Use the code below to install the development version
 if (!require(remotes)) {
   install.packages("remotes")
@@ -14,14 +17,15 @@ ret <- sapply(
   packages,
   function(p) {
     remotes::install_github(
-      paste0("radiant-rstats/", p),
+      p,
       dependencies = FALSE,
       upgrade = "never"
     )
   }
 )
 
-install.packages(c("shinyAce", "shinyFiles"))
+# install.packages(c("shinyAce", "shinyFiles"))
+install.packages("shinyFiles")
 
 ## to install the release version
 # packages <- c(
