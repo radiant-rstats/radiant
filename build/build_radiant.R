@@ -47,6 +47,7 @@ rem_old <- function(app) {
 }
 
 apps <- c(
+  "htmltools",
   "shiny",
   "htmlwidgets",
   # "shinyAce",
