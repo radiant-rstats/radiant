@@ -1,5 +1,6 @@
-# radiant 1.1.1.0
+# radiant 1.1.2.0
 
+* Documentation updates
 * Upgrade dependency to shiny 1.4.0
 
 # radiant 1.1.0.0
