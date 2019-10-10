@@ -24,6 +24,8 @@ apps <- c(
   "radiant"
 )
 
+sapply(apps, function(x) devtools::install(pkg = paste0("../", x), upgrade = "never"))
+
 path <- normalizePath(file.path(rstudioapi::getActiveProject(), ".."), winslash = "/")
 curr <- setwd(path)
 build_app <- function(app) {

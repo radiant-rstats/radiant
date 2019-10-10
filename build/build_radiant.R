@@ -63,6 +63,8 @@ apps <- c(
 )
 
 sapply(apps, rem_old)
+# sapply(apps, function(x) devtools::install(pkg = paste0("../", x), upgrade = "never"))
+sapply(apps, function(x) devtools::install(pkg = x, upgrade = "never"))
 
 ## probably need to restart Rstudio before building
 ## avoid 'loaded namespace' stuff when building for mac
