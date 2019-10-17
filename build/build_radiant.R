@@ -51,13 +51,13 @@ apps <- c(
   # "shiny",
   # "htmlwidgets",
   # "shinyAce",
-  "shinyFiles",
-  "gitgadget",
+  # "shinyFiles",
+  # "gitgadget",
   "radiant.data",
-  "radiant.design",
+  # "radiant.design",
   "radiant.basics",
   # "radiant.model",
-  "radiant.multivariate",
+  # "radiant.multivariate",
   # "radiant.update",
   "radiant"
 )
