@@ -1,7 +1,9 @@
-# radiant 1.1.2.0
+# radiant 1.2.0.0
 
 * Documentation updates
 * Upgrade dependency to shiny 1.4.0
+* Improved handling of fractions in radiant.design, radiant.basics, and radiant.model
+* Improved button refresh code when relevant inputs are changed by the user
 
 # radiant 1.1.0.0
 

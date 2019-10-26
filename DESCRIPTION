@@ -1,8 +1,8 @@
 Package: radiant
 Type: Package
 Title: Business Analytics using R and Shiny
-Version: 1.1.2
-Date: 2019-10-9
+Version: 1.2.0
+Date: 2019-10-25
 Authors@R: person("Vincent", "Nijs", , "radiant@rady.ucsd.edu", c("aut", "cre"))
 Description: A platform-independent browser-based interface for business
     analytics in R, based on the shiny package. The application combines the
@@ -10,11 +10,11 @@ Description: A platform-independent browser-based interface for business
     radiant.model, and radiant.multivariate.
 Depends:
     R (>= 3.4.0),
-    radiant.data (>= 1.1.5),
-    radiant.design (>= 1.1.2),
-    radiant.basics (>= 1.1.1),
-    radiant.model (>= 1.1.0),
-    radiant.multivariate (>= 1.1.1)
+    radiant.data (>= 1.2.0),
+    radiant.design (>= 1.2.0),
+    radiant.basics (>= 1.2.0),
+    radiant.model (>= 1.2.0),
+    radiant.multivariate (>= 1.2.0)
 Imports:
     shiny (>= 1.4.0),
     import (>= 1.1.0)
