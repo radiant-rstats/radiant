@@ -10,7 +10,7 @@ if (grepl("[nN]", rvprompt)) {
 
 apps <- c(
   # "shinyAce",
-  # "shinyFiles",
+  "shinyFiles",
   # "gitgadget",
   "radiant.data",
   "radiant.design",
