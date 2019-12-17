@@ -1,3 +1,8 @@
+# radiant 1.3.0.0
+
+* Using `polycor::hetcor` to calculate measures of correlation between numeric and categorical variables
+* Using `patchwork` to combine multiple plots 
+
 # radiant 1.2.0.0
 
 * Documentation updates
