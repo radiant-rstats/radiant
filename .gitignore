@@ -7,3 +7,4 @@ inst/doc
 radiant.Rproj
 ^inst/app/tests$
 radiant.dcf
+.vscode

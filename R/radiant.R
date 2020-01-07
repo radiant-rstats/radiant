@@ -47,6 +47,18 @@ radiant_window <- function(state, ...) radiant.data::launch(package = "radiant",
 #' @export
 radiant_viewer <- function(state, ...) radiant.data::launch(package = "radiant", run = "viewer", state, ...)
 
+#' Start radiant but do not open a browser
+#'
+#' @param state Path to statefile to load
+#' @param ... additional arguments to pass to shiny::runApp (e.g, port = 8080)
+#'
+#' @examples
+#' \dontrun{
+#' radiant_url()
+#' }
+#' @export
+radiant_url <- function(state, ...) radiant.data::launch(package = "radiant", run = FALSE, state, ...)
+
 #' Create a launcher and updater for Windows (.bat)
 #'
 #' @details On Windows a file named 'radiant.bat' and one named 'update_radiant.bat' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version
