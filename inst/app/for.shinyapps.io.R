@@ -7,7 +7,7 @@ packages <- paste0("radiant-rstats/", c(
   "radiant.model", "radiant.multivariate", "radiant"
 ))
 
-packages <- c(packages, "trestletech/shinyAce")
+packages <- c(packages, "trestletech/shinyAce", "vnijs/DiagrammeR")
 
 ## Use the code below to install the development version
 if (!require(remotes)) {
@@ -25,7 +25,7 @@ ret <- sapply(
 )
 
 # install.packages(c("shinyAce", "shinyFiles"))
-install.packages("shinyFiles")
+install.packages(c("shinyFiles", "htmltools"), repo = "https://cloud.r-project.org/")
 
 ## to install the release version
 # packages <- c(
@@ -59,4 +59,5 @@ library(rstudioapi)
 library(shinyAce)
 library(shinyFiles)
 library(DT)
+library(htmltools)
 
