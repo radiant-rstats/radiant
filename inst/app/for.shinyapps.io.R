@@ -1,6 +1,3 @@
-## restart before installing from github
-# rstudioapi::restartSession()
-
 ## install the latest version from github so it will be used on shinyapps.io
 packages <- paste0("radiant-rstats/", c(
   "radiant.data", "radiant.design", "radiant.basics",
@@ -24,7 +21,6 @@ ret <- sapply(
   }
 )
 
-# install.packages(c("shinyAce", "shinyFiles"))
 install.packages(c("shinyFiles", "htmltools"), repo = "https://cloud.r-project.org/")
 
 ## to install the release version
@@ -49,7 +45,6 @@ install.packages(c("shinyFiles", "htmltools"), repo = "https://cloud.r-project.o
 
 ## by listing the call to the radiant library it will get picked up as a dependency
 # library(radiant)
-
 library(radiant.data)
 library(radiant.design)
 library(radiant.basics)
