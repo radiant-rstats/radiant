@@ -2,8 +2,10 @@
 options(radiant.path.data = system.file(package = "radiant.data"))
 source(file.path(getOption("radiant.path.data"), "app/global.R"), encoding = getOption("radiant.encoding", default = "UTF-8"), local = TRUE)
 
-ifelse(grepl("radiant", getwd()) && file.exists("../../inst"), "..", system.file(package = "radiant")) %>%
-  options(radiant.path = .)
+if (getOption("radiant.development", default = FALSE)) {
+  ifelse(grepl("radiant", getwd()) && file.exists("../../inst"), "..", system.file(package = "radiant")) %>%
+    options(radiant.path = .)
+}
 
 options(radiant.path.design = system.file(package = "radiant.design"))
 options(radiant.path.basics = system.file(package = "radiant.basics"))
