@@ -4,8 +4,10 @@
 \alias{mac_launcher}
 \title{Create a launcher and updater for Mac (.command)}
 \usage{
-mac_launcher(app = c("radiant", "radiant.data", "radiant.design",
-  "radiant.basics", "radiant.model", "radiant.multivariate"))
+mac_launcher(
+  app = c("radiant", "radiant.data", "radiant.design", "radiant.basics",
+    "radiant.model", "radiant.multivariate")
+)
 }
 \arguments{
 \item{app}{App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"}

@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">radiant</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.3.2</span>
       </span>
     </div>
 
@@ -101,6 +101,15 @@
 </ul>
 <iframe width="640" height="375" src="https://www.youtube.com/embed/7L3hDpLw53I" frameborder="0" allowfullscreen>
 </iframe>
+<div id="playlists" class="section level4">
+<h4 class="hasAnchor">
+<a href="#playlists" class="anchor"></a>Playlists</h4>
+<p>There are two youtube playlists with video tutorials. The first provides a general introduction to key features in Radiant. The second covers topics relevant in a course on business analytics (i.e., Probability, Decision Analysis, Hypothesis Testing, Linear Regression, and Simulation).</p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLNhtaetb48EedDmWPUqytnQv-qxmCGtxi" target="_blank">Introduction to Radiant</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLNhtaetb48EdKRIY7MewCyvb_1x7dV3xw" target="_blank">Radiant Tutorial Series</a></li>
+</ul>
+</div>
 <div id="explore" class="section level4">
 <h4 class="hasAnchor">
 <a href="#explore" class="anchor"></a>Explore</h4>
@@ -136,17 +145,17 @@
 <li>Required: <a href="https://www.rstudio.com/products/rstudio/download/">Rstudio</a> version 1.1.453 or later</li>
 </ul>
 <p>In Rstudio you can start and update Radiant through the <code>Addins</code> menu at the top of the screen. To install the latest version of Radiant for Windows or Mac, with complete documentation for off-line access, open R(studio) and copy-and-paste the command below:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"radiant"</span>, <span class="dt">repos =</span> <span class="st">"https://radiant-rstats.github.io/minicran/"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"radiant"</span>, <span class="dt">repos =</span> <span class="st">"https://radiant-rstats.github.io/minicran/"</span>)</span></code></pre></div>
 <p>Once all packages are installed, select <code>Start radiant</code> from the <code>Addins</code> menu in Rstudio or use the command below to launch the app:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">radiant<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/radiant/topics/radiant">radiant</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>radiant<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/radiant/topics/radiant">radiant</a></span>()</span></code></pre></div>
 <p>To launch Radiant in Rstudio’s viewer pane use the command below:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">radiant<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/radiant/topics/radiant_viewer">radiant_viewer</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>radiant<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/radiant/topics/radiant_viewer">radiant_viewer</a></span>()</span></code></pre></div>
 <p>To launch Radiant in an Rstudio Window use the command below:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">radiant<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/radiant/topics/radiant_window">radiant_window</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>radiant<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/radiant/topics/radiant_window">radiant_window</a></span>()</span></code></pre></div>
 <p>To easily update Radiant and the required packages, install the <code>radiant.update</code> package using:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"radiant.update"</span>, <span class="dt">repos =</span> <span class="st">"https://radiant-rstats.github.io/minicran/"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"radiant.update"</span>, <span class="dt">repos =</span> <span class="st">"https://radiant-rstats.github.io/minicran/"</span>)</span></code></pre></div>
 <p>Then select <code>Update radiant</code> from the <code>Addins</code> menu in Rstudio or use the command below:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">radiant.update<span class="op">::</span><span class="kw">radiant.update</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>radiant.update<span class="op">::</span><span class="kw">radiant.update</span>()</span></code></pre></div>
 <p>See the <a href="https://radiant-rstats.github.io/docs/install.html">installing radiant</a> page additional for details.</p>
 <p><strong>Optional:</strong> You can also create a launcher on your Desktop to start Radiant by typing <code><a href="reference/launcher.html">radiant::launcher()</a></code> in the R(studio) console and pressing return. A file called <code>radiant.bat</code> (windows) or <code>radiant.command</code> (mac) will be created that you can double-click to start Radiant in your default browser. The <code>launcher</code> command will also create a file called <code>update_radiant.bat</code> (windows) or <code>update_radiant.command</code> (mac) that you can double-click to update Radiant to the latest release.</p>
 <p>When Radiant starts you will see data on diamond prices. To close the application click the <i title="Power off" class="fa fa-power-off"></i> icon in the navigation bar and then click <code>Stop</code>. The Radiant process will stop and the browser window will close (Chrome) or gray-out.</p>
@@ -178,24 +187,24 @@
 <p><a href="https://vnijs.shinyapps.io/radiant" target="_blank">https://vnijs.shinyapps.io/radiant</a></p>
 <p>Do <strong>not</strong> upload sensitive data to this public server. The size of data upload has been restricted to 10MB for security reasons.</p>
 </div>
-<div id="running-radiant-on-shinyapps-io" class="section level2">
+<div id="running-radiant-on-shinyappsio" class="section level2">
 <h2 class="hasAnchor">
-<a href="#running-radiant-on-shinyapps-io" class="anchor"></a>Running Radiant on shinyapps.io</h2>
+<a href="#running-radiant-on-shinyappsio" class="anchor"></a>Running Radiant on shinyapps.io</h2>
 <p>To run your own instance of Radiant on shinyapps.io first <a href="https://radiant-rstats.github.io/docs/install.html" target="_blank">install Radiant and its dependencies</a>. Then clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and ensure you have the latest version of the Radiant packages installed by running <code>radiant/inst/app/for.shinyapps.io.R</code>. Finally, open <code>radiant/inst/app/ui.R</code> and <a href="http://shiny.rstudio.com/articles/shinyapps.html">deploy</a> the application.</p>
 </div>
 <div id="running-radiant-on-shiny-server" class="section level2">
 <h2 class="hasAnchor">
 <a href="#running-radiant-on-shiny-server" class="anchor"></a>Running Radiant on shiny-server</h2>
 <p>You can also host Radiant using <a href="https://www.rstudio.com/products/rstudio/download-server/">shiny-server</a>. First, install radiant on the server using the command below:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"radiant"</span>, <span class="dt">repos =</span> <span class="st">"https://radiant-rstats.github.io/minicran/"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"radiant"</span>, <span class="dt">repos =</span> <span class="st">"https://radiant-rstats.github.io/minicran/"</span>)</span></code></pre></div>
 <p>Then clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and point shiny-server to the <code>inst/app/</code> directory. As a courtesy, please let me know if you intend to use Radiant on a server.</p>
 <p>When running Radiant on a server, by default, file uploads are limited to 10MB and R-code in <em>Report &gt; Rmd</em> and <em>Report &gt; R</em> will not be evaluated for security reasons. If you have <code>sudo</code> access to the server and have appropriate security in place you can change these settings by adding the following lines to <code>.Rprofile</code> for the <code>shiny</code> user on the server.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="ex">options</span>(radiant.maxRequestSize = -1)  ## <span class="ex">no</span> file size limit</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="ex">options</span>(radiant.report = TRUE)</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="ex">options</span>(radiant.maxRequestSize = -1)  <span class="co">## no file size limit</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="ex">options</span>(radiant.report = TRUE)</span></code></pre></div>
 </div>
-<div id="running-radiant-in-the-cloud-e-g--aws" class="section level2">
+<div id="running-radiant-in-the-cloud-eg-aws" class="section level2">
 <h2 class="hasAnchor">
-<a href="#running-radiant-in-the-cloud-e-g--aws" class="anchor"></a>Running Radiant in the cloud (e.g., AWS)</h2>
+<a href="#running-radiant-in-the-cloud-eg-aws" class="anchor"></a>Running Radiant in the cloud (e.g., AWS)</h2>
 <p>To run radiant in the cloud you can use the customized Docker container. See <a href="https://github.com/radiant-rstats/docker" target="_blank">https://github.com/radiant-rstats/docker</a> for details</p>
 </div>
 <div id="saving-and-loading-state" class="section level2">
@@ -205,7 +214,7 @@
 <p>A related feature in Radiant is that state is maintained if you accidentally navigate to another web page, close (and reopen) the browser, and/or hit refresh. Use <code>Refresh</code> in the <i title="Power off" class="fa fa-power-off"></i> menu in the navigation bar to return to a clean/new state.</p>
 <p>Loading and saving state also works with Rstudio. If you start Radiant from Rstudio and use <i title="Power off" class="fa fa-power-off"></i> &gt; <code>Stop</code> to stop the app, lists called <code>r_data</code>, <code>r_info</code>, and <code>r_state</code> will be put into Rstudio’s global workspace. If you start radiant again using <code><a href="reference/radiant.html">radiant::radiant()</a></code> it will use these lists to restore state. Also, if you load a state file directly into Rstudio it will be used when you start Radiant to recreate a previous state.</p>
 <p><strong>Technical note</strong>: Loading state works as follows in Radiant: When an input is initialized in a Shiny app you set a default value in the call to, for example, numericInput. In Radiant, when a state file has been loaded and an input is initialized it looks to see if there is a value for an input of that name in a list called <code>r_state</code>. If there is, this value is used. The <code>r_state</code> list is created when saving state using <code>reactiveValuesToList(input)</code>. An example of a call to <code>numericInput</code> is given below where the <code>state_init</code> function from <code>radiant.R</code> is used to check if a value from <code>r_state</code> can be used.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">numericInput</span>(<span class="st">"sm_comp_value"</span>, <span class="st">"Comparison value:"</span>, <span class="kw">state_init</span>(<span class="st">"sm_comp_value"</span>, <span class="dv">0</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">numericInput</span>(<span class="st">"sm_comp_value"</span>, <span class="st">"Comparison value:"</span>, <span class="kw">state_init</span>(<span class="st">"sm_comp_value"</span>, <span class="dv">0</span>))</span></code></pre></div>
 </div>
 <div id="source-code" class="section level2">
 <h2 class="hasAnchor">
@@ -224,7 +233,7 @@
 <p>Radiant is licensed under the <a href="https://tldrlegal.com/license/gnu-affero-general-public-license-v3-(agpl-3.0)" target="\_blank">AGPLv3</a>. As a summary, the AGPLv3 license requires, attribution, including copyright and license information in copies of the software, stating changes if the code is modified, and disclosure of all source code. Details are in the COPYING file.</p>
 <p>The documentation, images, and videos for the <code>radiant.data</code> package are licensed under the creative commons attribution and share-alike license <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC-BY-SA</a>. All other documentation and videos on this site, as well as the help files for <code>radiant.design</code>, <code>radiant.basics</code>, <code>radiant.model</code>, and <code>radiant.multivariate</code>, are licensed under the creative commons attribution, non-commercial, share-alike license <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA</a>.</p>
 <p>If you are interested in using any of the radiant packages please email me at <a href="mailto:radiant@rady.ucsd.edu" class="email">radiant@rady.ucsd.edu</a></p>
-<p>© Vincent Nijs (2018) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/images/by-sa.png"></a></p>
+<p>© Vincent Nijs (2019) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/images/by-sa.png"></a></p>
 </div>
 </div>
   </div>

@@ -4,8 +4,10 @@
 \alias{launcher}
 \title{Create a launcher on the desktop for Windows (.bat), Mac (.command), or Linux (.sh)}
 \usage{
-launcher(app = c("radiant", "radiant.data", "radiant.design",
-  "radiant.basics", "radiant.model", "radiant.multivariate"))
+launcher(
+  app = c("radiant", "radiant.data", "radiant.design", "radiant.basics",
+    "radiant.model", "radiant.multivariate")
+)
 }
 \arguments{
 \item{app}{App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"}

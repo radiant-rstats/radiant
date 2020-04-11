@@ -1,5 +1,21 @@
 ## Resubmission
 
+This is a resubmission. In this version I have fixed several bugs and added several new features (see NEWS.md for details).
+
+## Test environments
+
+* local OS X install, R 3.6.3
+* ubuntu "trusty" (on travis-ci), R release and devel
+* win-builder (devel)
+
+## R CMD check results
+
+There were no ERRORs, WARNINGs, or NOTEs. 
+
+# Previous cran-comments
+
+## Resubmission
+
 This is a resubmission. In this version I have updated dependencies to address an issue with building a vignette brought to my attention by an email from Prof Ripley (see email below). I believe the problem is related an issue in radiant.multivariate after recent changes to dplyr (0.8.1).
 
 radiant now requires radiant.multivariate >= 0.9.9.1 and should build the vignette correctly without excissive memory consumption

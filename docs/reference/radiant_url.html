@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create a launcher and updater for Linux (.sh) — lin_launcher • radiant</title>
+<title>Start radiant but do not open a browser — radiant_url • radiant</title>
 
 
 <!-- jquery -->
@@ -33,8 +33,8 @@
 
 
 
-<meta property="og:title" content="Create a launcher and updater for Linux (.sh) — lin_launcher" />
-<meta property="og:description" content="Create a launcher and updater for Linux (.sh)" />
+<meta property="og:title" content="Start radiant but do not open a browser — radiant_url" />
+<meta property="og:description" content="Start radiant but do not open a browser" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -116,44 +116,40 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Create a launcher and updater for Linux (.sh)</h1>
+    <h1>Start radiant but do not open a browser</h1>
     <small class="dont-index">Source: <a href='https://github.com/radiant-rstats/radiant/blob/master/R/radiant.R'><code>R/radiant.R</code></a></small>
-    <div class="hidden name"><code>lin_launcher.Rd</code></div>
+    <div class="hidden name"><code>radiant_url.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Create a launcher and updater for Linux (.sh)</p>
+    <p>Start radiant but do not open a browser</p>
     </div>
 
-    <pre class="usage"><span class='fu'>lin_launcher</span>(
-  <span class='kw'>app</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"radiant"</span>, <span class='st'>"radiant.data"</span>, <span class='st'>"radiant.design"</span>, <span class='st'>"radiant.basics"</span>,
-    <span class='st'>"radiant.model"</span>, <span class='st'>"radiant.multivariate"</span>)
-)</pre>
+    <pre class="usage"><span class='fu'>radiant_url</span>(<span class='no'>state</span>, <span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>app</th>
-      <td><p>App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"</p></td>
+      <th>state</th>
+      <td><p>Path to statefile to load</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>additional arguments to pass to shiny::runApp (e.g, port = 8080)</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>On Linux a file named 'radiant.sh' and one named 'update_radiant.sh' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='kw pkg'>radiant</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/radiant/topics/lin_launcher'>lin_launcher</a></span>(<span class='st'>"radiant"</span>)
-<span class='co'># }</span><div class='input'>
-</div></pre>
+<span class='fu'>radiant_url</span>()
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#details">Details</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 
