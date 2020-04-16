@@ -1,27 +1,27 @@
 ## install the latest version from github so it will be used on shinyapps.io
-packages <- paste0("radiant-rstats/", c(
-  "radiant.data", "radiant.design", "radiant.basics",
-  "radiant.model", "radiant.multivariate", "radiant"
-))
+# packages <- paste0("radiant-rstats/", c(
+#   "radiant.data", "radiant.design", "radiant.basics",
+#   "radiant.model", "radiant.multivariate", "radiant"
+# ))
+#
+# packages <- c(packages, "trestletech/shinyAce", "vnijs/DiagrammeR")
+#
+# ## Use the code below to install the development version
+# if (!require(remotes)) {
+#   install.packages("remotes")
+# }
+# ret <- sapply(
+#   packages,
+#   function(p) {
+#     remotes::install_github(
+#       p,
+#       dependencies = FALSE,
+#       upgrade = "never"
+#     )
+#   }
+# )
 
-packages <- c(packages, "trestletech/shinyAce", "vnijs/DiagrammeR")
-
-## Use the code below to install the development version
-if (!require(remotes)) {
-  install.packages("remotes")
-}
-ret <- sapply(
-  packages,
-  function(p) {
-    remotes::install_github(
-      p,
-      dependencies = FALSE,
-      upgrade = "never"
-    )
-  }
-)
-
-install.packages(c("shinyFiles", "htmltools"), repo = "https://cloud.r-project.org/")
+# install.packages(c("shinyFiles", "htmltools"), repo = "https://cloud.r-project.org/")
 
 ## to install the release version
 # packages <- c(
@@ -45,14 +45,14 @@ install.packages(c("shinyFiles", "htmltools"), repo = "https://cloud.r-project.o
 
 ## by listing the call to the radiant library it will get picked up as a dependency
 # library(radiant)
-library(radiant.data)
-library(radiant.design)
-library(radiant.basics)
-library(radiant.model)
-library(radiant.multivariate)
-library(rstudioapi)
-library(shinyAce)
-library(shinyFiles)
-library(DT)
-library(htmltools)
+# library(radiant.data)
+# library(radiant.design)
+# library(radiant.basics)
+# library(radiant.model)
+# library(radiant.multivariate)
+# library(rstudioapi)
+# library(shinyAce)
+# library(shinyFiles)
+# library(DT)
+# library(htmltools)
 
