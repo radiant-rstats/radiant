@@ -49,13 +49,13 @@ rem_old <- function(app) {
 apps <- c(
   # "shinyAce",
   # "shinyFiles",
-  # "gitgadget",
+  "gitgadget",
   "radiant.data",
-  # "radiant.design",
-  # "radiant.basics",
-  # "radiant.model",
-  # "radiant.multivariate",
-  # "radiant.update",
+  "radiant.design",
+  "radiant.basics",
+  "radiant.model",
+  "radiant.multivariate",
+  "radiant.update",
   "radiant"
 )
 
