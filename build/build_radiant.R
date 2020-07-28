@@ -27,13 +27,14 @@ if (isTRUE(dev)) {
 dirsrc <- file.path(base, "src/contrib")
 
 if (rv == "3.3") {
-  dirmac <- file.path(base, "bin/macosx/mavericks/contrib", rv)
+  dirmac <- fs::path("../minicran/bin/macosx/mavericks/contrib", rv)
+} else if (as.numeric(substr(rv, 1, 1)) >= 4) {
+  dirmac <- fs::path("../minicran/bin/macosx/contrib", rv)
 } else {
-  dirmac <- file.path(base, "bin/macosx/el-capitan/contrib", rv)
+  dirmac <- fs::path("../minicran/bin/macosx/el-capitan/contrib", rv)
 }
 
 dirwin <- file.path(base, "bin/windows/contrib", rv)
-dirwin
 
 if (!file.exists(dirsrc)) dir.create(dirsrc, recursive = TRUE)
 if (!file.exists(dirmac)) dir.create(dirmac, recursive = TRUE)
