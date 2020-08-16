@@ -1,4 +1,6 @@
-setwd(file.path(rstudioapi::getActiveProject(), ".."))
+# setwd(file.path(rstudioapi::getActiveProject(), ".."))
+curr <- getwd()
+pkg <- basename(curr)
 
 ## building radiant packages for mac and windows
 dev <- FALSE
@@ -11,30 +13,22 @@ if (isTRUE(dev)) {
 }
 
 rv <- R.Version()
-rv <- paste0(rv$major, ".", strsplit(rv$minor, ".", fixed = TRUE)[[1]][1])
+rv <- paste(rv$major, substr(rv$minor, 1, 1), sep = ".")
 
 rvprompt <- readline(prompt = paste0("Running for R version: ", rv, ". Is that what you wanted y/n: "))
-if (grepl("[nN]", rvprompt)) {
-  stop("Change R-version using RSwitch")
-}
+if (grepl("[nN]", rvprompt)) stop("Change R-version")
 
-if (isTRUE(dev)) {
-  base <- "minicran/dev"
-} else {
-  base <- "minicran"
-}
+dirsrc <- "../minicran/src/contrib"
 
-dirsrc <- file.path(base, "src/contrib")
-
-if (rv == "3.3") {
+if (rv < "3.4") {
   dirmac <- fs::path("../minicran/bin/macosx/mavericks/contrib", rv)
-} else if (as.numeric(substr(rv, 1, 1)) >= 4) {
+} else if (rv > "3.6") {
   dirmac <- fs::path("../minicran/bin/macosx/contrib", rv)
 } else {
   dirmac <- fs::path("../minicran/bin/macosx/el-capitan/contrib", rv)
 }
 
-dirwin <- file.path(base, "bin/windows/contrib", rv)
+dirwin <- file.path("../minicran/bin/windows/contrib", rv)
 
 if (!file.exists(dirsrc)) dir.create(dirsrc, recursive = TRUE)
 if (!file.exists(dirmac)) dir.create(dirmac, recursive = TRUE)
@@ -48,8 +42,8 @@ rem_old <- function(app) {
 }
 
 apps <- c(
-  # "shinyAce",
-  # "shinyFiles",
+  "shinyAce",
+  "shinyFiles",
   "gitgadget",
   "radiant.data",
   "radiant.design",

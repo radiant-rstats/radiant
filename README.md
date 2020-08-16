@@ -5,13 +5,13 @@
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/radiant)](https://CRAN.R-project.org/package=radiant)
 
 
-Radiant is an open-source platform-independent browser-based interface for business analytics in [R](https://www.r-project.org/). The application is based on the [Shiny](https://www.rstudio.com/shiny/) package and can be run locally or on a server. Radiant was developed by <a href="http://rady.ucsd.edu/faculty/directory/nijs/" target="\_blank">Vincent Nijs</a>. Please use the issue tracker on GitHub to suggest enhancements or report problems: https://github.com/radiant-rstats/radiant/issues. For other questions and comments please use radiant@rady.ucsd.edu.
+Radiant is an open-source platform-independent browser-based interface for business analytics in [R](https://www.r-project.org/). The application is based on the [Shiny](https://shiny.rstudio.com/) package and can be run locally or on a server. Radiant was developed by <a href="https://rady.ucsd.edu/people/faculty/nijs/" target="\_blank">Vincent Nijs</a>. Please use the issue tracker on GitHub to suggest enhancements or report problems: https://github.com/radiant-rstats/radiant/issues. For other questions and comments please use radiant@rady.ucsd.edu.
 
 ## Key features
 
 - Explore: Quickly and easily summarize, visualize, and analyze your data
 - Cross-platform: It runs in a browser on Windows, Mac, and Linux
-- Reproducible: Recreate results and share work with others as a state file or an [Rmarkdown](http://rmarkdown.rstudio.com/) report
+- Reproducible: Recreate results and share work with others as a state file or an [Rmarkdown](https://rmarkdown.rstudio.com/) report
 - Programming: Integrate Radiant's analysis functions with your own R-code
 - Context: Data and examples focus on business applications
 
@@ -35,7 +35,7 @@ Radiant works on Windows, Mac, or Linux. It can run without an Internet connecti
 
 #### Reproducible
 
-To conduct high-quality analysis, simply saving output is not enough. You need the ability to reproduce results for the same data and/or when new data become available. Moreover, others may want to review your analysis and results. Save and load the state of the application to continue your work at a later time or on another computer. Share state files with others and create reproducible reports using [Rmarkdown](http://rmarkdown.rstudio.com/). See also the section on `Saving and loading state` below
+To conduct high-quality analysis, simply saving output is not enough. You need the ability to reproduce results for the same data and/or when new data become available. Moreover, others may want to review your analysis and results. Save and load the state of the application to continue your work at a later time or on another computer. Share state files with others and create reproducible reports using [Rmarkdown](https://rmarkdown.rstudio.com/). See also the section on `Saving and loading state` below
 
 If you are using Radiant on a server you can even share the URL (include the SSUID) with others so they can see what you are working on. Thanks for this feature go to [Joe Cheng](https://github.com/jcheng5).
 
@@ -50,7 +50,7 @@ Radiant focuses on business data and decisions. It offers tools, examples, and d
 ## How to install Radiant
 
 - Required: [R](https://cran.r-project.org/) version 3.4.0 or later
-- Required: [Rstudio](https://www.rstudio.com/products/rstudio/download/) version 1.1.453 or later
+- Required: [Rstudio](https://rstudio.com/products/rstudio/download/) version 1.1.453 or later
 
 In Rstudio you can start and update Radiant through the `Addins` menu at the top of the screen. To install the latest version of Radiant for Windows or Mac, with complete documentation for off-line access, open R(studio) and copy-and-paste the command below:
 
@@ -124,11 +124,11 @@ Do **not** upload sensitive data to this public server. The size of data upload 
 
 ## Running Radiant on shinyapps.io
 
-To run your own instance of Radiant on shinyapps.io first <a href = "https://radiant-rstats.github.io/docs/install.html" target = "_blank">install Radiant and its dependencies</a>. Then clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and ensure you have the latest version of the Radiant packages installed by running `radiant/inst/app/for.shinyapps.io.R`. Finally, open `radiant/inst/app/ui.R` and [deploy](http://shiny.rstudio.com/articles/shinyapps.html) the application.
+To run your own instance of Radiant on shinyapps.io first <a href = "https://radiant-rstats.github.io/docs/install.html" target = "_blank">install Radiant and its dependencies</a>. Then clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and ensure you have the latest version of the Radiant packages installed by running `radiant/inst/app/for.shinyapps.io.R`. Finally, open `radiant/inst/app/ui.R` and [deploy](https://shiny.rstudio.com/articles/shinyapps.html) the application.
 
 ## Running Radiant on shiny-server
 
-You can also host Radiant using [shiny-server](https://www.rstudio.com/products/rstudio/download-server/). First, install radiant on the server using the command below:
+You can also host Radiant using [shiny-server](https://rstudio.com/products/rstudio/download-server/). First, install radiant on the server using the command below:
 
 ```r
 install.packages("radiant", repos = "https://radiant-rstats.github.io/minicran/")
@@ -169,7 +169,7 @@ These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Rese
 
 ## Credits
 
-Radiant would not be possible without [R](https://cran.r-project.org/) and [Shiny](http://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmarkdown, and DT. For an overview of other packages that Radiant relies on please see the <a href="https://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
+Radiant would not be possible without [R](https://cran.r-project.org/) and [Shiny](https://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmarkdown, and DT. For an overview of other packages that Radiant relies on please see the <a href="https://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
 
 
 ## License

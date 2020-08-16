@@ -88,14 +88,14 @@
 <!-- [![Build Status](https://travis-ci.org/radiant-rstats/radiant.png?branch=master)](https://travis-ci.org/radiant-rstats/radiant) -->
 <!-- [![Coverage Status](https://img.shields.io/coveralls/vnijs/radiant.svg)](https://coveralls.io/r/vnijs/radiant?branch=master) -->
 
-<p>Radiant is an open-source platform-independent browser-based interface for business analytics in <a href="https://www.r-project.org/">R</a>. The application is based on the <a href="https://www.rstudio.com/shiny/">Shiny</a> package and can be run locally or on a server. Radiant was developed by <a href="http://rady.ucsd.edu/faculty/directory/nijs/" target="\_blank">Vincent Nijs</a>. Please use the issue tracker on GitHub to suggest enhancements or report problems: <a href="https://github.com/radiant-rstats/radiant/issues" class="uri">https://github.com/radiant-rstats/radiant/issues</a>. For other questions and comments please use <a href="mailto:radiant@rady.ucsd.edu" class="email">radiant@rady.ucsd.edu</a>.</p>
+<p>Radiant is an open-source platform-independent browser-based interface for business analytics in <a href="https://www.r-project.org/">R</a>. The application is based on the <a href="https://shiny.rstudio.com/">Shiny</a> package and can be run locally or on a server. Radiant was developed by <a href="http://rady.ucsd.edu/faculty/directory/nijs/" target="\_blank">Vincent Nijs</a>. Please use the issue tracker on GitHub to suggest enhancements or report problems: <a href="https://github.com/radiant-rstats/radiant/issues" class="uri">https://github.com/radiant-rstats/radiant/issues</a>. For other questions and comments please use <a href="mailto:radiant@rady.ucsd.edu" class="email">radiant@rady.ucsd.edu</a>.</p>
 <div id="key-features" class="section level2">
 <h2 class="hasAnchor">
 <a href="#key-features" class="anchor"></a>Key features</h2>
 <ul>
 <li>Explore: Quickly and easily summarize, visualize, and analyze your data</li>
 <li>Cross-platform: It runs in a browser on Windows, Mac, and Linux</li>
-<li>Reproducible: Recreate results and share work with others as a state file or an <a href="http://rmarkdown.rstudio.com/">Rmarkdown</a> report</li>
+<li>Reproducible: Recreate results and share work with others as a state file or an <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a> report</li>
 <li>Programming: Integrate Radiant’s analysis functions with your own R-code</li>
 <li>Context: Data and examples focus on business applications</li>
 </ul>
@@ -123,7 +123,7 @@
 <div id="reproducible" class="section level4">
 <h4 class="hasAnchor">
 <a href="#reproducible" class="anchor"></a>Reproducible</h4>
-<p>To conduct high-quality analysis, simply saving output is not enough. You need the ability to reproduce results for the same data and/or when new data become available. Moreover, others may want to review your analysis and results. Save and load the state of the application to continue your work at a later time or on another computer. Share state files with others and create reproducible reports using <a href="http://rmarkdown.rstudio.com/">Rmarkdown</a>. See also the section on <code>Saving and loading state</code> below</p>
+<p>To conduct high-quality analysis, simply saving output is not enough. You need the ability to reproduce results for the same data and/or when new data become available. Moreover, others may want to review your analysis and results. Save and load the state of the application to continue your work at a later time or on another computer. Share state files with others and create reproducible reports using <a href="https://rmarkdown.rstudio.com/">Rmarkdown</a>. See also the section on <code>Saving and loading state</code> below</p>
 <p>If you are using Radiant on a server you can even share the URL (include the SSUID) with others so they can see what you are working on. Thanks for this feature go to <a href="https://github.com/jcheng5">Joe Cheng</a>.</p>
 </div>
 <div id="programming" class="section level4">
@@ -190,7 +190,7 @@
 <div id="running-radiant-on-shinyappsio" class="section level2">
 <h2 class="hasAnchor">
 <a href="#running-radiant-on-shinyappsio" class="anchor"></a>Running Radiant on shinyapps.io</h2>
-<p>To run your own instance of Radiant on shinyapps.io first <a href="https://radiant-rstats.github.io/docs/install.html" target="_blank">install Radiant and its dependencies</a>. Then clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and ensure you have the latest version of the Radiant packages installed by running <code>radiant/inst/app/for.shinyapps.io.R</code>. Finally, open <code>radiant/inst/app/ui.R</code> and <a href="http://shiny.rstudio.com/articles/shinyapps.html">deploy</a> the application.</p>
+<p>To run your own instance of Radiant on shinyapps.io first <a href="https://radiant-rstats.github.io/docs/install.html" target="_blank">install Radiant and its dependencies</a>. Then clone the <a href="https://github.com/radiant-rstats/radiant" target="_blank">radiant</a> repo and ensure you have the latest version of the Radiant packages installed by running <code>radiant/inst/app/for.shinyapps.io.R</code>. Finally, open <code>radiant/inst/app/ui.R</code> and <a href="https://rstudio.rstudio.com/articles/shinyapps.html">deploy</a> the application.</p>
 </div>
 <div id="running-radiant-on-shiny-server" class="section level2">
 <h2 class="hasAnchor">
@@ -225,7 +225,7 @@
 <div id="credits" class="section level2">
 <h2 class="hasAnchor">
 <a href="#credits" class="anchor"></a>Credits</h2>
-<p>Radiant would not be possible without <a href="https://cran.r-project.org/">R</a> and <a href="http://shiny.rstudio.com/">Shiny</a>. I would like to thank <a href="https://github.com/jcheng5">Joe Cheng</a>, <a href="https://github.com/wch">Winston Chang</a>, and <a href="https://github.com/yihui">Yihui Xie</a> for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmarkdown, and DT. For an overview of other packages that Radiant relies on please see the <a href="https://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.</p>
+<p>Radiant would not be possible without <a href="https://cran.r-project.org/">R</a> and <a href="https://rstudio.rstudio.com/">Shiny</a>. I would like to thank <a href="https://github.com/jcheng5">Joe Cheng</a>, <a href="https://github.com/wch">Winston Chang</a>, and <a href="https://github.com/yihui">Yihui Xie</a> for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmarkdown, and DT. For an overview of other packages that Radiant relies on please see the <a href="https://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.</p>
 </div>
 <div id="license" class="section level2">
 <h2 class="hasAnchor">
