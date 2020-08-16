@@ -70,11 +70,11 @@ if (grepl("[yY]", win)) {
   ## must build packages on Windows first
   setwd(file.path(rstudioapi::getActiveProject()))
   sapply(list.files("..", pattern = "*.tar.gz", full.names = TRUE), file.copy, dirsrc)
-  unlink("*.tar.gz")
+  unlink("../*.tar.gz")
   sapply(list.files("..", pattern = "*.tgz", full.names = TRUE), file.copy, dirsrc)
-  unlink("*.tgz")
+  unlink("../*.tgz")
   sapply(list.files("..", pattern = "*.zip", full.names = TRUE), file.copy, dirsrc)
-  unlink("*.zip")
+  unlink("../*.zip")
 
   tools::write_PACKAGES(dirmac, type = "mac.binary")
   tools::write_PACKAGES(dirwin, type = "win.binary")
