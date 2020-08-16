@@ -1,4 +1,4 @@
-# setwd(file.path(rstudioapi::getActiveProject(), ".."))
+setwd(rstudioapi::getActiveProject())
 curr <- getwd()
 pkg <- basename(curr)
 
@@ -54,12 +54,10 @@ apps <- c(
   "radiant"
 )
 
-# sapply(apps, rem_old)
-# sapply(apps, function(x) devtools::install(pkg = paste0("../", x), upgrade = "never"))
-sapply(apps, function(x) devtools::install(pkg = x, upgrade = "never"))
+sapply(apps, rem_old)
+sapply(apps, function(x) devtools::install(pkg = paste0("../", x), upgrade = "never"))
+# sapply(apps, function(x) devtools::install(pkg = x, upgrade = "never"))
 
-## probably need to restart Rstudio before building
-## avoid 'loaded namespace' stuff when building for mac
 dir2set <- file.path(rstudioapi::getActiveProject(), "..")
 system(paste0(Sys.which("R"), " -e \"setwd('", dir2set, "'); source('radiant/build/build_mac.R')\""))
 
