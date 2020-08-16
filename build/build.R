@@ -66,13 +66,14 @@ system(paste0(Sys.which("R"), " -e \"setwd('", dir2set, "'); source('radiant/bui
 win <- readline(prompt = "Did you build on Windows? y/n: ")
 if (grepl("[yY]", win)) {
 
-  ## move packages to radiant_miniCRAN. must package in Windows first
-  setwd(file.path(rstudioapi::getActiveProject(), ".."))
-  sapply(list.files(".", pattern = "*.tar.gz"), file.copy, dirsrc)
+  ## move packages to radiant_miniCRAN
+  ## must build packages on Windows first
+  setwd(file.path(rstudioapi::getActiveProject()))
+  sapply(list.files("..", pattern = "*.tar.gz", full.names = TRUE), file.copy, dirsrc)
   unlink("*.tar.gz")
-  sapply(list.files(".", pattern = "*.tgz"), file.copy, dirmac)
+  sapply(list.files("..", pattern = "*.tgz", full.names = TRUE), file.copy, dirsrc)
   unlink("*.tgz")
-  sapply(list.files(".", pattern = "*.zip"), file.copy, dirwin)
+  sapply(list.files("..", pattern = "*.zip", full.names = TRUE), file.copy, dirsrc)
   unlink("*.zip")
 
   tools::write_PACKAGES(dirmac, type = "mac.binary")
