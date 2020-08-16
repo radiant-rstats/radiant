@@ -55,7 +55,9 @@ apps <- c(
 )
 
 sapply(apps, rem_old)
-sapply(apps, function(x) devtools::install(pkg = paste0("../", x), upgrade = "never"))
+
+## why do you need to install all these packages?
+# sapply(apps, function(x) devtools::install(pkg = paste0("../", x), upgrade = "never"))
 # sapply(apps, function(x) devtools::install(pkg = x, upgrade = "never"))
 
 dir2set <- file.path(rstudioapi::getActiveProject(), "..")
