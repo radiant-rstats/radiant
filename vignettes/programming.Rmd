@@ -4,7 +4,7 @@ author: "Vincent R. Nijs, Rady School of Management (UCSD)"
 date: "`r Sys.Date()`"
 output: 
   rmarkdown::html_vignette:
-    css: http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css
+    css: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
 vignette: >
   %\VignetteIndexEntry{Programming with Radiant}
   %\VignetteEngine{knitr::rmarkdown}

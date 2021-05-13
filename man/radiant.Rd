@@ -16,7 +16,7 @@ radiant(state, ...)
 Launch radiant in the default web browser
 }
 \details{
-See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
+See \url{https://radiant-rstats.github.io/docs/} for documentation and tutorials
 }
 \examples{
 \dontrun{

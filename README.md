@@ -50,7 +50,7 @@ Radiant focuses on business data and decisions. It offers tools, examples, and d
 ## How to install Radiant
 
 - Required: [R](https://cran.r-project.org/) version 3.4.0 or later
-- Required: [Rstudio](https://rstudio.com/products/rstudio/download/) version 1.1.453 or later
+- Required: [Rstudio](https://www.rstudio.com/products/rstudio/download/) version 1.1.453 or later
 
 In Rstudio you can start and update Radiant through the `Addins` menu at the top of the screen. To install the latest version of Radiant for Windows or Mac, with complete documentation for off-line access, open R(studio) and copy-and-paste the command below:
 
@@ -130,7 +130,7 @@ To run your own instance of Radiant on shinyapps.io first <a href = "https://rad
 
 ## Running Radiant on shiny-server
 
-You can also host Radiant using [shiny-server](https://rstudio.com/products/rstudio/download-server/). First, install radiant on the server using the command below:
+You can also host Radiant using [shiny-server](https://www.rstudio.com/products/rstudio/download-server/). First, install radiant on the server using the command below:
 
 ```r
 options(repos = c(RSM = "https://radiant-rstats.github.io/minicran", CRAN = "https://cloud.r-project.org"))

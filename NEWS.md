@@ -1,3 +1,7 @@
+# radiant 1.4.0.0
+
+* Adding the markdown package to `suggests` fixes https://github.com/radiant-rstats/radiant/issues/153
+
 # radiant 1.3.1.0
 
 * Added launch option that only shows a URL. Convenient for VSCode to lauch Radiant in an external browser

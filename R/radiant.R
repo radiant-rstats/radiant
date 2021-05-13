@@ -1,7 +1,7 @@
 #' Launch radiant in the default browser
 #'
 #' @description Launch radiant in the default web browser
-#' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
+#' @details See \url{https://radiant-rstats.github.io/docs/} for documentation and tutorials
 #'
 #' @param state Path to state file to load
 #' @param ... additional arguments to pass to shiny::runApp (e.g, port = 8080)
@@ -21,7 +21,7 @@ radiant <- function(state, ...) radiant.data::launch(package = "radiant", run = 
 #' @param state Path to state file to load
 #' @param ... additional arguments to pass to shiny::runApp (e.g, port = 8080)
 #'
-#' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
+#' @details See \url{https://radiant-rstats.github.io/docs/} for documentation and tutorials
 #'
 #' @importFrom radiant.data launch
 #'
@@ -34,7 +34,7 @@ radiant_window <- function(state, ...) radiant.data::launch(package = "radiant",
 
 #' Launch radiant in the Rstudio viewer
 #'
-#' @details See \url{https://radiant-rstats.github.io/docs} for documentation and tutorials
+#' @details See \url{https://radiant-rstats.github.io/docs/} for documentation and tutorials
 #'
 #' @param state Path to state file to load
 #' @param ... additional arguments to pass to shiny::runApp (e.g, port = 8080)

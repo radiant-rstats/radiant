@@ -1,5 +1,32 @@
 ## Resubmission
 
+This is a resubmission. In this version I have fixed an important bug (see NEWS.md for details).
+
+## Test environments
+
+* Ubuntu 20.04 through WSL2, R 4.0.5
+* win-builder (devel)
+
+## R CMD check results
+
+There were no ERRORs or NOTEs. However, there was one WARNING (see below). I cannot reproduce the `InvalidUrlException` mentioned however. The URL is already absolute and works as intended locally. Hopefully you can provide some guidance if needed.
+
+
+<https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css>
+
+
+```
+* checking re-building of vignette outputs ... [24s] WARNING
+Error(s) in re-building vignettes:
+--- re-building 'programming.Rmd' using rmarkdown
+pandoc.exe: Could not fetch https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
+InvalidUrlException "https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" "URL must be absolute"
+```
+
+# Previous cran-comments
+
+## Resubmission
+
 This is a resubmission. In this version I have fixed several bugs and added several new features (see NEWS.md for details).
 
 ## Test environments
@@ -13,6 +40,7 @@ This is a resubmission. In this version I have fixed several bugs and added seve
 There were no ERRORs, WARNINGs, or NOTEs. 
 
 # Previous cran-comments
+
 
 ## Resubmission
 
