@@ -1,16 +1,24 @@
 ## Resubmission
 
-This is a resubmission. In this version I have fixed an important bug (see NEWS.md for details).
+This is a resubmission. In this version I have fixed an important bug (see NEWS.md for details). It seems the previous issues getting the Vignette to build on Windows are due to an issue in Rmarkdown. I tested a work around proposed by Christophe Dervieux (see https://github.com/rstudio/rmarkdown/issues/2163) and it seems to work with the win-builder test environment. A new version of Rmarkdown that addresses the issue should also be submitted to CRAN in the near future.
 
 ## Test environments
 
 * Ubuntu 20.04 through WSL2, R 4.0.5
+* Ubuntu 20.04, R 4.1.0
 * win-builder (devel)
 
 ## R CMD check results
 
-There were no ERRORs or NOTEs. However, there was one WARNING (see below). I cannot reproduce the `InvalidUrlException` mentioned however. The URL is already absolute and works as intended locally. Hopefully you can provide some guidance if needed.
+There were no ERRORs or NOTEs. However, there was one WARNING (see below). I cannot reproduce the `InvalidUrlException` mentioned however. The URL is already absolute and works as intended locally. 
 
+I posted a message to the R-development mailing list and received the suggestion to ask CRAN to run the tests again. 
+
+Is it possible this is a windows build issue? Based on the below, it seems the InvalidUrlException only affects windows checks. These problems were not present when radiant version 1.3.2 was submitted, else it wouldn't have gotten on CRAN in the first place.
+
+https://cran.r-project.org/web/checks/check_results_radiant.html
+
+Hopefully you can provide some guidance if needed.
 
 <https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css>
 
