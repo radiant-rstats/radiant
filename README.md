@@ -81,7 +81,8 @@ To easily update Radiant and the required packages, install the `radiant.update`
 
 ```r
 options(repos = c(RSM = "https://radiant-rstats.github.io/minicran", CRAN = "https://cloud.r-project.org"))
-install.packages("radiant.update")
+install.packages("remotes")
+remotes::install_github("radiant-rstats/radiant.update", upgrade = "never")
 ```
 
 Then select `Update radiant` from the `Addins` menu in Rstudio or use the command below:
