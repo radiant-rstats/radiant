@@ -1,8 +1,8 @@
 Package: radiant
 Type: Package
 Title: Business Analytics using R and Shiny
-Version: 1.4.1
-Date: 2021-11-21
+Version: 1.4.2
+Date: 2022-5-24
 Authors@R: person("Vincent", "Nijs", , "radiant@rady.ucsd.edu", c("aut", "cre"))
 Description: A platform-independent browser-based interface for business
     analytics in R, based on the shiny package. The application combines the
@@ -27,5 +27,5 @@ URL: https://github.com/radiant-rstats/radiant
 BugReports: https://github.com/radiant-rstats/radiant/issues
 License: AGPL-3 | file LICENSE
 Encoding: UTF-8
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 VignetteBuilder: knitr

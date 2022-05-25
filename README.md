@@ -49,8 +49,8 @@ Radiant focuses on business data and decisions. It offers tools, examples, and d
 
 ## How to install Radiant
 
-- Required: [R](https://cran.r-project.org/) version 3.4.0 or later
-- Required: [Rstudio](https://www.rstudio.com/products/rstudio/download/) version 1.1.453 or later
+- Required: [R](https://cran.r-project.org/) version 4.0.0 or later
+- Required: [Rstudio](https://www.rstudio.com/products/rstudio/download/)
 
 In Rstudio you can start and update Radiant through the `Addins` menu at the top of the screen. To install the latest version of Radiant for Windows or Mac, with complete documentation for off-line access, open R(studio) and copy-and-paste the command below:
 
@@ -169,11 +169,11 @@ numericInput("sm_comp_value", "Comparison value:", state_init("sm_comp_value", 0
 
 The source code for the radiant application is available on GitHub at <https://github.com/radiant-rstats>. `radiant.data`, offers tools to load, save, view, visualize, summarize, combine, and transform data. `radiant.design` builds on `radiant.data` and adds tools for experimental design, sampling, and sample size calculation. `radiant.basics` covers the basics of statistical analysis (e.g., comparing means and proportions, cross-tabs, correlation, etc.) and includes a probability calculator. `radiant.model` covers model estimation (e.g., logistic regression and neural networks), model evaluation (e.g., gains chart, profit curve, confusion matrix, etc.), and decision tools (e.g., decision analysis and simulation). Finally, `radiant.multivariate` includes tools to generate brand maps and conduct cluster, factor, and conjoint analysis.
 
-These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Research for Marketing Decisions_, _Consumer Behavior_, _Experiments in Firms_, _Pricing_, and _Customer Analytics_ classes at the Rady School of Management (UCSD).
+These tools are used in the _Business Analytics_, _Quantitative Analysis_, _Research for Marketing Decisions_, _Applied Market Research_, _Consumer Behavior_, _Experiments in Firms_, _Pricing_, _Pricing Analytics_, and _Customer Analytics_ classes at the Rady School of Management (UCSD).
 
 ## Credits
 
-Radiant would not be possible without [R](https://cran.r-project.org/) and [Shiny](https://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, rmarkdown, and DT. For an overview of other packages that Radiant relies on please see the <a href="https://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
+Radiant would not be possible without [R](https://cran.r-project.org/) and [Shiny](https://shiny.rstudio.com/). I would like to thank [Joe Cheng](https://github.com/jcheng5), [Winston Chang](https://github.com/wch), and [Yihui Xie](https://github.com/yihui) for answering questions, providing suggestions, and creating amazing tools for the R community. Other key components used in Radiant are ggplot2, dplyr, tidyr, magrittr, broom, shinyAce, shinyFiles, rmarkdown, and DT. For an overview of other packages that Radiant relies on please see the <a href="https://radiant-rstats.github.io/docs/about.html" target="_blank">about</a> page.
 
 
 ## License

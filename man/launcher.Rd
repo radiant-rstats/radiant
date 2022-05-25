@@ -6,11 +6,17 @@
 \usage{
 launcher(
   app = c("radiant", "radiant.data", "radiant.design", "radiant.basics",
-    "radiant.model", "radiant.multivariate")
+    "radiant.model", "radiant.multivariate"),
+  port = 4444,
+  pdir = Sys.getenv("HOME")
 )
 }
 \arguments{
 \item{app}{App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"}
+
+\item{port}{Port to use for shiny::runApp (e.g, port = 4444)}
+
+\item{pdir}{Project directory to use. Default is Sys.getenv("HOME")}
 }
 \description{
 Create a launcher on the desktop for Windows (.bat), Mac (.command), or Linux (.sh)

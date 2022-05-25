@@ -1,5 +1,20 @@
 ## Resubmission
 
+This is a resubmission. In this version I have fixed bugs and updated documentation (see NEWS.md for details).
+
+## Test environments
+
+* macOS, R 4.2.0
+* win-builder (devel)
+
+## R CMD check results
+
+There were no ERRORs, WARNINGs, or NOTEs. 
+
+# Previous cran-comments
+
+## Resubmission
+
 This is a resubmission. In this version I have fixed an important bug (see NEWS.md for details). It seems the previous issues getting the Vignette to build on Windows are due to an issue in Rmarkdown. I tested a work around proposed by Christophe Dervieux (see https://github.com/rstudio/rmarkdown/issues/2163) and it seems to work with the win-builder test environment. A new version of Rmarkdown that addresses the issue should also be submitted to CRAN in the near future.
 
 ## Test environments
@@ -31,7 +46,6 @@ pandoc.exe: Could not fetch https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/5
 InvalidUrlException "https:/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" "URL must be absolute"
 ```
 
-# Previous cran-comments
 
 ## Resubmission
 

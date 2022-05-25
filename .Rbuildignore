@@ -7,3 +7,4 @@
 cran-comments.md
 radiant.code-workspace
 .vscode
+^CRAN-SUBMISSION$

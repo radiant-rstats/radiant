@@ -2,18 +2,11 @@
 (function($) {
   $(function() {
 
-    $("#sidebar")
-      .stick_in_parent({offset_top: 40})
-      .on('sticky_kit:bottom', function(e) {
-        $(this).parent().css('position', 'static');
-      })
-      .on('sticky_kit:unbottom', function(e) {
-        $(this).parent().css('position', 'relative');
-      });
+    $('.navbar-fixed-top').headroom();
 
-    $('body').scrollspy({
-      target: '#sidebar',
-      offset: 60
+    $('body').css('padding-top', $('.navbar').height() + 10);
+    $(window).resize(function(){
+      $('body').css('padding-top', $('.navbar').height() + 10);
     });
 
     $('[data-toggle="tooltip"]').tooltip();
@@ -87,7 +80,7 @@
     $(document).ready(function() {
       var copyButton = "<button type='button' class='btn btn-primary btn-copy-ex' type = 'submit' title='Copy to clipboard' aria-label='Copy to clipboard' data-toggle='tooltip' data-placement='left auto' data-trigger='hover' data-clipboard-copy><i class='fa fa-copy'></i></button>";
 
-      $(".examples, div.sourceCode").addClass("hasCopyButton");
+      $("div.sourceCode").addClass("hasCopyButton");
 
       // Insert copy buttons:
       $(copyButton).prependTo(".hasCopyButton");
@@ -98,7 +91,7 @@
       // Initialize clipboard:
       var clipboardBtnCopies = new ClipboardJS('[data-clipboard-copy]', {
         text: function(trigger) {
-          return trigger.parentNode.textContent;
+          return trigger.parentNode.textContent.replace(/\n#>[^\n]*/g, "");
         }
       });
 

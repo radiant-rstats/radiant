@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
   cache = FALSE, 
   message = FALSE, 
   warning = FALSE,
-  dpi = 144
+  dpi = 96
 )
 options(width = 150)
 ```
@@ -151,7 +151,7 @@ plot(result, plots = c("density", "bar"))
 shopping <- store(shopping, result, name = "clus")
 
 ## was the data really changed?
-head(shopping)
+head(as.data.frame(shopping))
 ```
 
 See if you can reproduce this output in the radiant browser interface. Start `Radiant` from the `Addins` dropdown in Rstudio.

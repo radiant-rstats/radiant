@@ -64,7 +64,9 @@ radiant_url <- function(state, ...) radiant.data::launch(package = "radiant", ru
 #'
 #' @details On Windows a file named 'radiant.bat' and one named 'update_radiant.bat' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version
 #'
-#' @param app App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"
+#' @param app App to run when the desktop icon is double-clicked ("radiant", "radiant.data", etc.). Default is "radiant"
+#' @param port Port to use for shiny::runApp (e.g, port = 4444)
+#' @param pdir Project directory to use. Default is Sys.getenv("HOME")
 #'
 #' @examples
 #' \dontrun{
@@ -72,7 +74,7 @@ radiant_url <- function(state, ...) radiant.data::launch(package = "radiant", ru
 #' }
 #'
 #' @export
-win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate")) {
+win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate"), port = 4444, pdir = Sys.getenv("HOME")) {
   if (!interactive()) stop("This function can only be used in an interactive R session")
 
   if (Sys.info()["sysname"] != "Windows") {
@@ -96,8 +98,15 @@ win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 
     pt <- normalizePath(pt, winslash = "/")
 
+    if (rmarkdown::pandoc_available()) {
+      rsp <- Sys.getenv("RSTUDIO_PANDOC")
+      rsp <- paste0("Sys.setenv(RSTUDIO_PANDOC='", rsp, "');")
+    } else {
+      rsp <- ""
+    }
+
     fn1 <- file.path(pt, "radiant.bat")
-    launch_string <- paste0("\"", Sys.which("R"), "\" -e \"if (!require(radiant)) { install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary') }; library(radiant); shiny::runApp(system.file('app', package='", app[1], "'), port = 4444, launch.browser = TRUE)\"")
+    launch_string <- paste0("\"", Sys.which("R"), "\" -e \"setwd('", normalizePath(pdir, winslash = "/"), "'); options(radiant.launch_dir = normalizePath(getwd())); if (!require(radiant)) { install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary') }; ", rsp, "library(radiant); shiny::runApp(system.file('app', package='", app[1], "'), port = ", port, ", launch.browser = TRUE)\"")
     cat(launch_string, file = fn1, sep = "\n")
     Sys.chmod(fn1, mode = "0755")
 
@@ -120,7 +129,9 @@ win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 #'
 #' @details On Mac a file named 'radiant.command' and one named 'update_radiant.command' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version
 #'
-#' @param app App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"
+#' @param app App to run when the desktop icon is double-clicked ("radiant", "radiant.data", etc.). Default is "radiant"
+#' @param port Port to use for shiny::runApp (e.g, port = 4444)
+#' @param pdir Project directory to use. Default is Sys.getenv("HOME")
 #'
 #' @examples
 #' \dontrun{
@@ -128,7 +139,7 @@ win_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 #' }
 #'
 #' @export
-mac_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate")) {
+mac_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate"), port = 4444, pdir = Sys.getenv("HOME")) {
   if (!interactive()) stop("This function can only be used in an interactive R session")
 
   if (Sys.info()["sysname"] != "Darwin") {
@@ -140,8 +151,15 @@ mac_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
     local_dir <- Sys.getenv("R_LIBS_USER")
     if (!file.exists(local_dir)) dir.create(local_dir, recursive = TRUE)
 
+    if (rmarkdown::pandoc_available()) {
+      rsp <- Sys.getenv("RSTUDIO_PANDOC")
+      rsp <- paste0("Sys.setenv(RSTUDIO_PANDOC='", rsp, "');")
+    } else {
+      rsp <- ""
+    }
+
     fn1 <- paste0("/Users/", Sys.getenv("USER"), "/Desktop/radiant.command")
-    launch_string <- paste0("#!/usr/bin/env Rscript\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary')\n}\n\nlibrary(radiant)\nshiny::runApp(system.file('app', package='", app[1], "'), port = 4444, launch.browser = TRUE)\n")
+    launch_string <- paste0("#!/usr/bin/env Rscript\nsetwd('", pdir, "')\noptions(radiant.launch_dir = normalizePath(getwd()))\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/', type = 'binary')\n}\n", rsp, "\nlibrary(radiant)\nshiny::runApp(system.file('app', package='", app[1], "'), port = ", port, ", launch.browser = TRUE)\n")
     cat(launch_string, file = fn1, sep = "\n")
     Sys.chmod(fn1, mode = "0755")
 
@@ -164,7 +182,9 @@ mac_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 #'
 #' @details On Linux a file named 'radiant.sh' and one named 'update_radiant.sh' will be put on the desktop. Double-click the file to launch the specified Radiant app or update Radiant to the latest version
 #'
-#' @param app App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"
+#' @param app App to run when the desktop icon is double-clicked ("radiant", "radiant.data", etc.). Default is "radiant"
+#' @param port Port to use for shiny::runApp (e.g, port = 4444)
+#' @param pdir Project directory to use. Default is Sys.getenv("HOME")
 #'
 #' @examples
 #' \dontrun{
@@ -172,7 +192,7 @@ mac_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 #' }
 #'
 #' @export
-lin_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate")) {
+lin_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate"), port = 4444, pdir = Sys.getenv("HOME")) {
   if (!interactive()) stop("This function can only be used in an interactive R session")
 
   if (Sys.info()["sysname"] != "Linux") {
@@ -184,8 +204,15 @@ lin_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
     local_dir <- Sys.getenv("R_LIBS_USER")
     if (!file.exists(local_dir)) dir.create(local_dir, recursive = TRUE)
 
-    fn1 <- paste0(Sys.getenv("HOME"), "/Desktop/radiant.sh")
-    launch_string <- paste0("#!/usr/bin/env Rscript\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://radiant-rstats.github.io/minicran/')\n}\n\nlibrary(radiant)\nshiny::runApp(system.file('app', package='", app[1], "'), port = 4444, launch.browser = TRUE)\n")
+    if (rmarkdown::pandoc_available()) {
+      rsp <- Sys.getenv("RSTUDIO_PANDOC")
+      rsp <- paste0("Sys.setenv(RSTUDIO_PANDOC='", rsp, "');")
+    } else {
+      rsp <- ""
+    }
+
+    fn1 <- paste0("/Users/", Sys.getenv("USER"), "/Desktop/radiant.sh")
+    launch_string <- paste0("#!/usr/bin/env Rscript\nsetwd('", pdir, "')\noptions(radiant.launch_dir = normalizePath(getwd()))\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://packagemanager.rstudio.com/all/__linux__/focal/latest')\n}\n", rsp, "\nlibrary(radiant)\nshiny::runApp(system.file('app', package='", app[1], "'), port = ", port, ", launch.browser = TRUE)\n")
     cat(launch_string, file = fn1, sep = "\n")
     Sys.chmod(fn1, mode = "0755")
 
@@ -213,6 +240,8 @@ lin_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 #' @seealso \code{\link{lin_launcher}} to create a shortcut on Linux
 #'
 #' @param app App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"
+#' @param port Port to use for shiny::runApp (e.g, port = 4444)
+#' @param pdir Project directory to use. Default is Sys.getenv("HOME")
 #'
 #' @examples
 #' \dontrun{
@@ -220,14 +249,14 @@ lin_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
 #' }
 #'
 #' @export
-launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate")) {
+launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model", "radiant.multivariate"), port = 4444, pdir = Sys.getenv("HOME")) {
   os <- Sys.info()["sysname"]
   if (os == "Darwin") {
-    mac_launcher(app[1])
+    mac_launcher(app[1], port = port, pdir = pdir)
   } else if (os == "Windows") {
-    win_launcher(app[1])
+    win_launcher(app[1], port = port, pdir = pdir)
   } else if (os == "Linux") {
-    lin_launcher(app[1])
+    lin_launcher(app[1], port = port, pdir = pdir)
   } else {
     return(message("This function is not available for your platform."))
   }

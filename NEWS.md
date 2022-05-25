@@ -1,3 +1,8 @@
+# radiant 1.4.2.0
+
+* Documentation updates
+* Fix and improvements for launcher issue on windows, mac, and linux when not using Rstudio. Will pickup Quarto (Pandoc) if installed
+
 # radiant 1.4.0.0
 
 * Adding the markdown package to `suggests` fixes https://github.com/radiant-rstats/radiant/issues/153

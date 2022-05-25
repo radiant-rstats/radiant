@@ -6,11 +6,17 @@
 \usage{
 mac_launcher(
   app = c("radiant", "radiant.data", "radiant.design", "radiant.basics",
-    "radiant.model", "radiant.multivariate")
+    "radiant.model", "radiant.multivariate"),
+  port = 4444,
+  pdir = Sys.getenv("HOME")
 )
 }
 \arguments{
-\item{app}{App to run when the desktop icon is double-clicked ("analytics", "marketing", "quant", or "base"). Default is "analytics"}
+\item{app}{App to run when the desktop icon is double-clicked ("radiant", "radiant.data", etc.). Default is "radiant"}
+
+\item{port}{Port to use for shiny::runApp (e.g, port = 4444)}
+
+\item{pdir}{Project directory to use. Default is Sys.getenv("HOME")}
 }
 \description{
 Create a launcher and updater for Mac (.command)

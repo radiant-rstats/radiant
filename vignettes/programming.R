@@ -97,5 +97,5 @@ plot(result, plots = c("density", "bar"))
 shopping <- store(shopping, result, name = "clus")
 
 ## was the data really changed?
-head(shopping)
+head(as.data.frame(shopping))
 
