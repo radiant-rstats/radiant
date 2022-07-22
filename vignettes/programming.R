@@ -5,7 +5,7 @@ knitr::opts_chunk$set(
   cache = FALSE, 
   message = FALSE, 
   warning = FALSE,
-  dpi = 144
+  dpi = 96
 )
 options(width = 150)
 
