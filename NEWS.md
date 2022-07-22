@@ -1,3 +1,7 @@
+# radiant 1.4.4.0
+
+* Required 1.4.4 of all radiant packages to ensure users create screenshots of application settings in the shiny interface from menus.
+
 # radiant 1.4.2.0
 
 * Documentation updates

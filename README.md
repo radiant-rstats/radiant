@@ -185,4 +185,4 @@ The documentation, images, and videos for the `radiant.data` package are license
 
 If you are interested in using any of the radiant packages please email me at radiant@rady.ucsd.edu
 
-&copy; Vincent Nijs (2019) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/images/by-sa.png" /></a>
+&copy; Vincent Nijs (2022) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://radiant-rstats.github.io/docs/images/by-sa.png" /></a>
