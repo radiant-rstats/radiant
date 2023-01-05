@@ -5,8 +5,8 @@
 \title{Create a launcher on the desktop for Windows (.bat), Mac (.command), or Linux (.sh)}
 \usage{
 launcher(
-  app = c("radiant", "radiant.data", "radiant.design", "radiant.basics",
-    "radiant.model", "radiant.multivariate"),
+  app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model",
+    "radiant.multivariate"),
   port = 4444,
   pdir = Sys.getenv("HOME")
 )

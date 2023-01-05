@@ -5,8 +5,8 @@
 \title{Create a launcher and updater for Linux (.sh)}
 \usage{
 lin_launcher(
-  app = c("radiant", "radiant.data", "radiant.design", "radiant.basics",
-    "radiant.model", "radiant.multivariate"),
+  app = c("radiant", "radiant.data", "radiant.design", "radiant.basics", "radiant.model",
+    "radiant.multivariate"),
   port = 4444,
   pdir = Sys.getenv("HOME")
 )
