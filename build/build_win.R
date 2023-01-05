@@ -8,19 +8,6 @@ if (grepl("[nN]", rvprompt)) {
   stop("Change R-version using Rstudio > Tools > Global Options > Rversion")
 }
 
-# apps <- c(
-#   "shinyAce",
-#   "shinyFiles",
-#   "gitgadget",
-#   "radiant.data",
-#   "radiant.design",
-#   "radiant.basics",
-#   "radiant.model",
-#   "radiant.multivariate",
-#   "radiant.update",
-#   "radiant"
-# )
-
 apps <- c(
   "radiant.data",
   "radiant.design",

@@ -57,10 +57,6 @@ apps <- c(
 
 sapply(apps, rem_old)
 
-## why do you need to install all these packages?
-# sapply(apps, function(x) devtools::install(pkg = paste0("../", x), upgrade = "never"))
-# sapply(apps, function(x) devtools::install(pkg = x, upgrade = "never"))
-
 dir2set <- file.path(rstudioapi::getActiveProject(), "..")
 system(paste0(Sys.which("R"), " -e \"setwd('", dir2set, "'); source('radiant/build/build_mac.R')\""))
 
@@ -70,14 +66,17 @@ if (grepl("[yY]", win)) {
   ## move packages to radiant_miniCRAN
   ## must build packages on Windows first
   setwd(file.path(rstudioapi::getActiveProject()))
-  sapply(list.files("..", pattern = "*.tar.gz", full.names = TRUE), file.copy, dirsrc)
+  sapply(list.files("..", pattern = "*.tar.gz", full.names = TRUE), file.copy, dirwin)
   unlink("../*.tar.gz")
-  sapply(list.files("..", pattern = "*.tgz", full.names = TRUE), file.copy, dirsrc)
+  sapply(list.files("..", pattern = "*.tgz", full.names = TRUE), file.copy, dirmac[1])
+  sapply(list.files("..", pattern = "*.tgz", full.names = TRUE), file.copy, dirmac[2])
   unlink("../*.tgz")
   sapply(list.files("..", pattern = "*.zip", full.names = TRUE), file.copy, dirsrc)
   unlink("../*.zip")
 
-  tools::write_PACKAGES(dirmac, type = "mac.binary")
+  for (d in dirmac) {
+    tools::write_PACKAGES(d, type = "mac.binary")
+  }
   tools::write_PACKAGES(dirwin, type = "win.binary")
   tools::write_PACKAGES(dirsrc, type = "source")
 
