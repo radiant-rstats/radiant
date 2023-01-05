@@ -63,15 +63,22 @@ system(paste0(Sys.which("R"), " -e \"setwd('", dir2set, "'); source('radiant/bui
 win <- readline(prompt = "Did you build on Windows? y/n: ")
 if (grepl("[yY]", win)) {
 
+  fl <- list.files(pattern = "*.zip", path = "~/Dropbox/r-packages/", full.names = TRUE)
+  for (f in fl) {
+    print(f)
+    file.copy(f, "~/gh/")
+  }
+
   ## move packages to radiant_miniCRAN
   ## must build packages on Windows first
   setwd(file.path(rstudioapi::getActiveProject()))
-  sapply(list.files("..", pattern = "*.tar.gz", full.names = TRUE), file.copy, dirwin)
+  sapply(list.files("..", pattern = "*.tar.gz", full.names = TRUE), file.copy, dirsrc)
   unlink("../*.tar.gz")
+  unlink("~/Dropbox/r-packages/*.tar.gz")
   sapply(list.files("..", pattern = "*.tgz", full.names = TRUE), file.copy, dirmac[1])
   sapply(list.files("..", pattern = "*.tgz", full.names = TRUE), file.copy, dirmac[2])
   unlink("../*.tgz")
-  sapply(list.files("..", pattern = "*.zip", full.names = TRUE), file.copy, dirsrc)
+  sapply(list.files("..", pattern = "*.zip", full.names = TRUE), file.copy, dirwin)
   unlink("../*.zip")
 
   for (d in dirmac) {
