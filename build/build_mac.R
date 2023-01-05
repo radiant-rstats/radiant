@@ -15,10 +15,20 @@ update_app <- function(app, mess = "Update [ci skip]", git = FALSE, github = FAL
   invisible()
 }
 
+# apps <- c(
+#   "shinyAce",
+#   "shinyFiles",
+#   "gitgadget",
+#   "radiant.data",
+#   "radiant.design",
+#   "radiant.basics",
+#   "radiant.model",
+#   "radiant.multivariate",
+#   "radiant.update",
+#   "radiant"
+# )
+
 apps <- c(
-  "shinyAce",
-  "shinyFiles",
-  "gitgadget",
   "radiant.data",
   "radiant.design",
   "radiant.basics",

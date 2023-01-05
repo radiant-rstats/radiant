@@ -1,3 +1,7 @@
+# radiant 1.5.0.0
+
+* Required 1.5.0 of all radiant packages to ensure users can access the new functionality added to other radiant packages
+
 # radiant 1.4.4.0
 
 * Required 1.4.4 of all radiant packages (1.4.6  for radiant.model) to ensure users can create screenshots of application settings in the shiny interface for all radiant modules

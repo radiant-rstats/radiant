@@ -8,10 +8,20 @@ if (grepl("[nN]", rvprompt)) {
   stop("Change R-version using Rstudio > Tools > Global Options > Rversion")
 }
 
+# apps <- c(
+#   "shinyAce",
+#   "shinyFiles",
+#   "gitgadget",
+#   "radiant.data",
+#   "radiant.design",
+#   "radiant.basics",
+#   "radiant.model",
+#   "radiant.multivariate",
+#   "radiant.update",
+#   "radiant"
+# )
+
 apps <- c(
-  "shinyAce",
-  "shinyFiles",
-  "gitgadget",
   "radiant.data",
   "radiant.design",
   "radiant.basics",
@@ -30,3 +40,16 @@ build_app <- function(app) {
 }
 sapply(apps, build_app)
 setwd(curr)
+
+fl <- list.files(pattern = "*.zip", path = "../", full.names = TRUE)
+for (f in fl) {
+  print(glue::glue("Copying: {f}"))
+  file.copy(f, "C:/Users/vnijs/Dropbox/r-packages/", overwrite = TRUE)
+  unlink(f)
+}
+
+#options(repos = c(RSM = "https://radiant-rstats.github.io/minicran"))
+#install.packages("radiant.data", type = "binary")
+# remove.packages(c("radiant.data", "radiant.model"))
+#install.packages("radiant.update")
+# radiant.update::radiant.update()

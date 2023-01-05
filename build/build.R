@@ -12,6 +12,7 @@ if (isTRUE(dev)) {
   }
 }
 
+## building package for mac and windows
 rv <- R.Version()
 rv <- paste(rv$major, substr(rv$minor, 1, 1), sep = ".")
 
@@ -23,28 +24,28 @@ dirsrc <- "../minicran/src/contrib"
 if (rv < "3.4") {
   dirmac <- fs::path("../minicran/bin/macosx/mavericks/contrib", rv)
 } else if (rv > "3.6") {
-  dirmac <- fs::path("../minicran/bin/macosx/contrib", rv)
+  dirmac <- c(
+    fs::path("../minicran/bin/macosx/big-sur-arm64/contrib", rv),
+    fs::path("../minicran/bin/macosx/contrib", rv)
+  )
 } else {
   dirmac <- fs::path("../minicran/bin/macosx/el-capitan/contrib", rv)
 }
 
-dirwin <- file.path("../minicran/bin/windows/contrib", rv)
+dirwin <- fs::path("../minicran/bin/windows/contrib", rv)
 
 if (!file.exists(dirsrc)) dir.create(dirsrc, recursive = TRUE)
-if (!file.exists(dirmac)) dir.create(dirmac, recursive = TRUE)
+sapply(dirmac, function(x) if (!file.exists(x)) dir.create(x, recursive = TRUE))
 if (!file.exists(dirwin)) dir.create(dirwin, recursive = TRUE)
 
 ## delete older version of radiant
 rem_old <- function(app) {
   unlink(paste0(dirsrc, "/", app, "_*"))
-  unlink(paste0(dirmac, "/", app, "_*"))
+  sapply(dirmac, function(x) unlink(paste0(x, "/", app, "_*")))
   unlink(paste0(dirwin, "/", app, "_*"))
 }
 
 apps <- c(
-  "shinyAce",
-  "shinyFiles",
-  "gitgadget",
   "radiant.data",
   "radiant.design",
   "radiant.basics",
