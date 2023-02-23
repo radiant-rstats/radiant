@@ -1,0 +1,4 @@
+[codespell]
+skip = .git,*.pdf,*.svg,programming.html
+# rady - server/domain name
+ignore-words-list = rady
