@@ -6,7 +6,7 @@ pkg <- basename(curr)
 dev <- FALSE
 
 if (isTRUE(dev)) {
-  devprompt <- readline(prompt = paste0("Are you sure you want to build a developement version y/n: "))
+  devprompt <- readline(prompt = paste0("Are you sure you want to build a development version y/n: "))
   if (grepl("[nN]", devprompt)) {
     stop("Set 'dev' to FALSE")
   }

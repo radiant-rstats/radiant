@@ -17,7 +17,7 @@
 
 # radiant 1.3.1.0
 
-* Added launch option that only shows a URL. Convenient for VSCode to lauch Radiant in an external browser
+* Added launch option that only shows a URL. Convenient for VSCode to launch Radiant in an external browser
 * Using `polycor::hetcor` to calculate measures of correlation between numeric and categorical variables
 * Using `patchwork` to combine multiple plots 
 
