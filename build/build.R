@@ -64,6 +64,7 @@ win <- readline(prompt = "Did you build on Windows? y/n: ")
 if (grepl("[yY]", win)) {
 
   fl <- list.files(pattern = "*.zip", path = "~/Dropbox/r-packages/", full.names = TRUE)
+  fl
   for (f in fl) {
     print(f)
     file.copy(f, "~/gh/")
