@@ -1,3 +1,8 @@
+# radiant 1.6.0.0
+
+* Using "Radiant for R" in UI to differentiate from "Radiant for Python"
+* Addressed a package documentation issue due to a change in roxygen2
+
 # radiant 1.5.0.0
 
 * Required 1.5.0 of all radiant packages to ensure users can access the new functionality added to other radiant packages
