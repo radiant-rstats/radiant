@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">radiant</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.4.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.0</span>
       </span>
     </div>
 
@@ -63,22 +63,27 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">win_launcher</span><span class="op">(</span>
-  app <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"radiant"</span>, <span class="st">"radiant.data"</span>, <span class="st">"radiant.design"</span>, <span class="st">"radiant.basics"</span>,
-    <span class="st">"radiant.model"</span>, <span class="st">"radiant.multivariate"</span><span class="op">)</span>,
-  port <span class="op">=</span> <span class="fl">4444</span>,
-  pdir <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html" class="external-link">Sys.getenv</a></span><span class="op">(</span><span class="st">"HOME"</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">win_launcher</span><span class="op">(</span></span>
+<span>  app <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"radiant"</span>, <span class="st">"radiant.data"</span>, <span class="st">"radiant.design"</span>, <span class="st">"radiant.basics"</span>, <span class="st">"radiant.model"</span>,</span>
+<span>    <span class="st">"radiant.multivariate"</span><span class="op">)</span>,</span>
+<span>  port <span class="op">=</span> <span class="fl">4444</span>,</span>
+<span>  pdir <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html" class="external-link">Sys.getenv</a></span><span class="op">(</span><span class="st">"HOME"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>app</dt>
 <dd><p>App to run when the desktop icon is double-clicked ("radiant", "radiant.data", etc.). Default is "radiant"</p></dd>
+
+
 <dt>port</dt>
 <dd><p>Port to use for shiny::runApp (e.g, port = 4444)</p></dd>
+
+
 <dt>pdir</dt>
 <dd><p>Project directory to use. Default is Sys.getenv("HOME")</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -87,10 +92,10 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="fu">radiant</span><span class="fu">::</span><span class="fu">win_launcher</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
-<span class="r-in"></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="fu">radiant</span><span class="fu">::</span><span class="fu">win_launcher</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -105,7 +110,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">radiant</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.4.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.6.0</span>
       </span>
     </div>
 
@@ -82,7 +82,7 @@
                         <h4 data-toc-skip class="author">Vincent R.
 Nijs, Rady School of Management (UCSD)</h4>
             
-            <h4 data-toc-skip class="date">2022-05-24</h4>
+            <h4 data-toc-skip class="date">2023-09-05</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/radiant-rstats/radiant/blob/HEAD/vignettes/programming.Rmd" class="external-link"><code>vignettes/programming.Rmd</code></a></small>
       <div class="hidden name"><code>programming.Rmd</code></div>
@@ -108,21 +108,21 @@ render the report to HTML or press the <code>Save report</code> button
 to produce a Notebook, HTML, PDF, Word, or Rmarkdown file. Radiant’s
 function manuals can be viewed using the commands below:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.data</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.design</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.basics</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.model</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.multivariate</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.data</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.design</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.basics</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.model</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/help.html" class="external-link">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="va">radiant.multivariate</span><span class="op">)</span></span></code></pre></div>
 <p>You can also use Rstudio to render and edit Rmarkdown documents
 generated in Radiant. When you install and load Radiant it exports
 functions that can be called from R-code and/or an Rmarkdown document.
 For example, you can paste the commands below into the command console
 to get the same output as in the browser interface.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/radiant-rstats/radiant" class="external-link">radiant</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">diamonds</span>, envir <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/environment.html" class="external-link">environment</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
-<span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.basics/reference/single_mean.html" class="external-link">single_mean</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="st">"price"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/radiant-rstats/radiant" class="external-link">radiant</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">diamonds</span>, envir <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/environment.html" class="external-link">environment</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.basics/reference/single_mean.html" class="external-link">single_mean</a></span><span class="op">(</span><span class="va">diamonds</span>, <span class="st">"price"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
 <pre><code>Single mean test
 Data      : diamonds 
 Variable  : price 
@@ -138,22 +138,22 @@ Alt. hyp. : the mean of price is not equal to 0
 
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></code></pre></div>
-<p><img src="programming_files/figure-html/single_mean_price-1.png" width="720"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
+<p><img src="programming_files/figure-html/single_mean_price-1.png" width="480"></p>
 <p>You can also call functions for visualization (see below) and access
 help from the console using <code><a href="https://radiant-rstats.github.io/radiant.data/reference/visualize.html" class="external-link">?visualize</a></code></p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://radiant-rstats.github.io/radiant.data/reference/visualize.html" class="external-link">visualize</a></span><span class="op">(</span>
-  <span class="va">diamonds</span>, 
-  xvar <span class="op">=</span> <span class="st">"carat"</span>, 
-  yvar <span class="op">=</span> <span class="st">"price"</span>, 
-  type <span class="op">=</span> <span class="st">"scatter"</span>,
-  facet_row <span class="op">=</span> <span class="st">"clarity"</span>, 
-  color <span class="op">=</span> <span class="st">"clarity"</span>, 
-  labs <span class="op">=</span> <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Diamond Prices ($)"</span><span class="op">)</span>,
-  custom <span class="op">=</span> <span class="cn">FALSE</span>
-<span class="op">)</span> </code></pre></div>
-<p><img src="programming_files/figure-html/scatter-1.png" width="720"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://radiant-rstats.github.io/radiant.data/reference/visualize.html" class="external-link">visualize</a></span><span class="op">(</span></span>
+<span>  <span class="va">diamonds</span>, </span>
+<span>  xvar <span class="op">=</span> <span class="st">"carat"</span>, </span>
+<span>  yvar <span class="op">=</span> <span class="st">"price"</span>, </span>
+<span>  type <span class="op">=</span> <span class="st">"scatter"</span>,</span>
+<span>  facet_row <span class="op">=</span> <span class="st">"clarity"</span>, </span>
+<span>  color <span class="op">=</span> <span class="st">"clarity"</span>, </span>
+<span>  labs <span class="op">=</span> <span class="fu">labs</span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Diamond Prices ($)"</span><span class="op">)</span>,</span>
+<span>  custom <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span><span class="op">)</span> </span></code></pre></div>
+<p><img src="programming_files/figure-html/scatter-1.png" width="480"></p>
 <p>Use <code><a href="https://github.com/radiant-rstats/radiant" class="external-link">library(radiant)</a></code> to load the library. To see the
 index of functions currently available in, for example, Radiant’s Model
 menu use the <code><a href="https://radiant-rstats.github.io/radiant.model/reference" class="external-link">help(package = "radiant.model")</a></code> command</p>
@@ -165,13 +165,13 @@ analysis is conducted in function <code>single_mean</code>. Calling the
 output. Calling <code>plot</code> on the same result object will produce
 relevant plots.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.basics/reference/single_mean.html" class="external-link">single_mean</a></span><span class="op">(</span>
-  <span class="va">mtcars</span>, 
-  var <span class="op">=</span> <span class="st">"mpg"</span>, 
-  comp_value <span class="op">=</span> <span class="fl">20</span>, 
-  alternative <span class="op">=</span> <span class="st">"greater"</span>
-<span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.basics/reference/single_mean.html" class="external-link">single_mean</a></span><span class="op">(</span></span>
+<span>  <span class="va">mtcars</span>, </span>
+<span>  var <span class="op">=</span> <span class="st">"mpg"</span>, </span>
+<span>  comp_value <span class="op">=</span> <span class="fl">20</span>, </span>
+<span>  alternative <span class="op">=</span> <span class="st">"greater"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
 <pre><code>Single mean test
 Data      : mtcars 
 Variable  : mpg 
@@ -187,18 +187,18 @@ Alt. hyp. : the mean of mpg is &gt; 20
 
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="st">"hist"</span><span class="op">)</span></code></pre></div>
-<p><img src="programming_files/figure-html/single_mean_mpg-1.png" width="720"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="st">"hist"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="programming_files/figure-html/single_mean_mpg-1.png" width="480"></p>
 <p>To compare the mean price of diamonds across different levels of
 clarity we can call the <code>compare_means</code> function:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.basics/reference/compare_means.html" class="external-link">compare_means</a></span><span class="op">(</span>
-  <span class="va">diamonds</span>, 
-  var1 <span class="op">=</span> <span class="st">"clarity"</span>, 
-  var2 <span class="op">=</span> <span class="st">"price"</span>, 
-  adjust <span class="op">=</span> <span class="st">"bonf"</span>
-<span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.basics/reference/compare_means.html" class="external-link">compare_means</a></span><span class="op">(</span></span>
+<span>  <span class="va">diamonds</span>, </span>
+<span>  var1 <span class="op">=</span> <span class="st">"clarity"</span>, </span>
+<span>  var2 <span class="op">=</span> <span class="st">"price"</span>, </span>
+<span>  adjust <span class="op">=</span> <span class="st">"bonf"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
 <pre><code>Pairwise mean comparisons (t-test)
 Data      : diamonds 
 Variables : clarity, price 
@@ -248,8 +248,8 @@ Adjustment: Bonferroni
 
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bar"</span>, <span class="st">"density"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="programming_files/figure-html/compare_means_diamonds-1.png" width="576"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bar"</span>, <span class="st">"density"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="programming_files/figure-html/compare_means_diamonds-1.png" width="384"></p>
 <p>These datasets are available after loading the radiant library by
 using the <code>data</code> function. We can also load data through
 Radiant’s browser interface and then access the data from the console
@@ -263,16 +263,16 @@ web-interface are now available in the <code>r_data</code> environment
 as well. To use them directly in your code use
 <code>attach(r_data)</code>.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## start radiant in Rstudio, load the example data, then click the power </span>
-<span class="co">## icon in the navigation bar and click on Stop</span>
-<span class="fu">radiant</span><span class="fu">::</span><span class="fu"><a href="../reference/radiant.html">radiant</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">## start radiant in Rstudio, load the example data, then click the power </span></span>
+<span><span class="co">## icon in the navigation bar and click on Stop</span></span>
+<span><span class="fu">radiant</span><span class="fu">::</span><span class="fu"><a href="../reference/radiant.html">radiant</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>Because we already loaded the radiant library we already have access
 to all the data we need here. Lets use the <code>compare_means</code>
 function to evaluate salary data for professors of different ranks
 using:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.basics/reference/compare_means.html" class="external-link">compare_means</a></span><span class="op">(</span><span class="va">salary</span>, var1 <span class="op">=</span> <span class="st">"rank"</span>, var2 <span class="op">=</span> <span class="st">"salary"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.basics/reference/compare_means.html" class="external-link">compare_means</a></span><span class="op">(</span><span class="va">salary</span>, var1 <span class="op">=</span> <span class="st">"rank"</span>, var2 <span class="op">=</span> <span class="st">"salary"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
 <pre><code>Pairwise mean comparisons (t-test)
 Data      : salary 
 Variables : rank, salary 
@@ -292,13 +292,13 @@ Adjustment: None
 
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></code></pre></div>
-<p><img src="programming_files/figure-html/compare_means_salary-1.png" width="576"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
+<p><img src="programming_files/figure-html/compare_means_salary-1.png" width="384"></p>
 <p>We can also run regressions and get output in a format that would
 require quite a few lines of code to produce from scratch:</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.model/reference/regress.html" class="external-link">regress</a></span><span class="op">(</span><span class="va">diamonds</span>, rvar <span class="op">=</span> <span class="st">"price"</span>, evar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"carat"</span>,<span class="st">"clarity"</span><span class="op">)</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span>, sum_check <span class="op">=</span> <span class="st">"confint"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.model/reference/regress.html" class="external-link">regress</a></span><span class="op">(</span><span class="va">diamonds</span>, rvar <span class="op">=</span> <span class="st">"price"</span>, evar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"carat"</span>,<span class="st">"clarity"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span>, sum_check <span class="op">=</span> <span class="st">"confint"</span><span class="op">)</span></span></code></pre></div>
 <pre><code>Linear regression (OLS)
 Data     : diamonds 
 Response variable    : price 
@@ -334,8 +334,8 @@ clarity|VVS2    5109.476  4697.311  5521.640 412.165
 clarity|VVS1    5027.669  4607.574  5447.764 420.095
 clarity|IF      5265.170  4807.024  5723.317 458.147</code></pre>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">result</span>, pred_cmd <span class="op">=</span> <span class="st">"carat = 1:10"</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">pred</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">pred</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">result</span>, pred_cmd <span class="op">=</span> <span class="st">"carat = 1:10"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">pred</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
 <pre><code>Linear regression (OLS)
 Data                 : diamonds 
 Response variable    : price 
@@ -355,11 +355,11 @@ Prediction command   : carat = 1:10
      SI1     9  72769.811 71948.301 73591.322 821.511
      SI1    10  81207.842 80286.667 82129.017 921.175</code></pre>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="st">"coef"</span><span class="op">)</span></code></pre></div>
-<p><img src="programming_files/figure-html/regress_coeff-1.png" width="864"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="st">"coef"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="programming_files/figure-html/regress_coeff-1.png" width="576"></p>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="st">"dashboard"</span>, lines <span class="op">=</span> <span class="st">"line"</span>, nrobs <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></code></pre></div>
-<p><img src="programming_files/figure-html/regress_dashboard-1.png" width="720"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="st">"dashboard"</span>, lines <span class="op">=</span> <span class="st">"line"</span>, nrobs <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></code></pre></div>
+<p><img src="programming_files/figure-html/regress_dashboard-1.png" width="480"></p>
 <p>As another example, imagine that you want to segment a sample of
 respondents based on their toothpaste attitudes. Below is the required
 code to produce results using functions from the Radiant package. For
@@ -367,11 +367,11 @@ help on the commands and options for cluster analysis use
 <code><a href="https://radiant-rstats.github.io/radiant.multivariate/reference/hclus.html" class="external-link">?hclus</a></code>, <code><a href="https://radiant-rstats.github.io/radiant.multivariate/reference/plot.hclus.html" class="external-link">?plot.hclus</a></code>, and <code>?klus</code>.
 See also the Radiant function manuals linked above.</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## run hierarchical cluster analysis on the shopping data, variables v1 through v6</span>
-<span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.multivariate/reference/hclus.html" class="external-link">hclus</a></span><span class="op">(</span><span class="va">shopping</span>, <span class="st">"v1:v6"</span><span class="op">)</span>
-
-<span class="co">## summary - not much here - plots are more important</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">## run hierarchical cluster analysis on the shopping data, variables v1 through v6</span></span>
+<span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.multivariate/reference/hclus.html" class="external-link">hclus</a></span><span class="op">(</span><span class="va">shopping</span>, <span class="st">"v1:v6"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## summary - not much here - plots are more important</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
 <pre><code>Hierarchical cluster analysis
 Data        : shopping 
 Variables   : v1, v2, v3, v4, v5, v6 
@@ -380,22 +380,22 @@ Distance    : sq.euclidian
 Standardize : TRUE 
 Observations: 20 </code></pre>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## check the help file on how to plot results from hierarchical cluster</span>
-<span class="co">## analysis default plots</span>
-<span class="co">## it looks like there is a big jump in overall within-cluster</span>
-<span class="co">## heterogeneity in the step from 3 to 2 segments</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></code></pre></div>
-<p><img src="programming_files/figure-html/hclus-1.png" width="576"></p>
+<code class="sourceCode R"><span><span class="co">## check the help file on how to plot results from hierarchical cluster</span></span>
+<span><span class="co">## analysis default plots</span></span>
+<span><span class="co">## it looks like there is a big jump in overall within-cluster</span></span>
+<span><span class="co">## heterogeneity in the step from 3 to 2 segments</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
+<p><img src="programming_files/figure-html/hclus-1.png" width="384"></p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## show the dendrogram with cutoff at 0.05</span>
-<span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="st">"dendro"</span>, cutoff <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></code></pre></div>
-<p><img src="programming_files/figure-html/dendro-1.png" width="576"></p>
+<code class="sourceCode R"><span><span class="co">## show the dendrogram with cutoff at 0.05</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="st">"dendro"</span>, cutoff <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></span></code></pre></div>
+<p><img src="programming_files/figure-html/dendro-1.png" width="384"></p>
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">## plots created above suggest 3 clusters may be  most appropriate</span>
-<span class="co">## use kclus to create the clusters</span>
-<span class="co">## generate output and store cluster membership</span>
-<span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.multivariate/reference/kclus.html" class="external-link">kclus</a></span><span class="op">(</span><span class="va">shopping</span>, vars <span class="op">=</span> <span class="st">"v1:v6"</span>, nr_clus <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co">## plots created above suggest 3 clusters may be  most appropriate</span></span>
+<span><span class="co">## use kclus to create the clusters</span></span>
+<span><span class="co">## generate output and store cluster membership</span></span>
+<span><span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.multivariate/reference/kclus.html" class="external-link">kclus</a></span><span class="op">(</span><span class="va">shopping</span>, vars <span class="op">=</span> <span class="st">"v1:v6"</span>, nr_clus <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span></span></code></pre></div>
 <pre><code>K-means cluster analysis
 Data         : shopping 
 Variables    : v1, v2, v3, v4, v5, v6 
@@ -421,13 +421,13 @@ Cluster 3 33.71%
 Between cluster heterogeneity accounts for 73.93% of the
 total heterogeneity in the data (higher is better)</code></pre>
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"density"</span>, <span class="st">"bar"</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<p><img src="programming_files/figure-html/kclus-1.png" width="720"></p>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">result</span>, plots <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"density"</span>, <span class="st">"bar"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p><img src="programming_files/figure-html/kclus-1.png" width="480"></p>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">shopping</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.data/reference/store.html" class="external-link">store</a></span><span class="op">(</span><span class="va">shopping</span>, <span class="va">result</span>, name <span class="op">=</span> <span class="st">"clus"</span><span class="op">)</span>
-
-<span class="co">## was the data really changed?</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">shopping</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">shopping</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://radiant-rstats.github.io/radiant.data/reference/store.html" class="external-link">store</a></span><span class="op">(</span><span class="va">shopping</span>, <span class="va">result</span>, name <span class="op">=</span> <span class="st">"clus"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## was the data really changed?</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html" class="external-link">as.data.frame</a></span><span class="op">(</span><span class="va">shopping</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code>  id v1 v2 v3 v4 v5 v6 clus
 1  1  6  4  7  3  2  3    1
 2  2  2  3  1  4  5  4    2
@@ -438,7 +438,7 @@ total heterogeneity in the data (higher is better)</code></pre>
 <p>See if you can reproduce this output in the radiant browser
 interface. Start <code>Radiant</code> from the <code>Addins</code>
 dropdown in Rstudio.</p>
-<p>© Vincent Nijs (2018)
+<p>© Vincent Nijs (2023)
 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="external-link"><img alt="Creative Commons License" style="border-width: 0" src="images/by-sa.png"></a></p>
   </div>
 
@@ -457,7 +457,7 @@ dropdown in Rstudio.</p>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

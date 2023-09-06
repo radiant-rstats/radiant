@@ -212,7 +212,7 @@ lin_launcher <- function(app = c("radiant", "radiant.data", "radiant.design", "r
     }
 
     fn1 <- paste0("/Users/", Sys.getenv("USER"), "/Desktop/radiant.sh")
-    launch_string <- paste0("#!/usr/bin/env Rscript\nsetwd('", pdir, "')\noptions(radiant.launch_dir = normalizePath(getwd()))\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://packagemanager.rstudio.com/all/__linux__/focal/latest')\n}\n", rsp, "\nlibrary(radiant)\nshiny::runApp(system.file('app', package='", app[1], "'), port = ", port, ", launch.browser = TRUE)\n")
+    launch_string <- paste0("#!/usr/bin/env Rscript\nsetwd('", pdir, "')\noptions(radiant.launch_dir = normalizePath(getwd()))\nif (!require(radiant)) {\n  install.packages('radiant', repos = 'https://https://packagemanager.posit.co/all/__linux__/focal/latest')\n}\n", rsp, "\nlibrary(radiant)\nshiny::runApp(system.file('app', package='", app[1], "'), port = ", port, ", launch.browser = TRUE)\n")
     cat(launch_string, file = fn1, sep = "\n")
     Sys.chmod(fn1, mode = "0755")
 

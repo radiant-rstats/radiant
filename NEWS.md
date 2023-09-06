@@ -1,3 +1,8 @@
+# radiant 1.6.0.0
+
+* Using "Radiant for R" in UI to differentiate from "Radiant for Python"
+* Addressed a package documentation issue due to a change in roxygen2
+
 # radiant 1.5.0.0
 
 * Required 1.5.0 of all radiant packages to ensure users can access the new functionality added to other radiant packages
@@ -17,7 +22,7 @@
 
 # radiant 1.3.1.0
 
-* Added launch option that only shows a URL. Convenient for VSCode to lauch Radiant in an external browser
+* Added launch option that only shows a URL. Convenient for VSCode to launch Radiant in an external browser
 * Using `polycor::hetcor` to calculate measures of correlation between numeric and categorical variables
 * Using `patchwork` to combine multiple plots 
 
