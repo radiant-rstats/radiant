@@ -63,7 +63,7 @@ system(paste0(Sys.which("R"), " -e \"setwd('", dir2set, "'); source('radiant/bui
 win <- readline(prompt = "Did you build on Windows? y/n: ")
 if (grepl("[yY]", win)) {
 
-  fl <- list.files(pattern = "*.zip", path = "~/Dropbox/r-packages/", full.names = TRUE)
+  fl <- list.files(pattern = "*.zip", path = "~/Dropbox/r-packages", full.names = TRUE)
   fl
   for (f in fl) {
     print(f)
@@ -81,6 +81,7 @@ if (grepl("[yY]", win)) {
   unlink("../*.tgz")
   sapply(list.files("..", pattern = "*.zip", full.names = TRUE), file.copy, dirwin)
   unlink("../*.zip")
+  unlink("~/Dropbox/r-packages/*.zip") # cleanup
 
   for (d in dirmac) {
     tools::write_PACKAGES(d, type = "mac.binary")
@@ -96,3 +97,8 @@ if (grepl("[yY]", win)) {
   system("git push")
   setwd(rstudioapi::getActiveProject())
 }
+
+remove.packages("dplyr")
+radiant.update::radiant.update()
+
+)
