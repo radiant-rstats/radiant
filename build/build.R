@@ -3,14 +3,13 @@ curr <- getwd()
 pkg <- basename(curr)
 
 ## building radiant packages for mac and windows
-dev <- FALSE
-
-if (isTRUE(dev)) {
-  devprompt <- readline(prompt = paste0("Are you sure you want to build a development version y/n: "))
-  if (grepl("[nN]", devprompt)) {
-    stop("Set 'dev' to FALSE")
-  }
-}
+# dev <- FALSE
+# if (isTRUE(dev)) {
+#   devprompt <- readline(prompt = paste0("Are you sure you want to build a development version y/n: "))
+#   if (grepl("[nN]", devprompt)) {
+#     stop("Set 'dev' to FALSE")
+#   }
+# }
 
 ## building package for mac and windows
 rv <- R.Version()
@@ -25,6 +24,7 @@ if (rv < "3.4") {
   dirmac <- fs::path("../minicran/bin/macosx/mavericks/contrib", rv)
 } else if (rv > "3.6") {
   dirmac <- c(
+    fs::path("../minicran/bin/macosx/big-sur-x86_64/contrib", rv),
     fs::path("../minicran/bin/macosx/big-sur-arm64/contrib", rv),
     fs::path("../minicran/bin/macosx/contrib", rv)
   )
@@ -55,6 +55,8 @@ apps <- c(
   "radiant"
 )
 
+apps <- c("radiant.model")
+
 sapply(apps, rem_old)
 
 dir2set <- file.path(rstudioapi::getActiveProject(), "..")
@@ -62,11 +64,8 @@ system(paste0(Sys.which("R"), " -e \"setwd('", dir2set, "'); source('radiant/bui
 
 win <- readline(prompt = "Did you build on Windows? y/n: ")
 if (grepl("[yY]", win)) {
-
   fl <- list.files(pattern = "*.zip", path = "~/Dropbox/r-packages", full.names = TRUE)
-  fl
   for (f in fl) {
-    print(f)
     file.copy(f, "~/gh/")
   }
 
@@ -98,7 +97,6 @@ if (grepl("[yY]", win)) {
   setwd(rstudioapi::getActiveProject())
 }
 
-remove.packages("dplyr")
-radiant.update::radiant.update()
-
-)
+# testing
+# remove.packages("dplyr")
+# radiant.update::radiant.update()

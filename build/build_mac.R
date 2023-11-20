@@ -25,6 +25,9 @@ apps <- c(
   "radiant"
 )
 
+apps <- c("radiant.data", "radiant.model")
+
+
 sapply(apps, update_app, mess = "CRAN", git = TRUE, github = TRUE)
 
 ## build for packages ahead of CRAN
