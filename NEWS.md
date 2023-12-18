@@ -1,3 +1,7 @@
+# radiant.data 1.6.1.0
+
+* Require shiny 1.8.0. This fixes a bug in the shiny 1.7 versions that caused issues with all radiant packages
+
 # radiant 1.6.0.0
 
 * Using "Radiant for R" in UI to differentiate from "Radiant for Python"

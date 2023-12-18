@@ -4,6 +4,22 @@ This is a resubmission. See NEWS.md for changes.
 
 ## Test environments
 
+* macOS, R 4.3.2
+* win-builder (devel)
+
+## R CMD check results
+
+There were no ERRORs or WARNINGs. There was one NOTE related to the number of non-standard dependencies. However, this note is not easily addressed without substantially inconveniencing users that rely on the web (shiny) interface available for radiant.data.
+
+
+# Previous cran-comments
+
+## Resubmission
+
+This is a resubmission. See NEWS.md for changes.
+
+## Test environments
+
 * macOS, R 4.3.1
 * win-builder (devel)
 
@@ -11,7 +27,6 @@ This is a resubmission. See NEWS.md for changes.
 
 There were no ERRORs or WARNINGs. There was one NOTE related to the number of non-standard dependencies. However, this note is not easily addressed without substantially inconveniencing users that rely on the web (shiny) interface available for radiant.data.
 
-# Previous cran-comments
 
 ## Resubmission
 

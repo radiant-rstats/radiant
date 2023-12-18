@@ -55,8 +55,6 @@ apps <- c(
   "radiant"
 )
 
-apps <- c("radiant.model")
-
 sapply(apps, rem_old)
 
 dir2set <- file.path(rstudioapi::getActiveProject(), "..")
