@@ -96,8 +96,8 @@ if (grepl("[yY]", win)) {
 }
 
 # testing
-remove.packages(c("radiant.data", "radiant.model", "radiant", "radiant.multivariate", "radiant.basics", "radiant.design", "dplyr"))
-options(repos=c(RSM = "https://radiant-rstats.github.io/minicran"))
-install.packages("radiant.update")
-install.packages("radiant.update", type = "binary")
-radiant.update::radiant.update()
+# remove.packages(c("radiant.data", "radiant.model", "radiant", "radiant.multivariate", "radiant.basics", "radiant.design", "dplyr"))
+# options(repos=c(RSM = "https://radiant-rstats.github.io/minicran"))
+# install.packages("radiant.update")
+# install.packages("radiant.update", type = "binary")
+# radiant.update::radiant.update()
